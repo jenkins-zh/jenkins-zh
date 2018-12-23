@@ -1,0 +1,53 @@
+baseURL = "https://jenkins-zh.github.io/"
+languageCode = "zh-CN"
+defaultContentLanguage = "zh"
+title = "Jenkins 中文社区"
+theme = "hugo-jenkins-theme"
+
+googleAnalytics = "UA-4216293-5"
+
+[[menu.global]]
+  name = "微信"
+  weight = 100
+  identifier = "wechat"
+  url = "/wechat/"
+
+[[menu.global]]
+  name = "SuRen"
+  weight = 3100
+  identifier = "suren"
+  post = "external"
+  url = "http://blog.surenpi.com"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+section = [ "HTML", "RSS"]
+
+[related]
+
+threshold = 80
+includeNewer = true
+toLower = false
+
+[[related.indices]]
+name = "keywords"
+weight = 100
+[[related.indices]]
+name  = "date"
+weight = 10
+pattern = "2006"
+
+[params]
+## Gh repo for site footer (include trailing slash)
+ghrepo = "https://github.com/linuxsuren/surenpi/"
+## GH Repo for filing a new issue
+github_repo = "https://github.com/linuxsuren/surenpi/issues/new"
+ghdocsrepo = "https://github.com/LinuxSuRen/surenpi/tree/master"
+
+[params.comments.utterances]
+enable = true
+issueTerm = "pathname"
+
+[params.comments.utterances.github]
+username = "linuxsuren"
+repository = "jenkins-zh/jenkins-zh.github.io"
