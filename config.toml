@@ -13,11 +13,11 @@ googleAnalytics = "UA-4216293-5"
   url = "/wechat/"
 
 [[menu.global]]
-  name = "SuRen"
+  name = "Jenkins 官网"
   weight = 3100
-  identifier = "suren"
+  identifier = "jenkins"
   post = "external"
-  url = "http://blog.surenpi.com"
+  url = "http://jenkins.io/zh"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON" ]
@@ -39,10 +39,12 @@ pattern = "2006"
 
 [params]
 ## Gh repo for site footer (include trailing slash)
-ghrepo = "https://github.com/linuxsuren/surenpi/"
+ghrepo = "https://github.com/jenkins-infra/wechat/"
 ## GH Repo for filing a new issue
 github_repo = "https://github.com/linuxsuren/surenpi/issues/new"
 ghdocsrepo = "https://github.com/LinuxSuRen/surenpi/tree/master"
+github_contributors_link = "https://github.com/LinuxSuRen/surenpi/graphs/contributors"
+github_contributors = "Jenkins 社区贡献者"
 
 [params.comments.utterances]
 enable = true
