@@ -1,13 +1,13 @@
 fetch-theme:
 	if [ -d "themes/hugo-jenkins-theme" ]; then \
-	    cd themes/hugo-jenkins-theme && git pull; \
+	    cd themes/hugo-jenkins-theme && git fetch && git reset --hard origin/master && git pull; \
 	else \
 		cd themes && git clone https://github.com/jenkins-zh/hugo-jenkins-theme; \
 	fi
 
 fetch-wechat-articles:
 	if [ -d "content/wechat" ]; then \
-	    cd content/wechat && git pull; \
+	    cd content/wechat && git fetch && git reset --hard origin/master && git pull; \
 	else \
 		cd content && git clone https://github.com/jenkins-infra/wechat; \
 	fi
@@ -25,7 +25,7 @@ live:
 
 deploy:
 	if [ -d "jenkins-zh.github.io" ]; then \
-	    git pull; \
+	    cd jenkins-zh.github.io && git pull; \
 	else \
 		git clone git@github.com:jenkins-zh/jenkins-zh.github.io.git; \
 	fi
