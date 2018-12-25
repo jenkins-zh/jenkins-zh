@@ -7,10 +7,9 @@ fetch-theme:
 
 fetch-wechat-articles:
 	if [ -d "content/wechat" ]; then \
-	    cd content/wechat && git fetch && git reset --hard origin/master && git pull; \
-	else \
-		cd content && git clone https://github.com/jenkins-infra/wechat; \
+	    rm -rf content/wechat; \
 	fi
+	cd content && git clone https://github.com/jenkins-infra/wechat
 	make change-format
 
 change-format:
@@ -20,16 +19,21 @@ change-format:
 	rm -rf content/wechat/management/
 	rm -rf content/wechat/*.md
 
-live:
-	hugo server
-
-deploy:
+update:
 	if [ -d "jenkins-zh.github.io" ]; then \
 	    cd jenkins-zh.github.io && git pull; \
 	else \
 		git clone git@github.com:jenkins-zh/jenkins-zh.github.io.git; \
 	fi
 	make fetch-theme
+	make fetch-wechat-articles
+
+live:
+	make update
+	hugo server
+
+deploy:
+	make update
 	hugo
 	cp -r public/* jenkins-zh.github.io
 	cd jenkins-zh.github.io && git add . && git commit -m 'deploy' && git push
