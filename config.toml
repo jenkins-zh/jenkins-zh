@@ -39,12 +39,13 @@ pattern = "2006"
 
 [params]
 ## Gh repo for site footer (include trailing slash)
-ghrepo = "https://github.com/jenkins-infra/wechat/"
+ghrepo = "https://github.com/LinuxSuRen/jenkins-chat/"
 ## GH Repo for filing a new issue
-github_repo = "https://github.com/linuxsuren/surenpi/issues/new"
-ghdocsrepo = "https://github.com/LinuxSuRen/surenpi/tree/master"
-github_contributors_link = "https://github.com/LinuxSuRen/surenpi/graphs/contributors"
+github_repo = "https://github.com/LinuxSuRen/jenkins-chat/issues/new"
+ghdocsrepo = "https://github.com/LinuxSuRen/jenkins-chat/tree/master"
+github_contributors_link = "https://github.com/LinuxSuRen/jenkins-chat/graphs/contributors"
 github_contributors = "Jenkins 社区贡献者"
+welcome = "共建开放、包容、活跃的 Jenkins 社区"
 
 [params.comments.utterances]
 enable = true
