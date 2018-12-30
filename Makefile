@@ -18,6 +18,7 @@ change-format:
 	rm -rf content/wechat/images/*.md
 	rm -rf content/wechat/management/
 	rm -rf content/wechat/*.md
+	cp -r content/wechat/images/ static/images/
 
 update:
 	if [ -d "jenkins-zh.github.io" ]; then \
