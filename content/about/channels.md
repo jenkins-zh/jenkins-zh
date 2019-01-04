@@ -4,7 +4,7 @@ description: Jenkins 中文社区交流指南
 date: 2019-01-04T21:13:30+08:00
 toc: true
 author: linuxsuren
-draft: true
+draft: false
 ---
 
 为了方便各位 Jenkins 的爱好者、用户以及贡献者之间互相交流，我这里列出来一些途径：
