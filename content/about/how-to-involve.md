@@ -1,0 +1,28 @@
+---
+title: "如何参与"
+description: 不满意只做吃瓜群众的请看过来
+date: 2019-01-05T22:56:04+08:00
+draft: false
+toc: true
+author: linuxsuren
+---
+
+参与开源社区真的不只有 `Coding` 一条路可选。只要你认同“开源”，有热情，就可以！任何岗位、校大学生、甚至"不懂"技术都能够加入我们。走过路过的朋友们别错过，下面的参与方式总有一种能把你带上开源事业的“不归路”，如果真的没有包含你希望的参与方式，也可以从现在就发起一个 {{< exref "Pull Request" "https://github.com/jenkins-zh/jenkins-chat/pulls" >}}  开始：
+
+# Jenkins 本地化
+
+{{< exref "Jenkins 中文官网" "https://jenkins.io/zh/" >}}有很多的{{< exref "翻译任务" "https://issues.jenkins-ci.org/secure/RapidBoard.jspa?rapidView=536&view=detail" >}}需要各路英雄自由领取。无规矩不成方圆，在享受自由的同时，也请牢记如下几点：
+
+* 认真、负责第一位
+* 翻译任务通常不建议超过两周
+* {{< exref "翻译规范" "https://github.com/jenkinsci/localization-zh-cn-plugin/blob/master/specification.md" >}}
+
+Jenkins 的{{< exref "简体中文语言插件" "https://github.com/jenkinsci/localization-zh-cn-plugin" >}}也热切地期待你的 {{< exref "Pull Request" "https://github.com/jenkinsci/localization-zh-cn-plugin/pulls">}}。
+
+# 分享
+
+你可以在本站或者 [Mettup]({{< ref "meetups.md" >}}) 上分享你在使用 Jenkins 或者相关技术时总结的经验、教训、成果等。
+
+# 维护本站点
+
+你可以从了解[本站的架构]({{< ref "about-site.md" >}})开始。小到错别字修正，大到站点风格、架构完善都需要你的参与。
