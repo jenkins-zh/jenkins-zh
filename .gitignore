@@ -3,5 +3,4 @@ content/wechat
 jenkins-zh.github.io
 public
 
-.DS_Store
-static/.DS_Store
+**/*.DS_Store
