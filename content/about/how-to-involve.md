@@ -17,6 +17,8 @@ author: linuxsuren
 * 翻译任务通常不建议超过两周
 * {{< exref "翻译规范" "https://github.com/jenkinsci/localization-zh-cn-plugin/blob/master/specification.md" >}}
 
+翻译包括 Jenkins 官网的本地化，以及{{< exref "博客" "https://jenkins.io/node/">}}的翻译。翻译完成后，提交 {{< exref "Pull Request" "https://github.com/jenkins-infra/cn.jenkins.io/pulls">}} 并等待 Review。对于质量较高、或者适合在微信公众号上发布的文章，需要另外提交一个 {{< exref "Pull Request" "https://github.com/jenkins-infra/wechat/pulls">}}。
+
 Jenkins 的{{< exref "简体中文语言插件" "https://github.com/jenkinsci/localization-zh-cn-plugin" >}}也热切地期待你的 {{< exref "Pull Request" "https://github.com/jenkinsci/localization-zh-cn-plugin/pulls">}}。
 
 # 分享
