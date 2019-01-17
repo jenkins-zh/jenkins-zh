@@ -21,6 +21,10 @@ author: linuxsuren
 
 Jenkins 的{{< exref "简体中文语言插件" "https://github.com/jenkinsci/localization-zh-cn-plugin" >}}也热切地期待你的 {{< exref "Pull Request" "https://github.com/jenkinsci/localization-zh-cn-plugin/pulls">}}。
 
+# 新手 Bug
+
+如果你之前没有参与过 Jenkins 的贡献或者对如何开始不太情况，可以查看{{< exref "新手 Bug" "https://issues.jenkins-ci.org/issues/?jql=labels%20%3D%20newbie-friendly%20AND%20(status%20%3D%20Open%20OR%20status%20%3D%20%22To%20Do%22%20OR%20status%20%3D%20Reopened%20)" >}}。这是一些相对比较简单，容易修改的问题。
+
 # 分享
 
 你可以在本站或者 [Mettup]({{< ref "meetups.md" >}}) 上分享你在使用 Jenkins 或者相关技术时总结的经验、教训、成果等。
