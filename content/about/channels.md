@@ -17,10 +17,10 @@ draft: false
 
 Jenkins 社区有很多{{< exref "邮件组" "https://jenkins.io/zh/mailing-lists/" >}}，感兴趣的童鞋请自行翻阅。本文仅介绍中文相关的邮件组：
 
-|    |    |    |    |
-|----|----|----|----|
-|Jenkins 中文用户邮件组|{{< exref "查看历史" "http://groups.google.com/group/jenkinsci-zh/topics" >}}|[订阅](mailto:jenkinsci-zh+subscribe@googlegroups.com)|[取消订阅](mailto:jenkinsci-zh+unsubscribe@googlegroups.com)|
-|Jenkins 中文本地化兴趣邮件组|{{< exref "查看历史" "http://groups.google.com/group/jenkins-chinese-localization-sig/topics" >}}|[订阅](mailto:jenkins-chinese-localization-sig+subscribe@googlegroups.com)|[取消订阅](mailto:jenkins-chinese-localization-sig+unsubscribe@googlegroups.com)|
+|    |    |    |    |    |
+|----|----|----|----|----|
+|Jenkins 中文用户邮件组|{{< exref "查看历史" "http://groups.google.com/group/jenkinsci-zh/topics" >}}|[订阅](mailto:jenkinsci-zh+subscribe@googlegroups.com)|[取消订阅](mailto:jenkinsci-zh+unsubscribe@googlegroups.com)|[求助](mailto:jenkinsci-zh@googlegroups.com)|
+|Jenkins 中文本地化兴趣邮件组|{{< exref "查看历史" "http://groups.google.com/group/jenkins-chinese-localization-sig/topics" >}}|[订阅](mailto:jenkins-chinese-localization-sig+subscribe@googlegroups.com)|[取消订阅](mailto:jenkins-chinese-localization-sig+unsubscribe@googlegroups.com)|[求助](mailto:jenkins-chinese-localization-sig@googlegroups.com)|
 
 {{% note %}}
 *注意：点击上面的订阅或者取消都应该会弹出一个发送邮件的窗口，请不要做任何修改，邮件正文保持空白（不要添加邮件签名等内容）直接发送即可。邮件发送成功后，会收到确认的回复。鉴于邮件组是由 Google 提供的服务，无法科学上网的童鞋是无法查看历史邮件的。*
