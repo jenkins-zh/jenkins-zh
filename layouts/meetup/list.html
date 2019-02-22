@@ -1,0 +1,29 @@
+{{ define "main" }}
+    {{ range (.Pages.GroupByParam "year").Reverse }}
+
+    <table width="1000px">
+        <tr>
+            <td>City</td><td>Date</td><td>Location</td><td>Status</td><td>Sponsors</td>
+        </tr>
+        {{ range .Pages }}
+        <tr>
+        <td>{{ .Params.city }}</td>
+        <td>{{ .Params.hostDate }}</td>
+        <td>{{ .Params.location }}</td>
+        <td><a href="{{ .RelPermalink }}">{{with .Params.status}}{{.}}{{else}}敬请期待{{end}}</a></td>
+        <td>
+            {{with .Params.sponsors}}
+                {{ range . }}
+                <img src="/images/sponsors/{{.}}.png">
+                {{ end }}
+            {{else}}
+            <a href="{{.Site.Params.ghrepo}}edit/master/content/{{.File.Path}}"
+            class="f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link"
+            target="_blank">立即申请</a>
+            {{end}}
+        </td>
+        {{ end }}
+        </tr>
+    </table>
+    {{end}}
+{{ end }}

@@ -1,6 +1,6 @@
 ---
 type: meetup
-city: 深圳
+city: 上海
 hostDate: 2019-08-01
 year: 2019
 location: 深圳
