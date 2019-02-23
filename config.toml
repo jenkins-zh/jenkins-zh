@@ -13,14 +13,20 @@ googleAnalytics = "UA-4216293-5"
   url = "/wechat/"
 
 [[menu.global]]
-  name = "关于我们"
+  name = "活动"
   weight = 200
+  identifier = "event"
+  url = "/event/"
+
+[[menu.global]]
+  name = "关于我们"
+  weight = 300
   identifier = "about"
   url = "/about/"
 
 [[menu.global]]
   name = "Jenkins 官网"
-  weight = 3100
+  weight = 4100
   identifier = "jenkins"
   # pre = "<i class='fa fa-heart'></i>"
   post = "external"
