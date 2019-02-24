@@ -78,96 +78,77 @@
     </style>
   <div class="topic">
     <div>
-      <img
-        src="https://meetup.elasticsearch.cn/static/images/city/shanghai/shanghai.jpg"
-        alt
-      >
+      <img src="{{ .Params.poster }}" alt>
     </div>
     <div class="detail">
-      <h4>2018 Elastic & 东方航空大数据技术沙龙</h4>
+      <h4>{{.Params.topic}}</h4>
       <div>
         <span class="title">状态:</span>
-        <span>{{ .Params.status }} 结束</span>
+        <span>{{ .Params.status }}</span>
       </div>
       <div>
         <span class="title">时间:</span>
-        <span>{{ .Params.status }} 结束</span>
+        <span>{{ .Params.hostDate }}</span>
       </div>
       <div>
         <span class="title">地点:</span>
-        <span>{{ .Params.status }} 结束</span>
+        <span>{{ .Params.location }}</span>
       </div>
       <div>
         <span class="title">费用:</span>
-        <span>{{ .Params.status }} 结束</span>
+        <span>{{ .Params.fee }}</span>
       </div>
     </div>
   </div>
   <div class="topic-detail">
     <h4 class="topic-title">主题介绍</h4>
     <div>
-      Elastic中文社区联合东方航空公司，将于2018年12月08日，在上海举办一次线下技术交流活动。 本次活动交流内容不限于Elastic Stack，可以是搜索、推荐、机器学习、商业智能、智能运维等任意大数据相关技术的最佳应用实践。 活动分享主题正🔥征集中！
-      
-                  有意参与本次主题分享的同学，请发送邮件至kennywu76@outlook.com，并提供如下信息:
-                  
-                  个人简介
-                  分享主题
-                  内容提纲
-                  为确保本次活动的紧凑，分享主题将控制在5个以内。 部分同学提交的内容可能无法安排进本次活动日程，但我们将保留所有提交的主题，并尽力安排在后续的线下活动进行分享 。
-                  
-                  征集截止时间: 2018年11月10日
-                  
-                  活动时间: 2018年12月08日
-                  
-                  活动地址: 东航城（上海市闵行区虹翔三路）
-                  
-                  会议Zoom直播: 在 PC、Mac、iPhone/iPad、安卓手机/平板上，点击https://www.zoomus.cn/j/1524425455 即可轻松加入会议
-                  
-                  欢迎社区同学踊跃报名，期待你的分享！
+      {{.Params.abstract}}
     </div>
   </div>
 
   <div class="topic-detail">
     <h4 class="topic-title">嘉宾介绍</h4>
     <div>
+      {{ range .Params.speakers }}
+        {{ $speaker := getJSON "/content/speaker/" . ".json" }}
       <div class="guest">
         <div>
-          <img
-            src="https://meetup.elasticsearch.cn/static/images/city/shanghai/1002/speakers/jlt.jpg"
-            alt
-          >
+          <img src="/images/speakers/{{.}}.png" alt>
         </div>
         <div class="guest-detail">
           <div class="title">
-            金澜涛
-            <span class="job-title">eBay大数据工程师</span>
+            {{ $speaker.displayName }}
+            <span class="job-title">{{ $speaker.title }}</span>
           </div>
-          <div>detail</div>
+          <div>{{ $speaker.bio }}</div>
         </div>
       </div>
+      {{ end }}
     </div>
   </div>
 
   <div class="topic-detail">
     <h4 class="topic-title">活动安排</h4>
     <div>
+      {{ with .Params.agenda }}
+      {{ range . }}
       <div class="schedule-content">
-        <div class="time">13:300-17:40</div>
+        <div class="time">{{ .time }}</div>
         <div class="schedule-timeline"></div>
-        <div class="content">开始签到</div>
+        <div class="content">{{ .item }}</div>
       </div>
-      <div class="schedule-content">
-        <div class="time">13:300-17:40</div>
-        <div class="schedule-timeline"></div>
-        <div class="content">xxxxxxxxxx</div>
-      </div>
+      {{ end }}
+      {{ else }}
+      敬请期待
+      {{ end }}
     </div>
   </div>
 
   <div class="topic-detail">
     <h4 class="topic-title">注意事项</h4>
     <div>
-      xxxxxx
+      {{.Params.comment}}
     </div>
   </div>
   
