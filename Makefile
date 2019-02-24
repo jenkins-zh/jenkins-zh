@@ -1,4 +1,7 @@
 fetch-theme:
+	if [ ! -d "themes" ]; then \
+		mkdir themes; \
+	fi
 	if [ -d "themes/hugo-jenkins-theme" ]; then \
 	    cd themes/hugo-jenkins-theme && git fetch && git reset --hard origin/master && git pull; \
 	else \
