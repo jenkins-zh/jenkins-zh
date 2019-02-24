@@ -1,16 +1,176 @@
 {{ define "main" }}
-
-<main>
+<main style="background: #f5f5f5">
+  <style>
+    .topic {
+        display: flex;
+        margin: 20px auto;
+        max-width: 1000px;
+        padding: 20px;
+        background-color: #fff;
+    }
+    .topic .detail {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .topic .detail .title {
+        color: #898989;
+    }
+    .topic-detail {
+        margin: 20px auto;
+        max-width: 1000px;
+        padding: 20px;
+        background-color: #fff;
+    }
+    .topic-title {
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        display: flex;
+        border-left: 5px solid #1b809e;
+    }
+    .guest {
+        display: flex;
+    }
+    .guest img {
+        width: 100px;
+        height: 100px;
+    }
+    .guest-detail {
+        margin: 0 20px
+    }
+    .job-title {
+        color: #777;
+        font-size: 12px;
+    }
+    .schedule-content::after {
+        position: absolute;
+        top: 10px;
+        left: 2px;
+        content: '';
+        display: block;
+        width: 2px;
+        height: 100%;
+        background-color: rgba(31,99,175,0.5);
+        z-index: 0;
+    }
+    .schedule-content {
+        padding-bottom: 32px;
+        position: relative;
+        display: table;
+        clear: both;
+        width: 100%;
+        padding-left: 20px;
+    }
+    .schedule-timeline::after {
+        position: absolute;
+        left: 0;
+        top:8px;
+        content: '';
+        display: block;
+        width: 7px;
+        height: 7px;
+        border-radius: 1px;
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        background-color: #1b809e;
+        z-index: 1;
+    }
+    </style>
+  <div class="topic">
     <div>
-        <div>
-            <div>
-                {{ .Params.topic }}
-            </div>
-            <div>
-                {{ .Params.status }}
-            </div>
-        </div>
+      <img
+        src="https://meetup.elasticsearch.cn/static/images/city/shanghai/shanghai.jpg"
+        alt
+      >
     </div>
-</main>
+    <div class="detail">
+      <h4>2018 Elastic & 东方航空大数据技术沙龙</h4>
+      <div>
+        <span class="title">状态:</span>
+        <span>{{ .Params.status }} 结束</span>
+      </div>
+      <div>
+        <span class="title">时间:</span>
+        <span>{{ .Params.status }} 结束</span>
+      </div>
+      <div>
+        <span class="title">地点:</span>
+        <span>{{ .Params.status }} 结束</span>
+      </div>
+      <div>
+        <span class="title">费用:</span>
+        <span>{{ .Params.status }} 结束</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-detail">
+    <h4 class="topic-title">主题介绍</h4>
+    <div>
+      Elastic中文社区联合东方航空公司，将于2018年12月08日，在上海举办一次线下技术交流活动。 本次活动交流内容不限于Elastic Stack，可以是搜索、推荐、机器学习、商业智能、智能运维等任意大数据相关技术的最佳应用实践。 活动分享主题正🔥征集中！
+      
+                  有意参与本次主题分享的同学，请发送邮件至kennywu76@outlook.com，并提供如下信息:
+                  
+                  个人简介
+                  分享主题
+                  内容提纲
+                  为确保本次活动的紧凑，分享主题将控制在5个以内。 部分同学提交的内容可能无法安排进本次活动日程，但我们将保留所有提交的主题，并尽力安排在后续的线下活动进行分享 。
+                  
+                  征集截止时间: 2018年11月10日
+                  
+                  活动时间: 2018年12月08日
+                  
+                  活动地址: 东航城（上海市闵行区虹翔三路）
+                  
+                  会议Zoom直播: 在 PC、Mac、iPhone/iPad、安卓手机/平板上，点击https://www.zoomus.cn/j/1524425455 即可轻松加入会议
+                  
+                  欢迎社区同学踊跃报名，期待你的分享！
+    </div>
+  </div>
 
+  <div class="topic-detail">
+    <h4 class="topic-title">嘉宾介绍</h4>
+    <div>
+      <div class="guest">
+        <div>
+          <img
+            src="https://meetup.elasticsearch.cn/static/images/city/shanghai/1002/speakers/jlt.jpg"
+            alt
+          >
+        </div>
+        <div class="guest-detail">
+          <div class="title">
+            金澜涛
+            <span class="job-title">eBay大数据工程师</span>
+          </div>
+          <div>detail</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="topic-detail">
+    <h4 class="topic-title">活动安排</h4>
+    <div>
+      <div class="schedule-content">
+        <div class="time">13:300-17:40</div>
+        <div class="schedule-timeline"></div>
+        <div class="content">开始签到</div>
+      </div>
+      <div class="schedule-content">
+        <div class="time">13:300-17:40</div>
+        <div class="schedule-timeline"></div>
+        <div class="content">xxxxxxxxxx</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="topic-detail">
+    <h4 class="topic-title">注意事项</h4>
+    <div>
+      xxxxxx
+    </div>
+  </div>
+  
+
+</main>
 {{ end }}
