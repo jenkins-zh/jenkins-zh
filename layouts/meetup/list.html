@@ -6,26 +6,37 @@
   table { 
       text-align: center; 
       border-collapse: collapse;
+      margin: 0 auto;
   }
   .content {
       margin: 20px auto;
-      max-width: 1000px;
+      max-width: 1200px;
+      background: #fff;
+      padding: 20px;
   }
   h3 {
     text-align: center;  
   }
+  thead tr th {
+    line-height: 40px;
+  }
+  a {
+    text-decoration: none;
+    color: #0594cb;
+  }
 </style>
 {{ range (.Pages.GroupByParam "year").Reverse }}
+<div style="background: #f5f5f5">
 <div class="content">
   <h3>{{.Key}}年度计划安排</h3>
   <table width="1000px">
     <thead>
       <tr>
-        <td>城市</td>
-        <td>日期</td>
-        <td>位置</td>
-        <td>状态</td>
-        <td>赞助</td>
+        <th>城市</th>
+        <th>日期</th>
+        <th>位置</th>
+        <th>状态</th>
+        <th>赞助</th>
       </tr>
     </thead>
     <tbody>
@@ -55,6 +66,7 @@
       {{ end }}
     </tbody>
   </table>
+</div>
 </div>
 {{end}}
 {{end}}
