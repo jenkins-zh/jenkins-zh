@@ -1,0 +1,60 @@
+{{ define "main" }}
+<style> 
+  table,table tr th, table tr td { 
+      border:1px solid #eee; 
+  }
+  table { 
+      text-align: center; 
+      border-collapse: collapse;
+  }
+  .content {
+      margin: 20px auto;
+      max-width: 1000px;
+  }
+  h3 {
+    text-align: center;  
+  }
+</style>
+{{ range (.Pages.GroupByParam "year").Reverse }}
+<div class="content">
+  <h3>{{.Key}}年度计划安排</h3>
+  <table width="1000px">
+    <thead>
+      <tr>
+        <td>城市</td>
+        <td>日期</td>
+        <td>位置</td>
+        <td>状态</td>
+        <td>赞助</td>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range .Pages }}
+      <tr>
+        <td>{{ .Params.city }}</td>
+        <td>{{ .Params.hostDate }}</td>
+        <td>{{with .Params.location}}{{.}}{{else}}待定{{end}}</td>
+        <td>
+          {{ $link := .RelPermalink }}
+          {{with .Params.status}}<a href="{{ $link }}">{{.}}</a>{{else}}敬请期待{{end}}
+        </td>
+        <td>
+          {{with .Params.sponsors}}
+            {{ range . }}
+            <img src="/images/sponsors/{{.}}.png">
+            {{ end }}
+          {{else}}
+          <a href="{{.Site.Params.ghrepo}}edit/master/content/{{.File.Path}}"
+            class="f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link"
+            target="_blank">
+            立即申请
+          </a>
+          {{end}}
+        </td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>
+{{end}}
+{{end}}
