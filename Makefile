@@ -38,6 +38,6 @@ live:
 
 deploy:
 	make update
-	hugo
+	hugo -F
 	cp -r public/* jenkins-zh.github.io
 	cd jenkins-zh.github.io && git add . && git commit -m 'deploy' && git push
