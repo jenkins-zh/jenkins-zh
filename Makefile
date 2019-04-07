@@ -40,5 +40,5 @@ deploy:
 	make update
 	hugo -F
 	cp -r public/* jenkins-zh.github.io
-	cd jenkins-zh.github.io && git add . && git commit -m 'deploy' && git push
+	cd jenkins-zh.github.io && rm -rf images/ && rm -rf wechat/images/ && git add . && git commit -m 'deploy' && git push
 
