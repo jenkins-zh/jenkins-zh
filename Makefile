@@ -21,13 +21,13 @@ change-format:
 	rm -rf content/wechat/images/*.md
 	rm -rf content/wechat/management/
 	rm -rf content/wechat/*.md
-	cp -r content/wechat/images/ static/images/
+	cp -r content/wechat/images/ content/wechat/articles/images/
 
 update:
 	if [ -d "jenkins-zh.github.io" ]; then \
 	    cd jenkins-zh.github.io && git pull; \
 	else \
-		git clone git@github.com:jenkins-zh/jenkins-zh.github.io.git; \
+		git clone https://github.com/jenkins-zh/jenkins-zh.github.io; \
 	fi
 	make fetch-theme
 	make fetch-wechat-articles
@@ -41,3 +41,4 @@ deploy:
 	hugo -F
 	cp -r public/* jenkins-zh.github.io
 	cd jenkins-zh.github.io && git add . && git commit -m 'deploy' && git push
+
