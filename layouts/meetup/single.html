@@ -114,7 +114,12 @@
         {{ $speaker := getJSON "/content/speaker/" . ".json" }}
       <div class="guest">
         <div>
+          {{ $img := print "static/images/speakers/" . ".png" }}
+          {{ if (fileExists $img ) -}}
           <img src="/images/speakers/{{.}}.png" alt>
+          {{else}}
+          <img src="/images/speakers/anonymous.png" alt>
+          {{- end }}
         </div>
         <div class="guest-detail">
           <div class="title">
