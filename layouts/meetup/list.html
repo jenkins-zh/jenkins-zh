@@ -44,7 +44,11 @@
       <tr>
         <td>{{ .Params.city }}</td>
         <td>{{ with .Params.hostDate }}{{ . }}{{ else }}待定{{ end }}</td>
-        <td>{{ with .Params.location }}{{.}}{{else}}待定{{end}}</td>
+        <td>
+          {{ if ne .Params.location "" }}
+          {{ if ne .Params.map "" }}<a target="_blank" href="{{.Params.map}}">{{.Params.location}}</a>{{else}}{{.Params.location}}{{ end }}
+          {{else}}待定{{end}}
+        </td>
         <td>
           {{ $link := .RelPermalink }}
           {{with .Params.status}}<a href="{{ $link }}">{{.}}</a>{{else}}敬请期待{{end}}
