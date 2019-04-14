@@ -12,5 +12,5 @@ draft: false
 | 微信公众号 | {{< ghref "LinuxSuRen" "LinuxSuRen" >}} |
 | [开源中国](https://my.oschina.net/jenkinszh) | {{< ghref "donhui" "donhui" >}} |
 | [CSDN](https://blog.csdn.net/u014249394/column/info/36607) | {{< ghref "P01son6415" "P01son6415" >}} |
-| [简书](https://www.jianshu.com/c/b34c41b2f68f) | {{< ghref "zacker330" "zacker330" >}} |
+| [简书](https://www.jianshu.com/c/b34c41b2f68f) | {{< ghref "yJunS" "yJunS" >}} |
 | [掘金](https://juejin.im/user/5caa989b5188254418337798) | {{< ghref "zacker330" "zacker330" >}} |
