@@ -1,6 +1,6 @@
 ---
 title: "社交媒体"
-title: "Jenkins 中文社区的社交媒体"
+description: "Jenkins 中文社区的社交媒体"
 date: 2019-04-12T14:26:05+08:00
 draft: false
 ---

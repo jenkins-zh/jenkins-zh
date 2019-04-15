@@ -4,3 +4,4 @@ jenkins-zh.github.io
 public
 
 **/*.DS_Store
+.idea/
