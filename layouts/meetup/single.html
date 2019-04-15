@@ -92,7 +92,9 @@
       </div>
       <div>
         <span class="title">地点:</span>
-        <span>{{ .Params.location }}</span>
+        <span>
+            {{ if ne .Params.map "" }}<a target="_blank" href="{{.Params.map}}">{{.Params.location}}</a>{{else}}{{.Params.location}}{{ end }}
+        </span>
       </div>
       <div>
         <span class="title">费用:</span>
@@ -114,7 +116,12 @@
         {{ $speaker := getJSON "/content/speaker/" . ".json" }}
       <div class="guest">
         <div>
+          {{ $img := print "static/images/speakers/" . ".png" }}
+          {{ if (fileExists $img ) -}}
           <img src="/images/speakers/{{.}}.png" alt>
+          {{else}}
+          <img src="/images/speakers/anonymous.png" alt>
+          {{- end }}
         </div>
         <div class="guest-detail">
           <div class="title">
