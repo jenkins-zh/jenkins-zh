@@ -21,7 +21,11 @@ pipeline {
                 sh '''
                 pwd
                 ls -ahl
-                ./scripts/change-format.sh
+                cd content/wechat/articles && rm sample.md && find . -name *.md -exec mv {} .
+                rm -rfv content/wechat/articles/2018
+                rm -rfv content/wechat/images/*.md
+                rm -rfv content/wechat/management/
+                rm -rfv content/wechat/*.md
                 '''
             }
         }
