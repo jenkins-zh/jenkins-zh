@@ -11,12 +11,12 @@ pipeline {
         }
         stage("Fetch theme"){
             steps{
-                gitClone('https://github.com/jenkins-zh/hugo-jenkins-theme', 'themes')
+                gitClone('https://github.com/jenkins-zh/hugo-jenkins-theme', 'themes/hugo-jenkins-theme')
             }
         }
         stage("Fetch wechat articles"){
             steps{
-                gitClone('https://github.com/jenkins-infra/wechat', 'content')
+                gitClone('https://github.com/jenkins-infra/wechat', 'content/wechat')
 
                 sh '''
                 pwd
