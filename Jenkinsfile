@@ -3,6 +3,13 @@ pipeline {
         label "hugo"
     }
 
+    triggers {
+        anyOf{
+            upstream 'jenkins-zh/wechat/master/'
+            upstream 'jenkins-zh/hugo-jenkins-theme/master/'
+        }
+    }
+
     stages{
         stage("Clone site"){
             steps{
