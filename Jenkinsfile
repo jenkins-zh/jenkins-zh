@@ -4,10 +4,7 @@ pipeline {
     }
 
     triggers {
-        anyOf{
-            upstream 'jenkins-zh/wechat/master/'
-            upstream 'jenkins-zh/hugo-jenkins-theme/master/'
-        }
+        upstream(upstreamProjects: 'jenkins-zh/wechat/master/,jenkins-zh/hugo-jenkins-theme/master/', threshold: hudson.model.Result.SUCCESS)
     }
 
     stages{
