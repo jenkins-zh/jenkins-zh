@@ -52,6 +52,17 @@ pipeline {
                     targetUrl: 'https://github.com/jenkins-zh/jenkins-zh.github.io'
             }
         }
+        stage("Notify"){
+            when {
+                branch 'master'
+            }
+            steps{
+                mail from: 'admin@mail.jenkins-zh.cn',
+                    to: 'developer@mail.jenkins-zh.cn',
+                    subject: 'Jenkins 中文社区网站发布成功！', 
+                    body: '访问地址 https://jenkins-zh.cn/'
+            }
+        }
     }
 }
 
