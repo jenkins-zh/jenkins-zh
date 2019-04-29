@@ -37,6 +37,7 @@ pipeline {
                         rm -rfv content/wechat/images/*.md
                         rm -rfv content/wechat/management/
                         rm -rfv content/wechat/*.md
+                        cp -r content/wechat/images/ content/wechat/articles/images/
                         '''
                     }
                 }
