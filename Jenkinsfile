@@ -3,39 +3,48 @@ pipeline {
         label "hugo"
     }
 
+    options {
+        disableConcurrentBuilds()
+    }
+
     triggers {
         upstream(upstreamProjects: 'jenkins-zh/wechat/master/,jenkins-zh/hugo-jenkins-theme/master/', threshold: hudson.model.Result.SUCCESS)
     }
 
     stages{
-        stage("Clone site"){
-            steps{
-                gitClone('https://github.com/jenkins-zh/jenkins-zh.github.io', 'jenkins-zh.github.io')
-            }
-        }
-        stage("Fetch theme"){
-            steps{
-                gitClone('https://github.com/jenkins-zh/hugo-jenkins-theme', 'themes/hugo-jenkins-theme')
-            }
-        }
-        stage("Fetch wechat articles"){
-            steps{
-                gitClone('https://github.com/jenkins-infra/wechat', 'content/wechat')
+        stage("Fetch source"){
+            failFast true
+			parallel {
+                stage('Clone site'){
+                    steps{
+                        gitClone('https://github.com/jenkins-zh/jenkins-zh.github.io', 'jenkins-zh.github.io')
+                    }
+                }
+                stage("Fetch theme"){
+                    steps{
+                        gitClone('https://github.com/jenkins-zh/hugo-jenkins-theme', 'themes/hugo-jenkins-theme')
+                    }
+                }
+                stage("Fetch wechat articles"){
+                    steps{
+                        gitClone('https://github.com/jenkins-infra/wechat', 'content/wechat')
 
-                sh '''
-                pwd
-                ls -ahl
-                cd content/wechat/articles && rm sample.md && find . -name *.md -exec mv {} . \\;
-                rm -rfv content/wechat/articles/2018
-                rm -rfv content/wechat/images/*.md
-                rm -rfv content/wechat/management/
-                rm -rfv content/wechat/*.md
-                '''
+                        sh '''
+                        pwd
+                        ls -ahl
+                        cd content/wechat/articles && rm sample.md && find . -name *.md -exec mv {} . \\;
+                        rm -rfv content/wechat/articles/2018
+                        rm -rfv content/wechat/images/*.md
+                        rm -rfv content/wechat/management/
+                        rm -rfv content/wechat/*.md
+                        '''
+                    }
+                }
             }
         }
         stage("Build"){
             steps{
-                hugo destination: 'jenkins-zh.github.io', verbose: true
+                hugo destination: 'jenkins-zh.github.io', buildFuture: true, verbose: true
             }
         }
         stage("Publish"){
