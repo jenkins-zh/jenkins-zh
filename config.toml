@@ -1,4 +1,4 @@
-baseURL = "https://jenkins-zh.github.io/"
+baseURL = "https://jenkins-zh.cn"
 languageCode = "zh-CN"
 defaultContentLanguage = "zh"
 title = "Jenkins 中文社区"
