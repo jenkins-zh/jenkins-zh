@@ -8,7 +8,7 @@ draft: false
 社区所有的技术、活动类的文章都会同步发布到下面的社交媒体平台上。
 
 | 媒体 | 方式 | 负责人 |
-|----|----|
+|----|----|----|
 | 微信公众号 | 人工 | {{< ghref "LinuxSuRen" "LinuxSuRen" >}} |
 | [开源中国](https://my.oschina.net/jenkinszh) | 人工 | {{< ghref "donhui" "donhui" >}} |
 | [CSDN](https://blog.csdn.net/u014249394/column/info/36607) | 人工 | {{< ghref "P01son6415" "P01son6415" >}} |
