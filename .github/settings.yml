@@ -1,0 +1,27 @@
+repository:
+  name: jenkins-zh
+  description: Jenkins 中文社区网站源码
+  homepage: https://jenkins-zh.cn
+  private: false
+  has_issues: true
+  has_wiki: false
+  has_downloads: false
+  default_branch: master
+  allow_squash_merge: true
+  allow_merge_commit: true
+  allow_rebase_merge: true
+
+# Labels: define labels for Issues and Pull Requests
+labels:
+  - name: newbie
+    color: abe7f4
+    description: 新手上路
+  - name: bug
+    color: d73a4a
+    description: Something isn't working
+  - name: enhancement
+    color: a2eeef
+    description: New feature or request
+  - name: help wanted
+    color: 008672
+    description: Extra attention is needed
