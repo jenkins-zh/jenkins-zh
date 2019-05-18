@@ -44,7 +44,13 @@ pipeline {
         }
         stage("Build"){
             steps{
-                hugo destination: 'jenkins-zh.github.io', buildFuture: true, verbose: true
+                script {
+                    def baseUrl = "https://jenkins-zh.cn/"
+                    if env.BRANCH_NAME != "master" {
+                        baseUrl = "http://abc.preview.jenkins-zh.cn/"
+                    }
+                    hugo destination: 'jenkins-zh.github.io', buildFuture: true, verbose: true, baseUrl: baseUrl
+                }
             }
         }
         stage("Image"){

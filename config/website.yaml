@@ -26,7 +26,7 @@ spec:
       - env:
         - name: PORT
           value: "80"
-        image: surenpi/jenkins-zh:v1.0.0
+        image: surenpi/jenkins-zh:vPR-43-7
         imagePullPolicy: IfNotPresent
         name: website
         ports:
