@@ -114,20 +114,21 @@ pipeline {
                                 case "Deployment":
                                 item.spec.template.spec.containers[0].image = "surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID"
                                 echo 'going to write website-deploy.yaml'
-                                writeYaml file: 'website-deploy.yaml', data: item
                                 break;
                                 case "Ingress":
                                 item.spec.rules[0].host = "${BRANCH_NAME}.preview.jenkins-zh.cn"
                                 echo 'going to write website-ingress.yaml'
-                                writeYaml file: 'website-ingress.yaml', data: item
                                 break;
                                 case "Service":
                                 echo 'going to write website-service.yaml'
-                                writeYaml file: 'website-service.yaml', data: item
+                                
                                 break;
                             }
                         }
 
+                        writeYaml file: 'website-deploy.yaml', data: website[0]
+                        writeYaml file: 'website-service.yaml', data: website[0]
+                        writeYaml file: 'website-ingress.yaml', data: website[0]
                         sh '''
                         cat website-deploy.yaml
                         kubectl apply -f website-deploy.yaml -n $BRANCH_NAME
