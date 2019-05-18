@@ -100,7 +100,7 @@ pipeline {
             steps{
                 container('tools'){
                     sh '''
-                    rm -rfv website-deploy.yaml website-ingress.yaml website-service.yaml
+                    rm -rfv website-ns.yaml website-deploy.yaml website-ingress.yaml website-service.yaml
                     '''
 
                     script{
@@ -119,17 +119,20 @@ pipeline {
                                 item.spec.rules[0].host = "${BRANCH_NAME}.preview.jenkins-zh.cn"
                                 echo 'going to write website-ingress.yaml'
                                 break;
-                                case "Service":
-                                echo 'going to write website-service.yaml'
-                                
+                                case "Namespace":
+                                metadata.name = "${BRANCH_NAME}"
+                                echo 'going to write website-ns.yaml'
                                 break;
                             }
                         }
 
-                        writeYaml file: 'website-deploy.yaml', data: website[0]
-                        writeYaml file: 'website-service.yaml', data: website[0]
-                        writeYaml file: 'website-ingress.yaml', data: website[0]
+                        writeYaml file: 'website-ns.yaml', data: website[0]
+                        writeYaml file: 'website-deploy.yaml', data: website[1]
+                        writeYaml file: 'website-service.yaml', data: website[2]
+                        writeYaml file: 'website-ingress.yaml', data: website[3]
                         sh '''
+                        cat website-ns.yaml
+                        kubectl apply -f website-ns.yaml
                         cat website-deploy.yaml
                         kubectl apply -f website-deploy.yaml -n $BRANCH_NAME
                         cat website-service.yaml
