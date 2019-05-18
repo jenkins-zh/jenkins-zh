@@ -101,6 +101,7 @@ pipeline {
 
                     sh '''
                     kubectl apply -f website.yaml -n $BRANCH_NAME
+                    cat website.yaml
                     '''
 
                     pullRequest.createStatus(status: 'success',
