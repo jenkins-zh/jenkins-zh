@@ -81,7 +81,7 @@ pipeline {
             steps{
                 container('tools'){
                     sh '''
-                    rm -rfv website.yaml
+                    rm -rfv website-deploy.yaml website-ingress.yaml website-service.yaml
                     '''
 
                     script{
@@ -91,21 +91,27 @@ pipeline {
                             switch(item.kind) {
                                 case "Deployment":
                                 item.spec.template.spec.containers[0].image = "surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID"
+                                writeYaml file: 'website-deploy.yaml', data: item
                                 break;
                                 case "Ingress":
                                 item.spec.rules[0].host = "${BRANCH_NAME}.preview.jenkins-zh.cn"
+                                writeYaml file: 'website-ingress.yaml', data: item
+                                break;
+                                case "Service":
+                                item.spec.rules[0].host = "${BRANCH_NAME}.preview.jenkins-zh.cn"
+                                writeYaml file: 'website-service.yaml', data: item
                                 break;
                             }
                         }
-
-                        println website
-                        println website.toString()
-                        writeYaml file: 'website.yaml', data: website
                     }
 
                     sh '''
-                    cat website.yaml
-                    kubectl apply -f website.yaml -n $BRANCH_NAME
+                    cat website-deploy.yaml
+                    kubectl apply -f website-deploy.yaml -n $BRANCH_NAME
+                    cat website-service.yaml
+                    kubectl apply -f website-service.yaml -n $BRANCH_NAME
+                    cat website-ingress.yaml
+                    kubectl apply -f website-ingress.yaml -n $BRANCH_NAME
                     '''
 
                     script{
