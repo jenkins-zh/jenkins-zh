@@ -120,7 +120,7 @@ pipeline {
                                 echo 'going to write website-ingress.yaml'
                                 break;
                                 case "Namespace":
-                                metadata.name = "${BRANCH_NAME}"
+                                item.metadata.name = "${BRANCH_NAME}"
                                 echo 'going to write website-ns.yaml'
                                 break;
                             }
