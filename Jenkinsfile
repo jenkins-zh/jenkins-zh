@@ -107,6 +107,7 @@ pipeline {
                         if(params.upstream != ''){
                             env.BRANCH_NAME = params.upstream
                         }
+                        env.BRANCH_NAME = env.BRANCH_NAME.toLowerCase()
                         def website = readYaml file: "config/website.yaml"
 
                         for(item in website){
