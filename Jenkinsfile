@@ -122,7 +122,6 @@ pipeline {
                                 writeYaml file: 'website-ingress.yaml', data: item
                                 break;
                                 case "Service":
-                                item.spec.rules[0].host = "${BRANCH_NAME}.preview.jenkins-zh.cn"
                                 echo 'going to write website-service.yaml'
                                 writeYaml file: 'website-service.yaml', data: item
                                 break;
