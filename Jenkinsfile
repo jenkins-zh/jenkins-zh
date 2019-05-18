@@ -7,6 +7,10 @@ pipeline {
         disableConcurrentBuilds()
     }
 
+	parameters {
+        string defaultValue: '', description: '', name: 'upstream', trim: true
+    }
+
     triggers {
         upstream(upstreamProjects: 'jenkins-zh/wechat/master/,jenkins-zh/hugo-jenkins-theme/master/', threshold: hudson.model.Result.SUCCESS)
     }
@@ -55,27 +59,42 @@ pipeline {
         }
         stage("Image"){
             when {
-                not {
-                    branch 'master'
+                anyOf {
+                    expression {
+                        return params.upstream != ''
+                    }
+                    not {
+                        branch 'master'
+                    }
                 }
             }
             steps{
                 container('tools'){
-                    withCredentials([usernamePassword(credentialsId: 'jenkins-zh-docker', passwordVariable: 'PASSWD', usernameVariable: 'USER')]) {
-                        sh '''
-                        docker build . -t surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID
-                        ##docker login --username $USER --password $PASSWD
-                        ##docker push surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID
-                        ##docker logout
-                        '''
+                    script {
+                        if(params.upstream != ''){
+                            env.BRANCH_NAME = params.upstream
+                        }
+                        withCredentials([usernamePassword(credentialsId: 'jenkins-zh-docker', passwordVariable: 'PASSWD', usernameVariable: 'USER')]) {
+                            sh '''
+                            docker build . -t surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID
+                            ##docker login --username $USER --password $PASSWD
+                            ##docker push surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID
+                            ##docker logout
+                            '''
+                        }
                     }
                 }
             }
         }
         stage("Preview"){
             when {
-                not {
-                    branch 'master'
+                anyOf {
+                    expression {
+                        return params.upstream != ''
+                    }
+                    not {
+                        branch 'master'
+                    }
                 }
             }
             steps{
@@ -85,36 +104,40 @@ pipeline {
                     '''
 
                     script{
+                        if(params.upstream != ''){
+                            env.BRANCH_NAME = params.upstream
+                        }
                         def website = readYaml file: "config/website.yaml"
 
                         for(item in website){
                             switch(item.kind) {
                                 case "Deployment":
                                 item.spec.template.spec.containers[0].image = "surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID"
+                                echo 'going to write website-deploy.yaml'
                                 writeYaml file: 'website-deploy.yaml', data: item
                                 break;
                                 case "Ingress":
                                 item.spec.rules[0].host = "${BRANCH_NAME}.preview.jenkins-zh.cn"
+                                echo 'going to write website-ingress.yaml'
                                 writeYaml file: 'website-ingress.yaml', data: item
                                 break;
                                 case "Service":
                                 item.spec.rules[0].host = "${BRANCH_NAME}.preview.jenkins-zh.cn"
+                                echo 'going to write website-service.yaml'
                                 writeYaml file: 'website-service.yaml', data: item
                                 break;
                             }
                         }
-                    }
 
-                    sh '''
-                    cat website-deploy.yaml
-                    kubectl apply -f website-deploy.yaml -n $BRANCH_NAME
-                    cat website-service.yaml
-                    kubectl apply -f website-service.yaml -n $BRANCH_NAME
-                    cat website-ingress.yaml
-                    kubectl apply -f website-ingress.yaml -n $BRANCH_NAME
-                    '''
+                        sh '''
+                        cat website-deploy.yaml
+                        kubectl apply -f website-deploy.yaml -n $BRANCH_NAME
+                        cat website-service.yaml
+                        kubectl apply -f website-service.yaml -n $BRANCH_NAME
+                        cat website-ingress.yaml
+                        kubectl apply -f website-ingress.yaml -n $BRANCH_NAME
+                        '''
 
-                    script{
                         pullRequest.createStatus(status: 'success',
                             context: 'continuous-integration/jenkins/pr-merge/preview',
                             description: 'website preview',
