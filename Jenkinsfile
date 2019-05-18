@@ -96,7 +96,7 @@ pipeline {
 
                         println website
                         println website.toString()
-                        writeFile file: 'website.yaml', text: website.toString()
+                        writeYaml file: 'website.yaml', data: website
                     }
 
                     sh '''
