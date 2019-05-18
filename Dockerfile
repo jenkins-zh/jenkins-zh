@@ -13,5 +13,5 @@ ENV PORT=80 \
     SITE_ROOT=/public
 ENTRYPOINT ["/usr/bin/caddy"]
 CMD ["-conf", "/Caddyfile", "-root", "${SITE_ROOT}"]
-COPY artifacts/Caddyfile /
-COPY public /public
+COPY config/Caddyfile /
+COPY jenkins-zh.github.io /public
