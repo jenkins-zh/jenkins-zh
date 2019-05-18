@@ -77,9 +77,9 @@ pipeline {
                         withCredentials([usernamePassword(credentialsId: 'jenkins-zh-docker', passwordVariable: 'PASSWD', usernameVariable: 'USER')]) {
                             sh '''
                             docker build . -t surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID
-                            ##docker login --username $USER --password $PASSWD
-                            ##docker push surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID
-                            ##docker logout
+                            docker login --username $USER --password $PASSWD
+                            docker push surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID
+                            docker logout
                             '''
                         }
                     }
