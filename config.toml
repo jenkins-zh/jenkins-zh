@@ -61,7 +61,7 @@ ghdocsrepo = "https://github.com/jenkins-zh/jenkins-zh/tree/master"
 github_contributors_link = "https://github.com/jenkins-zh/jenkins-zh/graphs/contributors"
 github_contributors = "Jenkins 社区贡献者"
 welcome = "共建开放、包容、活跃的 Jenkins 社区"
-env = "production"
+#env = "production"
 
 [params.comments.utterances]
 enable = true

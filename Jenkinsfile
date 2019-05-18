@@ -54,6 +54,11 @@ pipeline {
             }
         }
         stage("Image"){
+            when {
+                not {
+                    branch 'master'
+                }
+            }
             steps{
                 container('tools'){
                     withCredentials([usernamePassword(credentialsId: 'jenkins-zh-docker', passwordVariable: 'PASSWD', usernameVariable: 'USER')]) {
@@ -64,6 +69,39 @@ pipeline {
                         docker logout
                         '''
                     }
+                }
+            }
+        }
+        stage("Preview"){
+            when {
+                not {
+                    branch 'master'
+                }
+            }
+            steps{
+                container('tools'){
+                    script{
+                        def website = readYaml file: "config/website.yaml"
+
+                        for(item in website){
+                            switch(item.kind) {
+                                case "Deployment":
+                                item.spec.template.spec.containers[0].image = "surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID"
+                                break;
+                                case "Ingress":
+                                item.spec.rules[0].host = "$BRANCH_NAME.preview.jenkins-zh.cn"
+                                break;
+                            }
+                        }
+
+                        println website
+                        println website.toString()
+                        writeFile file: 'website.yaml', text: website.toString()
+                    }
+
+                    sh '''
+                    kubectl apply -f website.yaml -n $BRANCH_NAME
+                    '''
                 }
             }
         }
