@@ -102,6 +102,11 @@ pipeline {
                     sh '''
                     kubectl apply -f website.yaml -n $BRANCH_NAME
                     '''
+
+                    pullRequest.createStatus(status: 'success',
+                         context: 'continuous-integration/jenkins/pr-merge/preview',
+                         description: 'website preview',
+                         targetUrl: "http://${BRANCH_NAME}.preview.jenkins-zh.cn")
                 }
             }
         }
