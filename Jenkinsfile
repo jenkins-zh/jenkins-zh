@@ -89,7 +89,7 @@ pipeline {
                                 item.spec.template.spec.containers[0].image = "surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID"
                                 break;
                                 case "Ingress":
-                                item.spec.rules[0].host = "$BRANCH_NAME.preview.jenkins-zh.cn"
+                                item.spec.rules[0].host = "${BRANCH_NAME}.preview.jenkins-zh.cn"
                                 break;
                             }
                         }
