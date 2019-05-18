@@ -80,6 +80,10 @@ pipeline {
             }
             steps{
                 container('tools'){
+                    sh '''
+                    rm -rfv website.yaml
+                    '''
+
                     script{
                         def website = readYaml file: "config/website.yaml"
 
