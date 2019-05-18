@@ -74,6 +74,7 @@ pipeline {
                         if(params.upstream != ''){
                             env.BRANCH_NAME = params.upstream
                         }
+                        env.BRANCH_NAME = env.BRANCH_NAME.toLowerCase()
                         withCredentials([usernamePassword(credentialsId: 'jenkins-zh-docker', passwordVariable: 'PASSWD', usernameVariable: 'USER')]) {
                             sh '''
                             docker build . -t surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID
