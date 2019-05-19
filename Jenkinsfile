@@ -144,10 +144,12 @@ pipeline {
                         kubectl apply -f website-ingress.yaml -n $BRANCH_NAME
                         '''
 
-                        pullRequest.createStatus(status: 'success',
-                            context: 'continuous-integration/jenkins/pr-merge/preview',
-                            description: 'Website preview',
-                            targetUrl: "http://${BRANCH_NAME}.preview.jenkins-zh.cn")
+                        if(params.previewUpstream != '') {
+                            pullRequest.createStatus(status: 'success',
+                                context: 'continuous-integration/jenkins/pr-merge/preview',
+                                description: 'Website preview',
+                                targetUrl: "http://${BRANCH_NAME}.preview.jenkins-zh.cn")
+                        }
                     }
                 }
             }
