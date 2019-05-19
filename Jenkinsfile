@@ -51,8 +51,10 @@ pipeline {
             steps{
                 script {
                     def baseUrl = "https://jenkins-zh.cn/"
-                    if (env.BRANCH_NAME != "master") {
-                        baseUrl = "http://abc.preview.jenkins-zh.cn/"
+                    if(params.previewUpstream != ''){
+                        baseUrl = "http://" + params.previewUpstream.toLowerCase() + ".preview.jenkins-zh.cn/"
+                    }else if (env.BRANCH_NAME != "master") {
+                        baseUrl = "http://" + env.BRANCH_NAME.toLowerCase() + ".preview.jenkins-zh.cn/"
                     }
                     hugo destination: 'jenkins-zh.github.io', buildFuture: true, verbose: true, baseUrl: baseUrl
                 }
