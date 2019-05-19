@@ -82,9 +82,15 @@ pipeline {
                             sh '''
                             docker build . -t surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID
                             docker login --username $USER --password $PASSWD
-                            docker push surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID
-                            docker logout
                             '''
+                            retry(3) {
+                                timeout(3) {
+                                    sh '''
+                                    docker push surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID
+                                    docker logout
+                                    '''
+                                }
+                            }
                         }
                     }
                 }
