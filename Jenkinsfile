@@ -5,6 +5,11 @@ pipeline {
 
     options {
         disableConcurrentBuilds()
+        quietPeriod 5
+    }
+
+	parameters {
+        string defaultValue: '', description: '', name: 'previewUpstream', trim: true
     }
 
     triggers {
@@ -44,12 +49,123 @@ pipeline {
         }
         stage("Build"){
             steps{
-                hugo destination: 'jenkins-zh.github.io', buildFuture: true, verbose: true
+                script {
+                    def baseUrl = "https://jenkins-zh.cn/"
+                    if (env.BRANCH_NAME != "master") {
+                        baseUrl = "http://abc.preview.jenkins-zh.cn/"
+                    }
+                    hugo destination: 'jenkins-zh.github.io', buildFuture: true, verbose: true, baseUrl: baseUrl
+                }
+            }
+        }
+        stage("Image"){
+            when {
+                anyOf {
+                    expression {
+                        return params.previewUpstream != ''
+                    }
+                    not {
+                        branch 'master'
+                    }
+                }
+            }
+            steps{
+                container('tools'){
+                    script {
+                        if(params.previewUpstream != ''){
+                            env.BRANCH_NAME = params.previewUpstream
+                        } else {
+                            echo 'preview upstream is: ' + params.previewUpstream + '.'
+                        }
+                        env.BRANCH_NAME = env.BRANCH_NAME.toLowerCase()
+                        withCredentials([usernamePassword(credentialsId: 'jenkins-zh-docker', passwordVariable: 'PASSWD', usernameVariable: 'USER')]) {
+                            sh '''
+                            docker build . -t surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID
+                            docker login --username $USER --password $PASSWD
+                            docker push surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID
+                            docker logout
+                            '''
+                        }
+                    }
+                }
+            }
+        }
+        stage("Preview"){
+            when {
+                anyOf {
+                    expression {
+                        return params.previewUpstream != ''
+                    }
+                    not {
+                        branch 'master'
+                    }
+                }
+            }
+            steps{
+                container('tools'){
+                    sh '''
+                    rm -rfv website-ns.yaml website-deploy.yaml website-ingress.yaml website-service.yaml
+                    '''
+
+                    script{
+                        if(params.previewUpstream != ''){
+                            env.BRANCH_NAME = params.previewUpstream
+                        }
+                        env.BRANCH_NAME = env.BRANCH_NAME.toLowerCase()
+                        def website = readYaml file: "config/website.yaml"
+
+                        for(item in website){
+                            switch(item.kind) {
+                                case "Deployment":
+                                item.spec.template.spec.containers[0].image = "surenpi/jenkins-zh:v$BRANCH_NAME-$BUILD_ID"
+                                echo 'going to write website-deploy.yaml'
+                                break;
+                                case "Ingress":
+                                item.spec.rules[0].host = "${BRANCH_NAME}.preview.jenkins-zh.cn"
+                                echo 'going to write website-ingress.yaml'
+                                break;
+                                case "Namespace":
+                                item.metadata.name = "${BRANCH_NAME}"
+                                echo 'going to write website-ns.yaml'
+                                break;
+                            }
+                        }
+
+                        writeYaml file: 'website-ns.yaml', data: website[0]
+                        writeYaml file: 'website-deploy.yaml', data: website[1]
+                        writeYaml file: 'website-service.yaml', data: website[2]
+                        writeYaml file: 'website-ingress.yaml', data: website[3]
+                        sh '''
+                        cat website-ns.yaml
+                        kubectl apply -f website-ns.yaml
+                        cat website-deploy.yaml
+                        kubectl apply -f website-deploy.yaml -n $BRANCH_NAME
+                        cat website-service.yaml
+                        kubectl apply -f website-service.yaml -n $BRANCH_NAME
+                        cat website-ingress.yaml
+                        kubectl apply -f website-ingress.yaml -n $BRANCH_NAME
+                        '''
+
+                        if(params.previewUpstream != '') {
+                            echo 'preview upstream is: ' + params.previewUpstream
+                        } else {
+                            pullRequest.createStatus(status: 'success',
+                                context: 'continuous-integration/jenkins/pr-merge/preview',
+                                description: 'Website preview',
+                                targetUrl: "http://${BRANCH_NAME}.preview.jenkins-zh.cn")
+                        }
+                    }
+                }
             }
         }
         stage("Publish"){
             when {
-                branch 'master'
+                allOf {
+                    expression {
+                        return params.previewUpstream == ''
+                    }
+                    branch 'master'
+                }
             }
             steps{
                 hugoGitPublish authorEmail: 'linuxsuren@gmail.com', authorName: 'suren',
@@ -63,7 +179,12 @@ pipeline {
         }
         stage("Notify"){
             when {
-                branch 'master'
+                allOf {
+                    expression {
+                        return params.previewUpstream == ''
+                    }
+                    branch 'master'
+                }
             }
             steps{
                 mail from: 'admin@mail.jenkins-zh.cn',

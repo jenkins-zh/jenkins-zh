@@ -1,0 +1,4 @@
+*:{%PORT%} 
+root {%SITE_ROOT%}
+limits 10485760
+log stdout
