@@ -63,8 +63,11 @@ pipeline {
                     def baseUrl = "https://jenkins-zh.cn/"
                     if(params.previewUpstream != ''){
                         baseUrl = "http://" + params.previewUpstream.toLowerCase() + ".preview.jenkins-zh.cn/"
+                        env.HUGO_PREVIEW = "true"
                     }else if (env.BRANCH_NAME != "master") {
                         baseUrl = "http://" + env.BRANCH_NAME.toLowerCase() + ".preview.jenkins-zh.cn/"
+                        baseUrl = "http://" + params.previewUpstream.toLowerCase() + ".preview.jenkins-zh.cn/"
+                        env.HUGO_PREVIEW = "true"
                     }
                     hugo destination: 'jenkins-zh.github.io', buildFuture: true, verbose: true, baseUrl: baseUrl
                 }
