@@ -71,7 +71,7 @@ pipeline {
                         hugoPreview = "true"
                     }
                     withEnv(['HUGO_PREVIEW=' + hugoPreview]) {
-                        hugo destination: 'jenkins-zh.github.io', buildFuture: true, verbose: true, baseUrl: baseUrl
+                        hugo destination: 'jenkins-zh.github.io', buildFuture: true, verbose: true, baseUrl: baseUrl, env: "HUGO_PREVIEW=" + hugoPreview
                     }
                 }
             }
