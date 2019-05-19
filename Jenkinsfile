@@ -5,7 +5,7 @@ pipeline {
 
     options {
         disableConcurrentBuilds()
-        rateLimitBuilds([count: 20, durationName: 'hour', userBoost: true])
+        quietPeriod 5
     }
 
 	parameters {
