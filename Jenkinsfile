@@ -61,15 +61,18 @@ pipeline {
             steps{
                 script {
                     def baseUrl = "https://jenkins-zh.cn/"
+                    def hugoPreview = ""
                     if(params.previewUpstream != ''){
                         baseUrl = "http://" + params.previewUpstream.toLowerCase() + ".preview.jenkins-zh.cn/"
-                        env.HUGO_PREVIEW = "true"
+                        hugoPreview = "true"
                     }else if (env.BRANCH_NAME != "master") {
                         baseUrl = "http://" + env.BRANCH_NAME.toLowerCase() + ".preview.jenkins-zh.cn/"
                         baseUrl = "http://" + params.previewUpstream.toLowerCase() + ".preview.jenkins-zh.cn/"
-                        env.HUGO_PREVIEW = "true"
+                        hugoPreview = "true"
                     }
-                    hugo destination: 'jenkins-zh.github.io', buildFuture: true, verbose: true, baseUrl: baseUrl
+                    withEnv(['HUGO_PREVIEW=' + hugoPreview]) {
+                        hugo destination: 'jenkins-zh.github.io', buildFuture: true, verbose: true, baseUrl: baseUrl
+                    }
                 }
             }
         }
