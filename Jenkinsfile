@@ -70,7 +70,7 @@ pipeline {
                         baseUrl = "http://" + params.previewUpstream.toLowerCase() + ".preview.jenkins-zh.cn/"
                         environment = "preview"
                     }
-                    hugo destination: 'jenkins-zh.github.io', buildFuture: true, verbose: true, baseUrl: baseUrl, environment: hugoPreview
+                    hugo destination: 'jenkins-zh.github.io', buildFuture: true, verbose: true, baseUrl: baseUrl, environment: environment
                 }
             }
         }
