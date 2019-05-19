@@ -145,7 +145,7 @@ pipeline {
 
                         pullRequest.createStatus(status: 'success',
                             context: 'continuous-integration/jenkins/pr-merge/preview',
-                            description: 'website preview',
+                            description: 'Website preview',
                             targetUrl: "http://${BRANCH_NAME}.preview.jenkins-zh.cn")
                     }
                 }
