@@ -1,0 +1,12 @@
+{{ define "main" }}
+下面是社区的合作伙伴：
+
+<div>
+{{ range .Pages }}
+    <div>
+    {{.Params.displayName}}
+    </div>
+{{ end }}
+</div>
+
+{{end}}
