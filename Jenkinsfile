@@ -37,9 +37,9 @@ pipeline {
 
                         script{
                             if(params.previewUpstreamPR != ''){
-                                sh 'git fetch origin +refs/pull/' + params.previewUpstreamPR + '/merge'
+                                sh 'cd content/wechat && git fetch origin +refs/pull/' + params.previewUpstreamPR + '/merge'
                                 sh '''
-                                git checkout FETCH_HEAD
+                                cd content/wechat && git checkout FETCH_HEAD
                                 '''
                             }
                         }
