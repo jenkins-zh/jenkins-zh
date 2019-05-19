@@ -74,6 +74,8 @@ pipeline {
                     script {
                         if(params.previewUpstream != ''){
                             env.BRANCH_NAME = params.previewUpstream
+                        } else {
+                            echo 'preview upstream is: ' + params.previewUpstream + '.'
                         }
                         env.BRANCH_NAME = env.BRANCH_NAME.toLowerCase()
                         withCredentials([usernamePassword(credentialsId: 'jenkins-zh-docker', passwordVariable: 'PASSWD', usernameVariable: 'USER')]) {
