@@ -149,6 +149,8 @@ pipeline {
                                 context: 'continuous-integration/jenkins/pr-merge/preview',
                                 description: 'Website preview',
                                 targetUrl: "http://${BRANCH_NAME}.preview.jenkins-zh.cn")
+                        } else {
+                            echo 'preview upstream is: ' + params.previewUpstream
                         }
                     }
                 }
