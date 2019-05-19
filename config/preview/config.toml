@@ -1,0 +1,72 @@
+baseURL = "https://jenkins-zh.cn"
+languageCode = "zh-CN"
+defaultContentLanguage = "zh"
+title = "Jenkins 中文社区"
+theme = "hugo-jenkins-theme"
+
+googleAnalytics = "UA-4216293-5"
+
+[[menu.global]]
+  name = "微信"
+  weight = 100
+  identifier = "wechat"
+  url = "/wechat/"
+
+[[menu.global]]
+  name = "活动"
+  weight = 200
+  identifier = "event"
+  url = "/event/"
+
+[[menu.global]]
+  name = "关于我们"
+  weight = 300
+  identifier = "about"
+  url = "/about/"
+
+[[menu.global]]
+  name = "Jenkins 官网"
+  weight = 4100
+  identifier = "jenkins"
+  # pre = "<i class='fa fa-heart'></i>"
+  post = "external"
+  # post = "<span class='alert'>New!</span>"
+  # target = "_blank"
+  url = "http://jenkins.io/zh"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+section = [ "HTML", "RSS"]
+
+[related]
+
+threshold = 80
+includeNewer = true
+toLower = false
+
+[[related.indices]]
+name = "keywords"
+weight = 100
+[[related.indices]]
+name  = "date"
+weight = 10
+pattern = "2006"
+
+[params]
+## Gh repo for site footer (include trailing slash)
+ghrepo = "https://github.com/jenkins-zh/jenkins-zh/"
+## GH Repo for filing a new issue
+github_repo = "https://github.com/jenkins-zh/jenkins-zh/issues/new"
+ghdocsrepo = "https://github.com/jenkins-zh/jenkins-zh/tree/master"
+github_contributors_link = "https://github.com/jenkins-zh/jenkins-zh/graphs/contributors"
+github_contributors = "Jenkins 社区贡献者"
+welcome = "共建开放、包容、活跃的 Jenkins 社区"
+env = "preview"
+
+[params.comments.utterances]
+enable = true
+issueTerm = "pathname"
+
+[params.comments.utterances.github]
+username = "linuxsuren"
+repository = "jenkins-zh/jenkins-zh.github.io"
