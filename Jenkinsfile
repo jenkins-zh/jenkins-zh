@@ -37,9 +37,8 @@ pipeline {
 
                         script{
                             if(params.previewUpstreamPR != ''){
-                                env.PreviewUpstreamPR = params.previewUpstreamPR
+                                sh 'git fetch origin +refs/pull/' + params.previewUpstreamPR + '/merge'
                                 sh '''
-                                git fetch origin +refs/pull/$PreviewUpstreamPR/merge
                                 git checkout FETCH_HEAD
                                 '''
                             }
