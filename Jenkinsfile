@@ -10,6 +10,7 @@ pipeline {
 
 	parameters {
         string defaultValue: '', description: '', name: 'previewUpstream', trim: true
+        string defaultValue: '', description: '', name: 'previewUpstreamPR', trim: true
     }
 
     triggers {
@@ -33,6 +34,16 @@ pipeline {
                 stage("Fetch wechat articles"){
                     steps{
                         gitClone('https://github.com/jenkins-infra/wechat', 'content/wechat')
+
+                        script{
+                            if(params.previewUpstreamPR != ''){
+                                env.PreviewUpstreamPR = params.previewUpstreamPR
+                                sh '''
+                                git fetch origin +refs/pull/$PreviewUpstreamPR/merge
+                                git checkout FETCH_HEAD
+                                '''
+                            }
+                        }
 
                         sh '''
                         pwd
