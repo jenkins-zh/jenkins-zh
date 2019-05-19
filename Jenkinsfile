@@ -8,7 +8,7 @@ pipeline {
     }
 
 	parameters {
-        string defaultValue: '', description: '', name: 'upstream', trim: true
+        string defaultValue: '', description: '', name: 'previewUpstream', trim: true
     }
 
     triggers {
@@ -61,7 +61,7 @@ pipeline {
             when {
                 anyOf {
                     expression {
-                        return params.upstream != ''
+                        return params.previewUpstream != ''
                     }
                     not {
                         branch 'master'
@@ -71,8 +71,8 @@ pipeline {
             steps{
                 container('tools'){
                     script {
-                        if(params.upstream != ''){
-                            env.BRANCH_NAME = params.upstream
+                        if(params.previewUpstream != ''){
+                            env.BRANCH_NAME = params.previewUpstream
                         }
                         env.BRANCH_NAME = env.BRANCH_NAME.toLowerCase()
                         withCredentials([usernamePassword(credentialsId: 'jenkins-zh-docker', passwordVariable: 'PASSWD', usernameVariable: 'USER')]) {
@@ -91,7 +91,7 @@ pipeline {
             when {
                 anyOf {
                     expression {
-                        return params.upstream != ''
+                        return params.previewUpstream != ''
                     }
                     not {
                         branch 'master'
@@ -105,8 +105,8 @@ pipeline {
                     '''
 
                     script{
-                        if(params.upstream != ''){
-                            env.BRANCH_NAME = params.upstream
+                        if(params.previewUpstream != ''){
+                            env.BRANCH_NAME = params.previewUpstream
                         }
                         env.BRANCH_NAME = env.BRANCH_NAME.toLowerCase()
                         def website = readYaml file: "config/website.yaml"
@@ -153,7 +153,12 @@ pipeline {
         }
         stage("Publish"){
             when {
-                branch 'master'
+                allOf {
+                    expression {
+                        return params.previewUpstream == ''
+                    }
+                    branch 'master'
+                }
             }
             steps{
                 hugoGitPublish authorEmail: 'linuxsuren@gmail.com', authorName: 'suren',
@@ -167,7 +172,12 @@ pipeline {
         }
         stage("Notify"){
             when {
-                branch 'master'
+                allOf {
+                    expression {
+                        return params.previewUpstream == ''
+                    }
+                    branch 'master'
+                }
             }
             steps{
                 mail from: 'admin@mail.jenkins-zh.cn',
