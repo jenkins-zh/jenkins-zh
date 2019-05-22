@@ -6,6 +6,7 @@ pipeline {
     options {
         disableConcurrentBuilds()
         quietPeriod 5
+        timeout(30)
     }
 
 	parameters {
