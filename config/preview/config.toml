@@ -7,7 +7,7 @@ theme = "hugo-jenkins-theme"
 googleAnalytics = "UA-4216293-5"
 
 [[menu.global]]
-  name = "微信"
+  name = "博客"
   weight = 100
   identifier = "wechat"
   url = "/wechat/"
