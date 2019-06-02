@@ -115,12 +115,15 @@ pipeline {
         }
         stage("Preview"){
             when {
-                anyOf {
+                allOf {
                     expression {
                         return params.previewUpstream != ''
                     }
                     not {
                         branch 'master'
+                    }
+                    expression {
+                        return false // skip this stage for tech reason
                     }
                 }
             }
