@@ -109,7 +109,7 @@
   <div class="topic-detail">
     <h4 class="topic-title">主题介绍</h4>
     <div>
-      {{.Params.abstract}}
+      {{ safeHTML (replace .Params.abstract "\n" "<br/>")}}
     </div>
   </div>
 
@@ -159,10 +159,9 @@
   <div class="topic-detail">
     <h4 class="topic-title">注意事项</h4>
     <div>
-      {{.Params.comment}}
+      {{ safeHTML (replace .Params.comment "\n" "<br/>")}}
     </div>
   </div>
-  
 
 </main>
 {{ end }}
