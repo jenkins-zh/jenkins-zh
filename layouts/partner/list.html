@@ -1,0 +1,14 @@
+{{ define "main" }}
+<h4 align="center">合作伙伴</h4>
+
+<div style="margin: 10px;">
+{{ range .Pages }}
+    <div style="text-align: center;">
+        {{ if and (ne .Params.logo nil) (ne .Params.logo "") }}
+        <img src="/images/partners/{{.Params.logo}}" width="260px" alt="{{.Params.displayName}}"/>
+        {{ end }}
+    </div>
+{{ end }}
+</div>
+
+{{end}}
