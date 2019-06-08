@@ -19,8 +19,14 @@ googleAnalytics = "UA-4216293-5"
   url = "/event/"
 
 [[menu.global]]
-  name = "关于我们"
+  name = "合作伙伴"
   weight = 300
+  identifier = "partner"
+  url = "/partner/"
+
+[[menu.global]]
+  name = "关于我们"
+  weight = 400
   identifier = "about"
   url = "/about/"
 
