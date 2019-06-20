@@ -1,34 +1,76 @@
 ---
 title: "如何参与"
-description: 不满意只做吃瓜群众的请看过来
+description: ""
 date: 2019-01-05T22:56:04+08:00
 draft: false
 toc: true
 author: linuxsuren
 ---
 
-参与开源社区真的不只有 `Coding` 一条路可选。只要你认同“开源”，有热情，就可以！任何岗位、校大学生、甚至"不懂"技术都能够加入我们。走过路过的朋友们别错过，下面的参与方式总有一种能把你带上开源事业的“不归路”，如果真的没有包含你希望的参与方式，也可以从现在就发起一个 {{< exref "Pull Request" "https://github.com/jenkins-zh/jenkins-chat/pulls" >}}  开始：
+# 为什么要参与开源社区
 
-# Jenkins 本地化
+* [翟志军](https://github.com/zacker330)：想亲身参与一个开源社区，了解其运行机制。而为什么选择 Jenkins 中文社区？是想更多人了解持续交付。
+* [zhangc819](https://github.com/zhangc819)：日常工作里经常需要开源社区的力量来解决问题、学习经验，参与开源社区建设也是为了给社区提供更多的力量，相互左右才能壮大下去。
 
-{{< exref "Jenkins 中文官网" "https://jenkins.io/zh/" >}}有很多的{{< exref "翻译任务" "https://github.com/orgs/jenkins-zh/projects/2" >}}需要各路英雄自由领取。无规矩不成方圆，在享受自由的同时，也请牢记如下几点：
+# 如何参与 Jenkins 中文社区
 
-* 认真、负责第一位
-* 翻译任务通常不建议超过两周
-* {{< exref "翻译规范" "https://github.com/jenkinsci/localization-zh-cn-plugin/blob/master/specification.md" >}}
+参与 Jenkins 中文社区的方式不只有 Coding 一条路可选，还有很多方式，比如：
+1. 发表或翻译 Jenkins 相关的文章，并发表到社区网站。
+1. Jenkins 本地化。
+1. 成为 Jenkins 线下或线上活动的志愿者。
+1. Review 别人提交到 Pull Request。
+1. 发现 Jenkins 社区哪里可以改善，然后提个 Issue。
 
-翻译包括 Jenkins 官网的本地化，以及{{< exref "博客" "https://jenkins.io/node/">}}的翻译。翻译完成后，提交 {{< exref "Pull Request" "https://github.com/jenkins-infra/cn.jenkins.io/pulls">}} 并等待 Review。对于质量较高、或者适合在微信公众号上发布的文章，需要另外提交一个 {{< exref "Pull Request" "https://github.com/jenkins-infra/wechat/pulls">}}。
+等等。所有你能想到的，促进 Jenkins 中文社区发展的事情都算是参与 Jenkins 中文社区。
 
-Jenkins 的{{< exref "简体中文语言插件" "https://github.com/jenkinsci/localization-zh-cn-plugin" >}}也热切地期待你的 {{< exref "Pull Request" "https://github.com/jenkinsci/localization-zh-cn-plugin/pulls">}}。
+但是，具体怎么做呢？
 
-# 新手 Bug
+首先，我们都是基于 Git 工具进行协作的，所以，你需要会一些 Git 及 GitHub 的基础操作。接下来，咱们分别介绍每一种参与方式。
 
-如果你之前没有参与过 Jenkins 的贡献或者对如何开始不太情况，可以查看{{< exref "新手 Bug" "https://issues.jenkins-ci.org/issues/?jql=labels%20%3D%20newbie-friendly%20AND%20(status%20%3D%20Open%20OR%20status%20%3D%20%22To%20Do%22%20OR%20status%20%3D%20Reopened%20)" >}}。这是一些相对比较简单，容易修改的问题。
+对 Git 与 GitHub 不熟悉的同学可以观看此教程视频：链接:https://pan.baidu.com/s/1nKY34O6KBUIpqewyixEexA ，密码：2sbt。
 
-# 分享
+# Jenkins 中文社区代码仓库列表
+那么，我们可以向哪些源代码仓库进行贡献呢？以下是各仓库的链接及简单介绍：
+
+* [wechat](https://github.com/jenkins-infra/wechat)：存放 jenkins-zh.cn 网站的文章。也就是发文章可在此仓库提 PR。
+* [jenkins-zh](https://github.com/jenkins-zh/jenkins-zh/)：Jenkins 中文社区网站源码，由 [Hugo](https://github.com/gohugoio/hugo) 实现。
+* [wechat-backend](https://github.com/jenkins-zh/wechat-backend)：Jenkins 微信公众号机器人。
+* [hugo-jenkins-theme](https://github.com/jenkins-zh/hugo-jenkins-theme)：Jenkins 中文社区网站主题。
+* [artwork](https://github.com/jenkins-zh/artwork)：Jenkins 中文社区的艺术作品，比如 Jenkins Logo。
+
+# 贡献 Jenkins 中文社区的具体工作
+具体有哪些工作，可以让我们参与？
+
+## 翻译 Jenkins 相关文章
+所有的翻译任务都会列在 [GitHub的看板]](https://github.com/orgs/jenkins-zh/projects/2)上。可以在看板上找到自己感兴趣的文章，然后将其拖到“In progress”列。这样可以避免重复的翻译。
+
+![kanban-jenkins.png](kanban-jenkins.png)
+
+当然，为保证翻译质量，希望大家能做到：
+
+1. 认真、负责第一位。
+1. 翻译任务通常不建议超过两周。
+1. 遵守[翻译规范](https://github.com/jenkinsci/localization-zh-cn-plugin/blob/master/specification.md)。
+
+## Jenkins 中文本地化
+本地化的工作包括：
+1. 对 Jenkins 官方网站及{{< exref "博客" "https://jenkins.io/node/">}}的翻译。Pull Request 提交到：{{< exref "cn.jenkins.io 代码仓库" "https://github.com/jenkins-infra/cn.jenkins.io">}}。
+1. 维护{{< exref "简体中文语言插件" "https://github.com/jenkinsci/localization-zh-cn-plugin" >}}Pull Request 提交到 {{< exref "localization-zh-cn-plugin" "https://github.com/jenkinsci/localization-zh-cn-plugin/pulls">}}
+
+## 发表 Jenkins 原创文章
+
+<TODO>
+
+## 分享
 
 你可以在本站或者 [Meetup]({{< ref "meetups.md" >}}) 上分享你在使用 Jenkins 或者相关技术时总结的经验、教训、成果等。
 
-# 维护本站点
+## 维护本站点
 
 你可以从了解[本站的架构]({{< ref "about-site.md" >}})开始。小到错别字修正，大到站点风格、架构完善都需要你的参与。
+
+## Review 别人提交到 Pull Request
+Review 代码也算贡献社区的一种方式。
+
+Linus 说过：Given enough eyeballs, all bugs are shallow（足够多的眼睛，就可让所有问题浮现）。所以，当有贡献者提 Pull Request 到 Jenkins 中文社区的任何一个代码仓库，原则上，我们都需要两人及以上的人对该 Pull Request 进行 review。
+
