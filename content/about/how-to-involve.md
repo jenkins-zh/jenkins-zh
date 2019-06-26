@@ -43,7 +43,7 @@ author: linuxsuren
 ## 翻译 Jenkins 相关文章
 所有的翻译任务都会列在 [GitHub的看板]](https://github.com/orgs/jenkins-zh/projects/2)上。可以在看板上找到自己感兴趣的文章，然后将其拖到“In progress”列。这样可以避免重复的翻译。
 
-![kanban-jenkins.png](kanban-jenkins.png)
+![kanban-jenkins.png](/images/kanban-jenkins.png)
 
 当然，为保证翻译质量，希望大家能做到：
 
@@ -53,6 +53,7 @@ author: linuxsuren
 
 ## Jenkins 中文本地化
 本地化的工作包括：
+
 1. 对 Jenkins 官方网站及{{< exref "博客" "https://jenkins.io/node/">}}的翻译。Pull Request 提交到：{{< exref "cn.jenkins.io 代码仓库" "https://github.com/jenkins-infra/cn.jenkins.io">}}。
 1. 维护{{< exref "简体中文语言插件" "https://github.com/jenkinsci/localization-zh-cn-plugin" >}}Pull Request 提交到 {{< exref "localization-zh-cn-plugin" "https://github.com/jenkinsci/localization-zh-cn-plugin/pulls">}}。
 
@@ -60,6 +61,7 @@ author: linuxsuren
 原创内容包括：Jenkins 相关、持续集成、持续交付、DevOps
 
 在 Jenkins 中文社区提交的 PR 通过后，会在多个渠道进行展示，目前包括：
+
 1. [Jenkins 中文社区网站](jenkins-zh.cn)
 2. Jenkins 公众号
 3. [开源中国博客](https://my.oschina.net/jenkinszh)
@@ -67,9 +69,11 @@ author: linuxsuren
 5. [掘金](https://juejin.im/user/5caa989b5188254418337798/posts)
 
 ### 发表原创文章的步骤
+
 1. Fork [wechat](https://github.com/jenkins-infra/wechat) 仓库，如果你还没有 fork。
-2. 参考 [sample](https://github.com/jenkins-infra/wechat/blob/master/articles/sample.md) 写文章，写文章前请阅读[规范](https://github.com/jenkins-infra/wechat/blob/master/articles/README.md)。 如果实在不明白的话，你也可以参考其它仓库中 [articles](https://github.com/jenkins-infra/wechat/tree/master/articles) 目录下的其它文章来写就好。
-3. 提一个 PR。
+2. 在本地，参考 [sample](https://github.com/jenkins-infra/wechat/blob/master/articles/sample.md) 写文章。写文章前请阅读[规范](https://github.com/jenkins-infra/wechat/blob/master/articles/README.md)。 如果实在不明白的话，你也可以参考其它仓库中 [articles](https://github.com/jenkins-infra/wechat/tree/master/articles) 目录下的其它文章来写就好。
+3. 将本地的提交，推到自己的仓库。
+3. 在 GitHub 上提一个 PR。
 
 ### 关于排期
 为保障大家有足够的时间进行 Review，建议排到一周以后。也就是你提 PR 时，你的文章的日期就要写到一周后。
