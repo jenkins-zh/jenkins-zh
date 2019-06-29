@@ -14,19 +14,18 @@ author: linuxsuren
 # 如何参与 Jenkins 中文社区
 
 参与 Jenkins 中文社区的方式不只有 Coding 一条路可选，还有很多方式，比如：
-1. 发表或翻译 Jenkins 相关的文章，并发表到社区网站。
+
+1. 发表或翻译 Jenkins 相关的文章，并发表到社区网站及微信公众号。
 1. Jenkins 本地化。
 1. 成为 Jenkins 线下或线上活动的志愿者。
 1. Review 别人提交到 Pull Request。
-1. 发现 Jenkins 社区哪里可以改善，然后提个 Issue。
+1. 发现 Jenkins 社区哪里可以改善，然后提个 Issue 或 Pull Request。
 
 等等。所有你能想到的，促进 Jenkins 中文社区发展的事情都算是参与 Jenkins 中文社区。
 
 但是，具体怎么做呢？
 
 首先，我们都是基于 Git 工具进行协作的，所以，你需要会一些 Git 及 GitHub 的基础操作。接下来，咱们分别介绍每一种参与方式。
-
-对 Git 与 GitHub 不熟悉的同学可以观看此教程视频：链接:https://pan.baidu.com/s/1nKY34O6KBUIpqewyixEexA ，密码：2sbt
 
 # Jenkins 中文社区代码仓库列表
 那么，我们可以向哪些源代码仓库进行贡献呢？以下是各仓库的链接及简单介绍：
@@ -60,10 +59,10 @@ author: linuxsuren
 ## 发表 Jenkins 原创文章
 原创内容包括：Jenkins 相关、持续集成、持续交付、DevOps
 
-在 Jenkins 中文社区提交的 PR 通过后，会在多个渠道进行展示，目前包括：
+在 Jenkins 中文社区提交的 PR 通过后，会发布在多个不同的媒体平台上，目前包括：
 
-1. [Jenkins 中文社区网站](jenkins-zh.cn)
-2. Jenkins 公众号
+1. [Jenkins 中文社区网站](https://jenkins-zh.cn/)
+2. Jenkins 微信公众号
 3. [开源中国博客](https://my.oschina.net/jenkinszh)
 4. [简书专栏](https://www.jianshu.com/c/b34c41b2f68f)
 5. [掘金](https://juejin.im/user/5caa989b5188254418337798/posts)
@@ -71,18 +70,22 @@ author: linuxsuren
 ### 发表原创文章的步骤
 
 1. Fork [wechat](https://github.com/jenkins-infra/wechat) 仓库，如果你还没有 fork。
-2. 在本地，参考 [sample](https://github.com/jenkins-infra/wechat/blob/master/articles/sample.md) 写文章。写文章前请阅读[规范](https://github.com/jenkins-infra/wechat/blob/master/articles/README.md)。 如果实在不明白的话，你也可以参考其它仓库中 [articles](https://github.com/jenkins-infra/wechat/tree/master/articles) 目录下的其它文章来写就好。
+2. 在本地，参考 [范文](https://github.com/jenkins-infra/wechat/blob/master/articles/sample.md) 写文章。动手前请仔细阅读请阅读[规范](https://github.com/jenkins-infra/wechat/blob/master/articles/README.md)。如果实在不明白的话，你也可以参考其它仓库中 [articles](https://github.com/jenkins-infra/wechat/tree/master/articles) 目录下的其它文章来写就好。
 3. 将本地的提交，推到自己的仓库。
-3. 在 GitHub 上提一个 PR。
+4. 在 GitHub 上提一个 PR。
 
 ### 关于排期
-为保障大家有足够的时间进行 Review，建议排到一周以后。也就是你提 PR 时，你的文章的日期就要写到一周后。
+为了尽可能满足你期望的发布日期，可以自行选择，但同时需要满足如下的条件：
 
-同时，也推荐是工作日发布。因为周末的阅读会低一些。
+* 为保障大家有足够的时间进行 Review，建议排到一周以后
+* 工作日
+* 避免同一天有相同类型的文章
 
 ### 提 PR 时的要求
 1. PR 的标题格式：[类型-文章排期] 标题
 2. 在 PR 类型列表前的 `[]` 中加入一个 `x`，例如：`[x]`
+
+更多内容请参考 [PULL_REQUEST_TEMPLATE.md](https://github.com/jenkins-infra/wechat/blob/master/.github/PULL_REQUEST_TEMPLATE.md)
 
 ## 分享
 
@@ -95,4 +98,4 @@ author: linuxsuren
 ## Review 别人提交到 Pull Request
 Review 代码也算贡献社区的一种方式。
 
-Linus 说过：Given enough eyeballs, all bugs are shallow（足够多的眼睛，就可让所有问题浮现）。所以，当有贡献者提 Pull Request 到 Jenkins 中文社区的任何一个代码仓库，原则上，我们都需要两人及以上的人对该 Pull Request 进行 review。
+Linus 说过：“Given enough eyeballs, all bugs are shallow（足够多的眼睛，就可让所有问题浮现）”。所以，当有贡献者提 Pull Request 到 Jenkins 中文社区的任何一个代码仓库，原则上，我们都需要两人及以上的人对该 Pull Request 进行 review。
