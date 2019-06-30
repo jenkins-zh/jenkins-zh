@@ -34,7 +34,7 @@ author: linuxsuren
 * [jenkins-zh](https://github.com/jenkins-zh/jenkins-zh/)：Jenkins 中文社区网站源码，由 [Hugo](https://github.com/gohugoio/hugo) 实现。
 * [wechat-backend](https://github.com/jenkins-zh/wechat-backend)：Jenkins 微信公众号机器人。
 * [hugo-jenkins-theme](https://github.com/jenkins-zh/hugo-jenkins-theme)：Jenkins 中文社区网站主题。
-* [artwork](https://github.com/jenkins-zh/artwork)：Jenkins 中文社区的艺术作品，比如 Jenkins Logo。
+* [artwork](https://github.com/jenkins-zh/artwork)：Jenkins 中文社区的艺术作品，比如 Jenkins 中文社区 Logo。
 
 # 贡献 Jenkins 中文社区的具体工作
 具体有哪些工作，可以让我们参与？
