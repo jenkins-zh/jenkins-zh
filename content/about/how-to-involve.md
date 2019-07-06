@@ -40,7 +40,7 @@ author: linuxsuren
 具体有哪些工作，可以让我们参与？
 
 ## 翻译 Jenkins 相关文章
-所有的翻译任务都会列在 [GitHub的看板]](https://github.com/orgs/jenkins-zh/projects/2)上。可以在看板上找到自己感兴趣的文章，然后将其拖到“In progress”列。这样可以避免重复的翻译。
+所有的翻译任务都会列在 [GitHub的看板](https://github.com/orgs/jenkins-zh/projects/2)上。可以在看板上找到自己感兴趣的文章，然后将其拖到“In progress”列。这样可以避免重复的翻译。
 
 ![kanban-jenkins.png](/images/kanban-jenkins.png)
 
