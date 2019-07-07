@@ -23,6 +23,9 @@ labels:
   - name: help wanted
     color: 008672
     description: Extra attention is needed
+  - name: event
+    color: 85ea85
+    description: Jenkins 中文社区活动
 branches:
   - name: master
     protection:
