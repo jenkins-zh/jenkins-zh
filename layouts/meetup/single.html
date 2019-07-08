@@ -81,6 +81,7 @@
       <img width="320px" height="160px" src="{{ .Params.poster }}" alt>
     </div>
     <div class="detail">
+      {{ $topic := .Params.topic }}
       <h4>{{.Params.topic}}</h4>
       <div>
         <span class="title">状态:</span>
@@ -117,8 +118,15 @@
     <h4 class="topic-title">嘉宾介绍</h4>
     <div>
       {{ range .Params.speakers }}
-        {{ $speaker := getJSON "/content/speaker/" . ".json" }}
       <div class="guest">
+        {{if eq . "todo"}}
+        <div>本次活动还有空余的话题，欢迎您<a href="mailto:events@mail.jenkins-zh.cn?subject=活动-{{$topic}}-讲师申请"
+        class="f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link"
+        target="_blank" style="margin: 5px;">
+        立即申请作为讲师
+        </a></div>
+        {{else}}
+        {{ $speaker := getJSON "/content/speaker/" . ".json" }}
         <div>
           {{ $img := print "static/images/speakers/" . ".png" }}
           {{ if (fileExists $img ) -}}
@@ -134,6 +142,7 @@
           </div>
           <div>{{ $speaker.bio }}</div>
         </div>
+        {{end}}
       </div>
       {{ end }}
     </div>
