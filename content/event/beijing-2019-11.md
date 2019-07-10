@@ -8,6 +8,7 @@ co-organizers: 待定
 topic: Jenkins 社区的 Hacktoberfest
 speakers:
 - linuxsuren
+- todo
 sponsors:
 - alauda
 abstract: 介绍 Hacktoberfest，一起完成这个一年一度的活动。
