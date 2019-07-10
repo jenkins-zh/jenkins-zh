@@ -1,2 +1,6 @@
 User-agent:* 
-Allow:*
+Allow: /wechat
+Allow: /about
+Allow: /event
+
+Sitemap: https://jenkins-zh.cn/sitemap.xml
