@@ -127,7 +127,7 @@
         </a></div>
         {{else}}
         {{ $speaker := getJSON "/content/speaker/" . ".json" }}
-        <div>
+        <div style="min-width: 100px;">
           {{ $img := print "static/images/speakers/" . ".png" }}
           {{ if (fileExists $img ) -}}
           <img src="/images/speakers/{{.}}.png" alt>
@@ -173,4 +173,5 @@
   </div>
 
 </main>
+
 {{ end }}
