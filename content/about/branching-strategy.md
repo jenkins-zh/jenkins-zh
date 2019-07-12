@@ -52,7 +52,7 @@ local:                   master    dev-01
 有了上面的认识，下面就是一步一步的命令行，假设上面的 `dev-01` 已经被合并，需要新建 `dev-02` 分支执行新的任务：
 
 1. `git checkout master`
-2. `git pull upstream master`
+2. `git pull upstream master --rebase`
 3. `git checkout -b dev-02`
 3. (do something)
 4. `git add . && git commit -m 'do something'`
