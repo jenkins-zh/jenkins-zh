@@ -167,3 +167,29 @@ here is the note
 ---
 
 ## 平台
+
+---
+## 实训项目-1
+
+热身练习
+1. 构建 Maven 项目
+2. 制品归档
+3. 构建 Docker 镜像
+4. 参数化构建，指定 Docker 镜像 Tag
+
+进阶练习
+1. 构建 Maven 项目并发布到 Nexus
+2. 使用私有 Nexus 中的依赖进行构建
+3. 构建 Docker 镜像并推送到 Harbor
+4. 构建 Heml Charts 并推送到 Chartmuseum
+
+.footnote[<a href="https://github.com/surenpi/demo-junit" target="_blank">实训 demo 项目</a>]
+
+---
+## 实训项目-2
+
+基于 Kubernetes 的持续交付
+1. 基于 deployment 进行交付
+2. 基于 helm charts 进行交付
+
+.footnote[<a href="https://github.com/surenpi/demo-junit" target="_blank">实训 demo 项目</a>]
