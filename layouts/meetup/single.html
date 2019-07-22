@@ -166,6 +166,17 @@
   </div>
 
   <div class="topic-detail">
+    <h4 class="topic-title">赞助单位</h4>
+    <div>
+      {{with .Params.sponsors}}
+      {{ range . }}
+      <img width="120px;" src="/images/sponsors/{{.}}.png">
+      {{ end }}
+      {{end}}
+    </div>
+  </div>
+
+  <div class="topic-detail">
     <h4 class="topic-title">注意事项</h4>
     <div>
       {{ safeHTML (replace .Params.comment "\n" "<br/>")}}
