@@ -60,7 +60,7 @@
         <td>
           {{with .Params.sponsors}}
             {{ range . }}
-            <img src="/images/sponsors/{{.}}.png">
+            <div><img width="120px;" src="/images/sponsors/{{.}}.png"></div>
             {{ end }}
           {{else}}
           <a href="mailto:admin@mail.jenkins-zh.cn?subject=活动-{{.Params.topic}}-赞助"
