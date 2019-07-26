@@ -7,8 +7,16 @@ author: linuxsuren
 draft: false
 ---
 
-统计的基础分数为：GitHub 账号首页上 {{< ghref "jenkinsci" "jenkinsci">}}、{{< ghref "jenkins-infra" "jenkins-infra">}}、{{< ghref "jenkins-zh" "jenkins-zh">}}、{{< ghref "jenkins-x" "jenkins-x">}} 四个组织的贡献数和。
+为了激励社区成员积极地为社区作出贡献，我们会不定期给予积极活跃、付出重大贡献的小伙伴一定形式的奖励。下面是历次的奖励记录：
 
-附加分，统计发表在 Jenkins 公众号上的文章的阅读数，该数字除以100得到的整倍数。例如：某篇文章的阅读数为120，那么得分为1；阅读数为90，则没有得分。
+## NO.1
+时间范围：2019年3月～5月  
+赞助方：[人民邮电出版社][ptpress]
 
-加权，是为了鼓励更多的原创。原创文章的加权数为1.2，例如：某篇原创文章的阅读数为230，那么最终得分为2.4。
+|成员|奖励|
+|----|----|
+|{{< ghref "donhui" "donhui" >}}|《黑客与画家》|
+|{{< ghref "zacker330" "zacker330" >}}|《基础设施即服务》|
+|{{< ghref "yJunS" "yJunS" >}}|《黑客与画家》|
+
+[ptpress]: https://www.ptpress.com.cn/
