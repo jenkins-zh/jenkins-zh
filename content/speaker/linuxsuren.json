@@ -1,8 +1,8 @@
 {
     "type": "speaker",
     "displayName": "赵晓杰",
-    "title": "Jenkins 社区媒体联系人",
+    "title": "Jenkins 中文社区发起人",
     "github": "linuxsuren",
-    "bio": "关注 DevOps 相关技术",
+    "bio": "8年研发经历，目前在灵雀云负责 CI/CD 相关的研发工作，曾经先后就职于中科曙光、广联达。Jenkins 简体中文以及多个插件的维护者，致力于推广开源文化、技术。",
     "blog": "http://surenpi.com"
 }
