@@ -101,10 +101,6 @@
         <span class="title">费用:</span>
         <span>{{ .Params.fee }}</span>
       </div>
-      <div>
-        <span class="title">报名:</span>
-        <span><a target="_blank" href="{{.Params.signUpURL}}">{{ .Params.signUp }}</a></span>
-      </div>
     </div>
   </div>
 
@@ -132,6 +128,28 @@
       {{ safeHTML (replace .Params.codeOfConduct "\n" "<br/>")}}
     </div>
   </div>
+
+  {{ with .Params.signUp }}
+  <div class="topic-detail">
+    <h4 class="topic-title">报名说明</h4>
+    <div>
+      {{ safeHTML (replace . "\n" "<br/>")}}
+    </div>
+  </div>
+  {{end}}
+
+  {{with .Params.proposals}}
+  <div class="topic-detail">
+    <h4 class="topic-title">项目提议</h4>
+    <div>
+      {{ range . }}
+      <div style="margin-top: 5px;">
+        {{ safeHTML (replace . "\n" "<br/>")}}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{end}}
 
   <div class="topic-detail">
     <h4 class="topic-title">奖项设置</h4>
@@ -193,19 +211,6 @@
     </div>
   </div>
 
-  {{with .Params.proposals}}
-  <div class="topic-detail">
-    <h4 class="topic-title">项目提议</h4>
-    <div>
-      {{ range . }}
-      <div>
-        {{.}}
-      </div>
-      {{ end }}
-    </div>
-  </div>
-  {{end}}
-
   {{with .Params.glodSponsors}}
   <div class="topic-detail">
     <h4 class="topic-title">金牌赞助</h4>
@@ -231,6 +236,17 @@
   {{with .Params.generalSponsors}}
   <div class="topic-detail">
     <h4 class="topic-title">赞助单位</h4>
+    <div>
+      {{ range . }}
+      <img style="max-height: 70px;" src="/images/sponsors/{{.}}.png">
+      {{ end }}
+    </div>
+  </div>
+  {{end}}
+
+  {{with .Params.collaborations}}
+  <div class="topic-detail">
+    <h4 class="topic-title">合作社区（单位）</h4>
     <div>
       {{ range . }}
       <img style="max-height: 70px;" src="/images/sponsors/{{.}}.png">
