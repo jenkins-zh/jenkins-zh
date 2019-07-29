@@ -213,8 +213,8 @@ pipeline {
                 }
             }
             steps{
-                mail from: 'admin@mail.jenkins-zh.cn',
-                    to: 'developer@mail.jenkins-zh.cn',
+                mail from: 'admin@jenkins-zh.cn',
+                    to: 'developer@jenkins-zh.cn',
                     subject: 'Jenkins 中文社区网站发布成功！', 
                     body: '访问地址 https://jenkins-zh.cn/'
             }
