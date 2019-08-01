@@ -1,16 +1,13 @@
 {{ define "main" }}
 
-<main>
-    <div>
-        <div>
-            <div>
-                {{ .Params.displayName }}
-            </div>
-            <div>
-                {{ .Params.displayName }}
-            </div>
-        </div>
-    </div>
-</main>
+<div class="w-100 ph4 pb5 pb6-ns pt1 pt3-ns">
+    <h1>
+        {{ .Params.title }}
+    </h1>
+
+    <aside>
+        {{ .Content }}
+    </aside>
+</div>
 
 {{ end }}
