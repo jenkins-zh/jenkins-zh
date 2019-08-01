@@ -1,13 +1,55 @@
 {{ define "main" }}
 
-<div class="w-100 ph4 pb5 pb6-ns pt1 pt3-ns">
-    <h1>
-        {{ .Params.title }}
-    </h1>
+<main>
+    <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
+        <div class="flex-l">
+            <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+                <div>
+                    <h1>{{ .Params.title }}</h1>
+                    {{ .Content }}
+                </div>
+            </aside>
+            
+            <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
+                <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
+                    作者：<a href="https://github.com/{{.Params.author}}" target="_blank">{{.Params.author}}</a>
+                    {{ if .Params.toc }}
+                        <p class="b">{{ i18n "page-catalog" . }}</p>
+                        {{ .TableOfContents }}
+                    {{ end }}
 
-    <aside>
-        {{ .Content }}
-    </aside>
-</div>
+                    {{with .Params.editors}}
+                    贡献者列表：
+                    {{range .}}
+                    <a href="https://github.com/{{.}}" target="_blank">{{.}}</a>
+                    {{end}}
+                    {{end}}
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    {{- with .Params.references -}}
+    <div style="padding-left: 2rem;">
+        参考资料：
+        {{ range . }}
+        <div style="padding-left: 4rem;"><a href="{{.link}}">{{.name}}</a></div>
+        {{end}}
+    </div>
+    {{end}}
+</main>
+
+{{ if .Site.Params.Comments.Utterances.Enable }}
+{{ if ne .Params.comment false }}
+<script src="https://utteranc.es/client.js"
+        repo="{{ .Site.Params.Comments.Utterances.Github.repository }}"
+        issue-term="{{ .Site.Params.Comments.Utterances.IssueTerm }}"
+        theme="github-light"
+        label="tutorial"
+        crossorigin="{{ .Site.Params.Comments.Utterances.Github.username }}"
+        async>
+</script>
+{{ end }}
+{{ end }}
 
 {{ end }}
