@@ -13,20 +13,26 @@ googleAnalytics = "UA-4216293-5"
   url = "/wechat/"
 
 [[menu.global]]
-  name = "活动"
+  name = "教程"
   weight = 200
+  identifier = "tutorial"
+  url = "/tutorial/"
+
+[[menu.global]]
+  name = "活动"
+  weight = 300
   identifier = "event"
   url = "/event/"
 
 [[menu.global]]
   name = "合作伙伴"
-  weight = 300
+  weight = 400
   identifier = "partner"
   url = "/partner/"
 
 [[menu.global]]
   name = "关于我们"
-  weight = 400
+  weight = 900
   identifier = "about"
   url = "/about/"
 
