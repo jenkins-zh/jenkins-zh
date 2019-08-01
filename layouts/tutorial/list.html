@@ -1,0 +1,47 @@
+{{ define "main" }}
+<div class="w-100 ph4 pb5 pb6-ns pt1 pt3-ns">
+    <div class="flex">
+      <div class="dn db-l w-20">
+        <aside>
+            <ul>
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.tutorial }}
+                    {{ if .HasChildren }}
+                        <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                            <a href="#">
+                                {{ .Pre }}
+                                <span>{{ default .Name .Post }}</span>
+                            </a>
+                        </li>
+                        <ul class="sub-menu">
+                            {{ range .Children }}
+                                <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                                    <a href="{{ .URL }}">{{ default .Name .Post }}</a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    {{ else }}
+                        <li>
+                            <a href="{{ .URL }}">
+                                {{ .Pre }}
+                                <span>{{ default .Name .Post }}</span>
+                            </a>
+                        </li>
+                    {{ end }}
+                {{ end }}
+            </ul>
+        </aside>
+      </div>
+
+        <div>
+        {{.Content}}
+
+        {{ range .Pages }}
+        <div>
+            <a href="{{.RelPermalink}}">{{ .Params.title }}</a>
+        </div>
+        {{end}}
+        </div>
+    </div>
+</div>
+{{end}}
