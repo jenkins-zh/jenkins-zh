@@ -13,20 +13,26 @@ googleAnalytics = "UA-4216293-5"
   url = "/wechat/"
 
 [[menu.global]]
-  name = "活动"
+  name = "教程"
   weight = 200
+  identifier = "tutorial"
+  url = "/tutorial/"
+
+[[menu.global]]
+  name = "活动"
+  weight = 300
   identifier = "event"
   url = "/event/"
 
 [[menu.global]]
   name = "合作伙伴"
-  weight = 300
+  weight = 400
   identifier = "partner"
   url = "/partner/"
 
 [[menu.global]]
   name = "关于我们"
-  weight = 400
+  weight = 900
   identifier = "about"
   url = "/about/"
 
@@ -39,6 +45,28 @@ googleAnalytics = "UA-4216293-5"
   # post = "<span class='alert'>New!</span>"
   # target = "_blank"
   url = "http://jenkins.io/zh"
+
+[[menu.tutorial]]
+  name = "scm"
+  post = "代码管理"
+[[menu.tutorial]]
+  name = "management"
+  post = "管理"
+[[menu.tutorial]]
+  name = "notify"
+  post = "消息通知"
+[[menu.tutorial]]
+  name = "pipeline"
+  post = "流水线"
+[[menu.tutorial]]
+  name = "plugin-dev"
+  post = "插件开发"
+[[menu.tutorial]]
+  name = "api"
+  post = "API"
+[[menu.tutorial]]
+  name = "use-cases"
+  post = "使用场景"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON" ]

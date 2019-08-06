@@ -61,6 +61,12 @@ googleAnalytics = "UA-4216293-5"
 [[menu.tutorial]]
   name = "plugin-dev"
   post = "插件开发"
+[[menu.tutorial]]
+  name = "api"
+  post = "API"
+[[menu.tutorial]]
+  name = "use-cases"
+  post = "使用场景"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON" ]
