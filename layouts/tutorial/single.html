@@ -4,7 +4,7 @@
     <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
         <div class="flex-l">
             <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
-                <div>
+                <div class="prose">
                     <h1>{{ .Params.title }}</h1>
                     {{ .Content }}
                 </div>
@@ -24,6 +24,10 @@
                     <a href="https://github.com/{{.}}" target="_blank">{{.}}</a>
                     {{end}}
                     {{end}}
+
+                    <div style="margin-top: 20px; margin-bottom: 20px;">
+                        <a href="{{.Site.Params.ghrepo}}edit/master/content/{{.File.Path}}" target="_blank">{{ i18n "improve-this-page" . }}</a>
+                    </div>
                 </aside>
             </div>
         </div>

@@ -5,10 +5,11 @@
         <aside>
             <ul>
                 {{ $currentPage := . }}
+                {{ $baseURL := .Site.BaseURL}}
                 {{ range .Site.Menus.tutorial }}
                     {{ if .HasChildren }}
                         <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
-                            <a href="#">
+                            <a href="{{$baseURL}}/tutorial/{{.Name}}">
                                 {{ .Pre }}
                                 <span>{{ default .Name .Post }}</span>
                             </a>
@@ -33,7 +34,7 @@
         </aside>
       </div>
 
-        <div>
+        <div class="prose">
         {{.Content}}
 
         {{ range .Pages }}
