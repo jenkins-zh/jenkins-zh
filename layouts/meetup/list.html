@@ -32,8 +32,9 @@
   <table width="1000px">
     <thead>
       <tr>
+        <th>时间</th>
+        <th>主题</th>
         <th>城市</th>
-        <th>主题/日期</th>
         <th>位置</th>
         <th>状态</th>
         <th>赞助</th>
@@ -41,13 +42,11 @@
     </thead>
     <tbody>
       <!-- should use hostDate instead of order, but cannot get the right order by hostDate -->
-      {{ range (sort .Pages ".Params.order" "desc") }}
+      {{ range (sort .Pages ".Params.hostdate" "desc") }}
       <tr>
+        <td>{{ with .Params.hostDate }}{{ . }}{{ else }}待定{{ end }}</td>
+        <td>{{ with .Params.topic }}{{ . }}{{ else }}待定{{ end }}</br></td>
         <td>{{ .Params.city }}</td>
-        <td>
-          {{ with .Params.topic }}{{ . }}{{ else }}待定{{ end }}</br>
-          {{ with .Params.hostDate }}{{ . }}{{ else }}待定{{ end }}
-        </td>
         <td>
           {{ if ne .Params.location "" }}
           {{ if ne .Params.map "" }}<a target="_blank" href="{{.Params.map}}">{{.Params.location}}</a>{{else}}{{.Params.location}}{{ end }}
