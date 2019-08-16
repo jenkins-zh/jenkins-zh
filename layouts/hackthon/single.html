@@ -101,6 +101,10 @@
         <span class="title">费用:</span>
         <span>{{ .Params.fee }}</span>
       </div>
+      <div>
+        <span class="title">报名:</span>
+        <span><a target="_blank" href="{{.Params.signUpURL}}">{{ .Params.signUp }}</a></span>
+      </div>
     </div>
   </div>
 
@@ -129,7 +133,7 @@
     </div>
   </div>
 
-  {{ with .Params.signUp }}
+  {{ with .Params.signUpDesc }}
   <div class="topic-detail">
     <h4 class="topic-title">报名说明</h4>
     <div>
