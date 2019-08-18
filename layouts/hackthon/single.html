@@ -242,7 +242,13 @@
     <h4 class="topic-title">赞助单位</h4>
     <div>
       {{ range . }}
+      {{ $pngImage := print "static/images/sponsors/" . ".png"}}
+      {{ $svgImage := print "static/images/sponsors/" . ".svg"}}
+      {{ if (fileExists $pngImage ) }}
       <img style="max-height: 70px;" src="/images/sponsors/{{.}}.png">
+      {{ else if (fileExists $svgImage ) }}
+      <img style="max-height: 70px; max-width: 150px;" src="/images/sponsors/{{.}}.svg">
+      {{ end }}
       {{ end }}
     </div>
   </div>
