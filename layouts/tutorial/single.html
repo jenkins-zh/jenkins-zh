@@ -45,6 +45,14 @@
 
 {{ if .Site.Params.Comments.Utterances.Enable }}
 {{ if ne .Params.comment false }}
+<style>
+div[class=utterances] {
+    max-width: inherit;
+    width: auto;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+</style>
 <script src="https://utteranc.es/client.js"
         repo="{{ .Site.Params.Comments.Utterances.Github.repository }}"
         issue-term="{{ .Site.Params.Comments.Utterances.IssueTerm }}"
