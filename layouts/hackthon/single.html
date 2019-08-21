@@ -119,23 +119,23 @@
     </div>
   </div>
 
-  <div class="topic-detail">
-    <h4 class="topic-title">主题介绍</h4>
+  <div class="topic-detail" id="topic">
+    <h4 class="topic-title"><a href="#topic">主题介绍</a></h4>
     <div>
       {{ safeHTML (replace .Params.abstract "\n" "<br/>")}}
     </div>
   </div>
 
-  <div class="topic-detail">
-    <h4 class="topic-title">比赛规则</h4>
+  <div class="topic-detail" id="rule">
+    <h4 class="topic-title"><a href="#rule">比赛规则</a></h4>
     <div>
       {{ safeHTML (replace .Params.codeOfConduct "\n" "<br/>")}}
     </div>
   </div>
 
   {{ with .Params.signUpDesc }}
-  <div class="topic-detail">
-    <h4 class="topic-title">报名说明</h4>
+  <div class="topic-detail" id="signUpDesc">
+    <h4 class="topic-title"><a href="#signUpDesc">报名说明</a></h4>
     <div>
       {{ safeHTML (replace . "\n" "<br/>")}}
     </div>
@@ -143,8 +143,8 @@
   {{end}}
 
   {{with .Params.proposals}}
-  <div class="topic-detail">
-    <h4 class="topic-title">项目提议</h4>
+  <div class="topic-detail" id="proposals">
+    <h4 class="topic-title"><a href="#proposals">项目提议</a></h4>
     <div>
       {{ range . }}
       <div style="margin-top: 5px;">
@@ -155,8 +155,8 @@
   </div>
   {{end}}
 
-  <div class="topic-detail">
-    <h4 class="topic-title">奖项设置</h4>
+  <div class="topic-detail" id="award">
+    <h4 class="topic-title"><a href="award">奖项设置</a></h4>
     <div>
       {{ safeHTML (replace .Params.award "\n" "<br/>")}}
     </div>
@@ -198,8 +198,8 @@
   </div>
   {{ end }}
 
-  <div class="topic-detail">
-    <h4 class="topic-title">活动安排</h4>
+  <div class="topic-detail" id="agenda">
+    <h4 class="topic-title"><a href="#agenda">活动安排</a></h4>
     <div>
       {{ with .Params.agenda }}
       {{ range . }}
@@ -216,8 +216,8 @@
   </div>
 
   {{with .Params.glodSponsors}}
-  <div class="topic-detail">
-    <h4 class="topic-title">金牌赞助</h4>
+  <div class="topic-detail" id="glodSponsors">
+    <h4 class="topic-title"><a href="#glodSponsors">金牌赞助</a></h4>
     <div>
       {{ range . }}
       <img style="max-height: 70px;" src="/images/sponsors/{{.}}.png">
@@ -227,8 +227,8 @@
   {{end}}
 
   {{with .Params.silverSponsors}}
-  <div class="topic-detail">
-    <h4 class="topic-title">银牌赞助</h4>
+  <div class="topic-detail" id="silverSponsors">
+    <h4 class="topic-title"><a href="#silverSponsors">银牌赞助</a></h4>
     <div>
       {{ range . }}
       <img style="max-height: 70px;" src="/images/sponsors/{{.}}.png">
@@ -238,8 +238,8 @@
   {{end}}
 
   {{with .Params.generalSponsors}}
-  <div class="topic-detail">
-    <h4 class="topic-title">赞助单位</h4>
+  <div class="topic-detail" id="generalSponsors">
+    <h4 class="topic-title"><a href="#generalSponsors">赞助单位</a></h4>
     <div>
       {{ range . }}
       {{ $pngImage := print "static/images/sponsors/" . ".png"}}
@@ -255,8 +255,8 @@
   {{end}}
 
   {{with .Params.collaborations}}
-  <div class="topic-detail">
-    <h4 class="topic-title">合作社区（单位）</h4>
+  <div class="topic-detail" id="collaborations">
+    <h4 class="topic-title"><a href="#collaborations">合作社区（单位）</a></h4>
     <div>
       {{ range . }}
       <img style="max-height: 70px;" src="/images/sponsors/{{.}}.png">
