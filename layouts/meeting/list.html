@@ -1,0 +1,14 @@
+{{ define "main" }}
+<main>
+    <div class="prose">
+    {{.Content}}
+    </div>
+
+    <div>社区例会记录列表：</div>
+    {{ range .Pages }}
+    <div>
+        <a href="{{.RelPermalink}}">{{ dateFormat "2006-01-02" (string .Params.date) }}</a>
+    </div>
+    {{end}}
+</main>
+{{ end }}

@@ -1,0 +1,25 @@
+{{ define "main" }}
+<main>
+    <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
+        Jenkins 中文社区例会 {{ dateFormat "2006-01-02" (string .Params.date) }}
+        <div class="flex-l">
+            <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+                <div class="prose">
+                    {{ .Content }}
+                </div>
+            </aside>
+
+            <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
+                <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
+                    {{with .Params.attendance}}
+                    签到列表：
+                    {{range .}}
+                    <div style="margin-top: 5px;"><a href="https://github.com/{{.}}" target="_blank">{{.}}</a></div>
+                    {{end}}
+                    {{end}}
+                </aside>
+            </div>
+        </div>
+    </article>
+</main>
+{{ end }}
