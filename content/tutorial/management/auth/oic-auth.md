@@ -1,11 +1,14 @@
 ---
 type: tutorial
-title: 忘记密码
+title: 通过 OpenID 认证
 author: linuxsuren
 keywords:
-- 忘记Jenkins密码
-- 找回Jenkins密码
+- OpenID
+- 认证
 toc: true
+references:
+- name: 插件源码
+  link: https://github.com/jenkinsci/oic-auth-plugin
 ---
 
 如果忘记了 Jenkins 的管理员密码的话，也不用担心，只要你有权限访问 Jenkins 的根目录，就可以轻松地重置密码。
