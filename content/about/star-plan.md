@@ -17,7 +17,7 @@ draft: false
 
 |成员|奖励|
 |----|----|
-|{{< ghref "donhui" "donhui" >}}|《人生护城河 如何建立自己真正的优势 》|
+|{{< ghref "donhui" "donhui" >}}|《人生护城河 如何建立自己真正的优势》|
 |{{< ghref "yJunS" "yJunS" >}}|《精通 jQuery(第二版)》|
 |{{< ghref "linan607" "linan607" >}}|《持续交付 2.0 业务引领的 DevOps 精要》|
 |{{< ghref "P01son6415" "P01son6415" >}}|《算法 第四版》|
