@@ -27,3 +27,4 @@ jobs:
         GIT_DEPLOY_KEY: ${{ secrets.GIT_DEPLOY_KEY }}
         HUGO_VERSION: "0.53"
         WEBSITE_GIT: "git@github.com:jenkins-zh/jenkins-zh.github.io.git"
+        WEBSITE_DIR: "jenkins-zh.github.io"
