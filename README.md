@@ -17,3 +17,8 @@
 1. 下载 [Hugo](https://github.com/gohugoio/hugo/releases) 命令行；
 2. 更新主题 `make fetch-theme`
 3. 启动服务 `hugo server -D`
+
+# 备份
+
+我们使用 [git-backup-actions](https://github.com/jenkins-zh/git-backup-actions/) 来备份当前仓库到 
+[gitee](https://gitee.com/jenkins-zh/jenkins-zh).
