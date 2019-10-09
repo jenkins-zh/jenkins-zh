@@ -22,7 +22,7 @@ jobs:
         rm -rf $cur/content/wechat/management/
         rm -rf $cur/content/wechat/*.md
     - name: hugo-deploy-gh-pages
-      uses: jenkins-zh/hugo-gh-actions@master
+      uses: jenkins-zh/hugo-gh-actions@v0.0.1
       env:
         GIT_DEPLOY_KEY: ${{ secrets.GIT_DEPLOY_KEY }}
         HUGO_VERSION: "0.53"
