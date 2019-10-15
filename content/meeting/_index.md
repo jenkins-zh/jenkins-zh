@@ -11,8 +11,8 @@ Jenkins 中文社区例会，每个双周周三（遇到法定节假日时延后
 * 不发言的时候，及时关闭麦克风🎤
 * 例会是讨论社区的事情，而不是技术分享
 
-## 链接下载地址
-[软件下载](http://www.zooms.vip/download/)
+## 如何接入？
+可以下载[桌面客户端](http://www.zooms.vip/download/)，或者移动客户端来接入会议。
 
-## 网页入会
-[网页入会](https://www.zoomus.cn/webclient/join)
+如果不想下载软件，或者由于某种原因无法访问国外网站的，可以[点击此处](https://www.zoomus.cn/webclient/join)打开国内的 Web 客户端，
+直接在浏览器中参加会议。
