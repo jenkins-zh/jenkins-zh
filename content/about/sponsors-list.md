@@ -20,3 +20,9 @@ weight: 100
 |捐助者|金额（单位：元）|日期|备注|
 |---|---|---|---|
 |{{< ghref "geshujiang" "geshujiang" >}}|100|2019-05-11|[活动链接](https://jenkins-zh.cn/event/beijing-2019-06-22/)|
+
+## 资金去向
+
+|用途|金额|日期|申请人|
+|---|---|---|---|
+|阿里云服务器带宽充值|100|2019.10.24|{{< ghref "linuxsuren" "linuxsuren" >}}|
