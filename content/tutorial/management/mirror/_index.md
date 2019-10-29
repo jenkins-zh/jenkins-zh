@@ -13,3 +13,4 @@ menu:
 |维护方|描述|
 |---|---|
 |[清华大学](https://mirrors.tuna.tsinghua.edu.cn/jenkins/)|war包|
+|[清华大学](/tutorial/management/plugin/update-center/)|插件镜像|
