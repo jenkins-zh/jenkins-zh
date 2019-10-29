@@ -27,7 +27,7 @@ draft: false
 
 # 定期激励
 每个季度被选中的贡献者，可以在[人民邮电出版社微店](https://shop16629033.youzan.com/v2/showcase/homepage?kdt_id=16436865)中自行挑选图书一本。  
-## 定期激励 NO.2
+## NO.2
 时间范围：2019年6月～8月  
 赞助方：[人民邮电出版社][ptpress]
 
@@ -39,7 +39,7 @@ draft: false
 |{{< ghref "P01son6415" "P01son6415" >}}|《算法 第四版》|
 |{{< ghref "hummerstudio" "hummerstudio" >}}|《极简主义——风靡欧美的工作与生活理念》|
 
-## 定期激励 NO.1
+## NO.1
 时间范围：2019年3月～5月  
 赞助方：[人民邮电出版社][ptpress]
 
