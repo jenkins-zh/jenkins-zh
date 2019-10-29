@@ -7,9 +7,21 @@ author: linuxsuren
 draft: false
 ---
 
-为了激励社区成员积极地为社区作出贡献，我们会不定期给予积极活跃、付出重大贡献的小伙伴一定形式的奖励。下面是历次的奖励记录：
+为了激励社区成员积极地为社区作出贡献，我们会不定期给予积极活跃、付出重大贡献的小伙伴一定形式的奖励。
 
-被选中的贡献者，可以在[人民邮电出版社微店](https://shop16629033.youzan.com/v2/showcase/homepage?kdt_id=16436865)中自行挑选图书一本。
+每个季度被选中的贡献者，可以在[人民邮电出版社微店](https://shop16629033.youzan.com/v2/showcase/homepage?kdt_id=16436865)中自行挑选图书一本。  
+此外，不定期还会有合作社区的活动门票赠送给有需要的贡献者。  
+
+下面是历次的奖励记录：
+
+## NO.3
+时间：2019年10月22日  
+活动：[Jenkins User Conference China](https://www.bagevent.com/event/5872241)
+
+|成员|奖励|
+|----|----|
+|{{< ghref "donhui" "donhui" >}}|门票一张|
+|{{< ghref "tomatofrommars" "tomatofrommars" >}}|门票一张|
 
 ## NO.2
 时间范围：2019年6月～8月  
