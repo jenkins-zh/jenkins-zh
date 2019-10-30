@@ -13,5 +13,6 @@ menu:
 |维护方|描述|
 |---|---|
 |[清华大学](https://mirrors.tuna.tsinghua.edu.cn/jenkins/)|不同操作系统下的安装包，以及通用的 War 包，插件等|
+|[华为开源镜像站](https://mirrors.huaweicloud.com/jenkins/)|不同操作系统下的安装包，以及通用的 War 包，插件等|
 
 对于插件镜像源的配置，请参考[这里的说明](/tutorial/management/plugin/update-center/)。

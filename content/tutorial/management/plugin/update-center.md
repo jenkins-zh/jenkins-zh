@@ -12,5 +12,7 @@ Jenkins 安装完成后，默认的插件更新中心地址为 `https://updates.
 `https://updates.jenkins.io/experimental/update-center.json`
 
 ## 镜像地址
-
-`https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json`
+|维护方|镜像中心地址|
+|---|---|
+|[清华大学](https://mirrors.tuna.tsinghua.edu.cn/jenkins/)|`https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json`|
+|[华为开源镜像站](https://mirrors.huaweicloud.com/jenkins/)|`https://mirrors.huaweicloud.com/jenkins/updates/update-center.json`|
