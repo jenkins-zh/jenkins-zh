@@ -32,3 +32,13 @@ toc: true
 
 * 数组：合并
 * 相同字段：报错
+
+## Restful API
+
+导出配置 `curl -X POST -u admin:112e74ac1ded9b9af4854e594405819df9  http://localhost:8080/configuration-as-code/export`
+
+查看 Schema `curl -X POST -u admin:112e74ac1ded9b9af4854e594405819df9 http://localhost:8080/configuration-as-code/schema`
+
+重新加载配置 `curl -X POST -u admin:112e74ac1ded9b9af4854e594405819df9 http://localhost:8080/configuration-as-code/reload`
+
+从请求中应用配置 `curl -X POST -u admin:112e74ac1ded9b9af4854e594405819df9 http://localhost:8080/configuration-as-code/apply`
