@@ -20,7 +20,7 @@ weight: 100
 |捐助者|金额（单位：元）|日期|备注|
 |---|---|---|---|
 |{{< ghref "geshujiang" "geshujiang" >}}|100|2019-05-11|[活动链接](https://jenkins-zh.cn/event/beijing-2019-06-22/)|
-|[测吧(北京)科技有限公司](https://www.testing-studio.com/)|10,000|2019-11-05|社区捐赠|
+|[霍格沃兹测试学院](https://testing-studio.com)|10,000|2019-11-05|社区捐赠|
 
 ## 资金去向
 
