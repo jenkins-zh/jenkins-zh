@@ -119,7 +119,7 @@ docker run ^
 - 当 Jenkins is ready 页面出现， 点击 Start using Jenkins。  
 Notes: **该页面可能表明 Jenkins is almost ready! 如果相反， 点击 Restart。**
 
-- 如果该页面在一分钟后没有自动刷新， 使用你的web浏览器手动刷新。
+- 如果该页面在一分钟后没有自动刷新， 使用你的 web 浏览器手动刷新。
 
 如果需要，登录 Jenkins ， 你就可以开始使用 Jenkins了!
 
