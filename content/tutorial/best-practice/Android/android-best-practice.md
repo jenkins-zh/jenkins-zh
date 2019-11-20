@@ -34,7 +34,7 @@ keywords:
 ## 在 Docker 中运行 Jenkins
 在本教程中， 将 Jenkins 作为 Docker 容器并从 [jenkinsci/blueocean Docker](https://hub.docker.com/r/jenkinsci/blueocean/) 镜像中运行。
 
-要在 Docker 中运行 Jenkins， 请遵循下面的 macOS 和 Linux 或 Windows 相关文档说明进行操作。 .
+要在 Docker 中运行 Jenkins， 请遵循下面的 macOS 和 Linux 或 Windows 相关文档说明进行操作。
 
 你可以在 Docker 和 Installing Jenkins 页面的 [Downloading and running Jenkins in Docker](https://jenkins.io/zh/doc/book/installing#downloading-and-running-jenkins-in-docker) 部分阅读更多有关 Docker 容器和镜像概念的信息。
 
