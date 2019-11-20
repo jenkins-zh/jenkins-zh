@@ -121,7 +121,7 @@ Notes: **该页面可能表明 Jenkins is almost ready! 如果相反， 点击 R
 
 - 如果该页面在一分钟后没有自动刷新， 使用你的 web 浏览器手动刷新。
 
-如果需要，登录 Jenkins ， 你就可以开始使用 Jenkins了!
+如果需要，登录 Jenkins， 你就可以开始使用 Jenkins 了!
 
 ### 停止和重启 Jenkins
 在本教程的其余部分， 你可以通过在终端/命令提示窗口输入 Ctrl-C`停止 Jenkins/Blue Ocean Docker 容器，也可以运行上面`docker run ... 命令。
