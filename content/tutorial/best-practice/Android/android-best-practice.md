@@ -29,7 +29,7 @@ keywords:
     - Docker - 在安装Jenkins页面的[安装 Docker ](https://jenkins.io/doc/book/installing/#installing-docker)章节阅读更多信息。
 注意: 如果您使用 Linux，本教程假定您没有以 root 用户的身份运行 Docker 命令，而是使用单个用户帐户访问本教程中使用的其他工具。
 
-    - Git 和 GitHub Desktop.
+    - Git 和 GitHub Desktop。
 
 ## 在 Docker 中运行 Jenkins
 在本教程中， 将 Jenkins 作为 Docker 容器并从 [jenkinsci/blueocean Docker](https://hub.docker.com/r/jenkinsci/blueocean/) 镜像中运行。
