@@ -8,11 +8,11 @@ keywords:
 - 最佳实践
 ---
 
-本教程将展示 Jenkins 如何使用 Jenkins 和 Gradle 构建一个简单的 Android 应用程序.
+本教程将展示 Jenkins 如何使用 Jenkins 和 Gradle 构建一个简单的 Android 应用程序。
 
 如果你是一个对 CI/CD 概念不了解的 Android 开发者， 或者你熟悉这些概念却不知道如何使用 Jenkins 完成构建，那么本教程很适合你。你将在 Github 上获取一个简单的 Android 应用项目，并包含单元测试。
 
-耗时: 本教程需要 20-40 分钟来完成 (假设你的机器已经满足 配置要求 ).
+耗时: 本教程需要 20-40 分钟来完成 (假设你的机器已经满足 配置要求 )。
 
 
 ## 配置要求
@@ -29,12 +29,12 @@ keywords:
     - Docker - 在安装Jenkins页面的[安装 Docker ](https://jenkins.io/doc/book/installing/#installing-docker)章节阅读更多信息。
 注意: 如果您使用 Linux，本教程假定您没有以 root 用户的身份运行 Docker 命令，而是使用单个用户帐户访问本教程中使用的其他工具。
 
-    - Git 和 GitHub Desktop.
+    - Git 和 GitHub Desktop。
 
 ## 在 Docker 中运行 Jenkins
 在本教程中， 将 Jenkins 作为 Docker 容器并从 [jenkinsci/blueocean Docker](https://hub.docker.com/r/jenkinsci/blueocean/) 镜像中运行。
 
-要在 Docker 中运行 Jenkins， 请遵循下面的 macOS 和 Linux 或 Windows 相关文档说明进行操作。 .
+要在 Docker 中运行 Jenkins， 请遵循下面的 macOS 和 Linux 或 Windows 相关文档说明进行操作。
 
 你可以在 Docker 和 Installing Jenkins 页面的 [Downloading and running Jenkins in Docker](https://jenkins.io/zh/doc/book/installing#downloading-and-running-jenkins-in-docker) 部分阅读更多有关 Docker 容器和镜像概念的信息。
 
@@ -57,7 +57,7 @@ docker run \
 
      ①`-v jenkins-data:/var/jenkins_home` 表示将容器中的 /var/jenkins_home 目录映射到 Docker volume ，并将其命名为 jenkins-data。如果该卷不存在， 那么 docker run 命令会自动为你创建卷。  
      
-     ② `-v "$HOME":/home \` 将主机上的`$HOME` 目录 (即你的本地)映射到 (通常是 /Users/<your-username> 目录) 到容器的 /home 目录。
+     ② `-v "$HOME":/home \` 将主机上的 $HOME 目录 (即你的本地)映射到 (通常是 /Users/<your-username> 目录) 到容器的 /home 目录。
     
 
 3. 继续向导
@@ -117,11 +117,11 @@ docker run ^
 - 当 Create First Admin User 页面出现， 在相应的字段中指定你的详细消息并点击 Save and Finish。
 
 - 当 Jenkins is ready 页面出现， 点击 Start using Jenkins。  
-Notes: **该页面可能表明 Jenkins is almost ready! 如果相反， 点击 Restart.**
+Notes: **该页面可能表明 Jenkins is almost ready! 如果相反， 点击 Restart。**
 
 - 如果该页面在一分钟后没有自动刷新， 使用你的web浏览器手动刷新。
 
-如果需要，登录 Jenkins ， 你就可以开始使用 Jenkins了!
+如果需要，登录 Jenkins ， 你就可以开始使用 Jenkins 了!
 
 ### 停止和重启 Jenkins
 在本教程的其余部分， 你可以通过在终端/命令提示窗口输入 Ctrl-C`停止 Jenkins/Blue Ocean Docker 容器，也可以运行上面`docker run ... 命令。
@@ -282,7 +282,7 @@ git commit -m "Add 'Test' stage"
 6. 可以看到在我们的 UI 中增加了一个 UnitTest 的阶段，点击右上方的 X 回到 Blue Ocean 主界面。
 
 ## 流水线增加交付阶段
-1. 回到你的文本编辑器/IDE，打开你的 Jenkinsfile。
+1. 回到你的文本编辑器/ IDE ，打开你的 Jenkinsfile 。
 2. 复制以下声明式流水线代码，并粘贴到 Jenkinsfile 中 UnitTest 阶段的下方：
 ```
         stage('Archive') {  ①
