@@ -131,7 +131,7 @@ Notes: **该页面可能表明 Jenkins is almost ready! 如果相反， 点击 R
 1. 在上面的 macOS，Linux 或 Windows 上运行相同的 docker run ... 命令 。  
 Note: **如果有更新的话，该进程会更新 jenkinsci/blueocean Docker 镜像。**
 
-2. 浏览`http://localhost:8080`。
+2. 浏览 `http://localhost:8080`。
 
 3. 等待直到登录页面出现并登陆。
 
