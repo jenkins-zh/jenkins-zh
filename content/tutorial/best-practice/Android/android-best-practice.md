@@ -117,7 +117,7 @@ docker run ^
 - 当 Create First Admin User 页面出现， 在相应的字段中指定你的详细消息并点击 Save and Finish。
 
 - 当 Jenkins is ready 页面出现， 点击 Start using Jenkins。  
-Notes: **该页面可能表明 Jenkins is almost ready! 如果相反， 点击 Restart.**
+Notes: **该页面可能表明 Jenkins is almost ready! 如果相反， 点击 Restart。**
 
 - 如果该页面在一分钟后没有自动刷新， 使用你的web浏览器手动刷新。
 
