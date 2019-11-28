@@ -18,4 +18,12 @@ menu:
 |[北京理工大学](http://mirror.bit.edu.cn/jenkins/)||
 |[USTC](http://mirrors.ustc.edu.cn/jenkins/)||
 
+Jenkins 官方也给出了[其他镜像源列表](http://mirrors.jenkins-ci.org/status.html#cn)。
+
+下面是一些国外的镜像源
+
+|维护方|描述|
+|---|---|
+|[XMisson](http://mirror.xmission.com/jenkins/)||
+
 对于插件镜像源的配置，请参考[这里的说明](/tutorial/management/plugin/update-center/)。
