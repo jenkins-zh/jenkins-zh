@@ -332,7 +332,7 @@ pipeline{
         }
         stage('Archive') {  
             steps {
-                archiveArtifacts artifacts: 'app/build/outputs/**/*.apk'， fingerprint: true 
+                archiveArtifacts artifacts: 'app/build/outputs/**/*.apk', fingerprint: true 
             }
         }
     }
