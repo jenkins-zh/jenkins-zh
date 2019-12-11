@@ -33,6 +33,27 @@ toc: true
 * 数组：合并
 * 相同字段：报错
 
+## CLI
+
+除了可以在 UI 界面上操作 CasC 的相关功能，CLI 也有对应的支持。
+
+```
+$ jcli casc
+Configuration as Code
+
+Usage:
+  jcli casc [command]
+
+Available Commands:
+  apply       从应用已有的配置
+  export      导出配置及代码的配置
+  open        在浏览器中打开配置及代码的页面
+  reload      重新加载配置及代码的配置
+  schema      获取配置及代码的结构
+```
+
+**注意**：该功能从 `jcli v0.0.24` 开始支持。详情，请参考对应的 PR [链接](https://github.com/jenkins-zh/jenkins-cli/pull/265)。
+
 ## Restful API
 
 导出配置 `curl -X POST -u admin:112e74ac1ded9b9af4854e594405819df9  http://localhost:8080/configuration-as-code/export`
