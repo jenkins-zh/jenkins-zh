@@ -25,6 +25,15 @@ draft: false
 |[Jenkins User Conference China]|2019年11月2日|{{< ghref "donhui" "donhui" >}}|门票一张|[#138](https://github.com/jenkins-zh/jenkins-zh/issues/138)|
 |[Jenkins User Conference China]|2019年11月2日|{{< ghref "tomatofrommars" "tomatofrommars" >}}|门票一张|[#139](https://github.com/jenkins-zh/jenkins-zh/issues/139)|
 
+## 社区聚会
+
+|日期|城市|成员|备注|
+|---|---|---|---|
+| 2020-1-5 | 北京 | {{< ghref "linuxsuren" "linuxsuren" >}} | 50元 |
+| 2020-1-5 | 北京 | {{< ghref "donhui" "donhui" >}} | 50元 |
+| 2020-1-5 | 北京 | {{< ghref "linan607" "linan607" >}} | 50元 |
+| 2020-1-5 | 北京 | {{< ghref "yJunS" "yJunS" >}} | 50元 [论坛帖子](https://community.jenkins-zh.cn/t/topic/178) |
+
 ## 定期激励
 每个季度被选中的贡献者，可以在[人民邮电出版社微店](https://shop16629033.youzan.com/v2/showcase/homepage?kdt_id=16436865)中自行挑选图书一本。  
 ### NO.2
