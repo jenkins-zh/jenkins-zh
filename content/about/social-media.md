@@ -11,6 +11,7 @@ draft: false
 |----|----|----|
 | 微信公众号 | 人工 | {{< ghref "LinuxSuRen" "LinuxSuRen" >}} |
 | [开源中国](https://my.oschina.net/jenkinszh) | 人工 | {{< ghref "donhui" "donhui" >}} |
+| [思否 SegmentFault](https://segmentfault.com/u/jenkins_zh) | 人工 | {{< ghref "LinuxSuRen" "LinuxSuRen" >}} |
 | [CSDN](https://blog.csdn.net/u014249394/column/info/36607) | 人工 | {{< ghref "P01son6415" "P01son6415" >}} |
 | [简书](https://www.jianshu.com/c/b34c41b2f68f) | 人工 | {{< ghref "yJunS" "yJunS" >}} |
 | [掘金](https://juejin.im/user/5caa989b5188254418337798) | 人工 | {{< ghref "zacker330" "zacker330" >}} |
