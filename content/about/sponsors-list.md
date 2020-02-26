@@ -28,4 +28,4 @@ weight: 100
 |---|---|---|---|
 |阿里云服务器带宽充值|100|2019.10.24|{{< ghref "linuxsuren" "linuxsuren" >}}|
 |购买阿里云服务器|5,640|2019.11.8|{{< ghref "linuxsuren" "linuxsuren" >}}|
-| 购买梯子帐号（一年） | 276 | 2020.02.23 | {{< ghref "linuxsuren" "linuxsuren" >}} |
+| 购买梯子帐号（一年） | 276 | 2020.02.23 | {{< ghref "linuxsuren" "linuxsuren" >}}, {{< ghref "yJunS" "yJunS" >}}, {{< ghref "donhui" "donhui" >}}, {{< ghref "linan607" "linan607" >}} |
