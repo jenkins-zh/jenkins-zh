@@ -15,10 +15,11 @@ author: donhui
 - 分支策略
 
 ## 三个 repo
-git 是一个分布式版本管理系统。以提交文章到 [jenkins-infra/wechat](https://github.com/jenkins-infra/wechat) 为例，在这个过程中，我们会涉及到三个代码仓库。
-1. jenkins-infra/wechat repo，也就是 upstream repo，你需要 `git remote add upstream` 将其配置为 upstream repo 。
-2. fork/wechat repo，如果你从这里 clone 的话，也就是对应的 origin repo 。
-3. local repo，所有的分支管理都是从这里发起的。
+git 是一个分布式版本管理系统。以提交文章到 [jenkins-infra/wechat](https://github.com/jenkins-infra/wechat) 为例，在这个过程中，我们会涉及到三个代码仓库：
+
+1. jenkins-infra/wechat repo，也就是 upstream repo，你需要 `git remote add upstream` 将其配置为 upstream repo
+2. fork/wechat repo，如果你从这里 clone 的话，也就是对应的 origin repo
+3. local repo，所有的分支管理都是从这里发起的
 
 ## 每个任务一个分支
 每个任务一个分支的目的是，保证在 PR review/merge 的时候不会发生冲突。
