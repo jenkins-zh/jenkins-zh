@@ -29,6 +29,10 @@
    1. 人工干预（这个待补充，因为之前出现的两次问题原因还不明确，如何恢复的也还不了解）；
    2. 自动化恢复（这个待补充，需要在 `1` 明确后进行）；
 
+### 监控和预警设置的权限
+
+阿里云平台有个 [RAM (Resource Access Management) 权限管理台](https://ram.console.aliyun.com)，可以新建 RAM 账户，给 RAM 账户设置权限，例如，单独给云监控的权限对应 `AliyunCloudMonitorFullAccess`(对应有个云监控只读权限)。
+
 ### 待确定的内容
 
 1. 监控项目和阈值；
