@@ -19,13 +19,14 @@ weight: 100
 
 |捐助者|金额（单位：元）|日期|备注|
 |---|---|---|---|
-|{{< ghref "geshujiang" "geshujiang" >}}|100|2019-05-11|[活动链接](https://jenkins-zh.cn/event/beijing-2019-06-22/)|
+| [UCloud](https://www.ucloud.cn/) | 2170 | 2020-04-04 | 2核2G 2M 80G系统盘 1年，地区北京，台数1台 |
 |[霍格沃兹测试学院](https://testing-studio.com)|10,000|2019-11-05|社区捐赠|
+|{{< ghref "geshujiang" "geshujiang" >}}|100|2019-05-11|[活动链接](https://jenkins-zh.cn/event/beijing-2019-06-22/)|
 
 ## 资金去向
 
 |用途|金额|日期|申请人|
 |---|---|---|---|
-|阿里云服务器带宽充值|100|2019.10.24|{{< ghref "linuxsuren" "linuxsuren" >}}|
-|购买阿里云服务器|5,640|2019.11.8|{{< ghref "linuxsuren" "linuxsuren" >}}|
 | 购买梯子帐号（一年） | 276 | 2020.02.23 | {{< ghref "linuxsuren" "linuxsuren" >}}, {{< ghref "yJunS" "yJunS" >}}, {{< ghref "donhui" "donhui" >}}, {{< ghref "linan607" "linan607" >}} |
+|购买阿里云服务器|5,640|2019.11.8|{{< ghref "linuxsuren" "linuxsuren" >}}|
+|阿里云服务器带宽充值|100|2019.10.24|{{< ghref "linuxsuren" "linuxsuren" >}}|
