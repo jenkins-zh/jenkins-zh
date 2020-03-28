@@ -1,0 +1,28 @@
+{{ $issues := .context.Params.jenkinsIssues }}
+{{ if $issues }}
+<table>
+    <tr>
+        <td>类型</td><td>编号</td><td>描述</td>
+    </tr>
+{{ $urlPre := "https://issues.jenkins-ci.org/rest/api/2/search?jql=" }}
+{{ $user_json := getJSON $urlPre $issues }}
+{{ $count := 0 }}
+{{ range $user_json.issues }}
+{{ $count = add $count 1 }}
+    {{ if le $count 5 }}
+    <tr>
+        <td>{{ .fields.issuetype.name }}</td>
+        <td>
+            <a href="https://issues.jenkins-ci.org/browse/{{ .key }}" target="_blank">{{ .key }}</a>
+        </td>
+        <td>
+            {{ .fields.summary }}
+        </td>
+    </tr>
+    {{ end }}
+{{ end }}
+</table>
+{{ if gt $user_json.total 5 }}
+一共：{{ $user_json.total }}个，<a href="https://issues.jenkins-ci.org/issues/?jql={{- htmlUnescape $issues -}}" target="_blank">查看更多</a>
+{{ end }}
+{{ end }}

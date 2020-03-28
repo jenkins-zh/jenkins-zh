@@ -1,0 +1,41 @@
+[search]
+other = "搜索文档"
+
+[read-more]
+other = "查看更多"
+
+[page-catalog]
+other = "此页面上的内容"
+
+[see-also]
+other = "参考"
+
+[last-updated]
+other = "上次更新："
+
+[file-issue]
+other = "记录问题"
+
+[get-help]
+other = "获取帮助"
+
+[discuss-source-code]
+other = "讨论源码"
+
+[quick-start]
+other = "快速入门"
+
+[improve-this-page]
+other = "改善此页"
+
+[see-more]
+other = "查看更多"
+
+[source-file]
+other = "原文件"
+
+[copy]
+other = "拷贝"
+
+[menu]
+other = "菜单"

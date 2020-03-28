@@ -1,0 +1,17 @@
+name: Dispatch push event
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: dispatch
+      env:
+        TOKEN: ${{ secrets.TOKEN }}
+      run: |
+        curl -X POST -H "Accept: application/vnd.github.everest-preview+json" -H "Authorization: token ${TOKEN}" -i "https://api.github.com/repos/jenkins-zh/jenkins-zh/dispatches" -d '{"event_type":"repository_dispatch"}'

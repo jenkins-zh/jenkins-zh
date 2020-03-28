@@ -1,0 +1,41 @@
+[search]
+other = "Search the Docs"
+
+[read-more]
+other = "Read More"
+
+[page-catalog]
+other = "What's on this Page"
+
+[see-also]
+other = "See Also"
+
+[last-updated]
+other = "was last updated:"
+
+[file-issue]
+other = "File an Issue"
+
+[get-help]
+other = "Get Help"
+
+[discuss-source-code]
+other = "Discuss Source Code"
+
+[quick-start]
+other = "Quick Start"
+
+[improve-this-page]
+other = "Improve this page"
+
+[see-more]
+other = "See More"
+
+[source-file]
+other = "Source"
+
+[copy]
+other = "Copy"
+
+[menu]
+other = "Menu"

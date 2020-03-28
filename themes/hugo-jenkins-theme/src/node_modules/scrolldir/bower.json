@@ -1,0 +1,26 @@
+{
+  "name": "scrolldir",
+  "description": "Prefectly track user scroll direction without the jitter",
+  "main": "dist/scrolldir.js",
+  "authors": [
+    "Patrick Fisher <patrick@pwfisher.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "jquery",
+    "scroll",
+    "intent",
+    "scrollTop",
+    "position",
+    "javascript",
+    "window"
+  ],
+  "homepage": "https://github.com/pwfisher/scrolldir.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
