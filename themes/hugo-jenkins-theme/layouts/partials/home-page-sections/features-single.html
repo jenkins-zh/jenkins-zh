@@ -1,0 +1,22 @@
+{{ if .Params.sections }}
+{{ range .Params.sections }}
+{{ $.Scratch.Add "i" 1 }}{{ $i := $.Scratch.Get "i" }}
+
+<section class="w-100  ph4 ph5-ns pv4 pv6-ns mid-gray {{ .color_classes }}">
+  <div class="flex-ns flex-wrap center mw9">
+
+    <div class="w-80-ns center tc">
+      <h3 class="f1 fw4 black ma0 pt4 lh-title pt0-l">{{ .heading }}</h3>
+      <p class="f3 lh-copy">
+      {{ .copy }}
+      </p>
+
+      <iframe width="640" height="360" src="{{ .link | absURL }}" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+    </div>
+
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

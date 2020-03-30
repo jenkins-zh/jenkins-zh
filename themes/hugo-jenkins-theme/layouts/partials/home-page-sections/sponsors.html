@@ -1,0 +1,28 @@
+{{$classes_box := "ba b--light-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l "}}
+{{ $sponsors := where .Site.Pages "Params.type" "sponsor" }}
+<section class="bg-primary-color-dark b--dark-gray bb bt ph5 pv4 w-100">
+  <div class="center mw9"> 
+    <f3 class="b f3 light-gray">赞助商</f3>
+    <div class="flex-ns flex-wrap center justify-between  pt3">
+      {{ range $sponsors }}
+      {{ $banner := . }}
+      {{if .Params.logo }}
+      <div class="{{$classes_box}} o-100">
+        {{with .Params.homepage}}<a href="{{ . }}" target="_blank" class="grow">{{end}}
+          <img src="/images/partners/{{.Params.logo}}" class="img h3 center" />
+          {{with .Params.homepage}}</a>{{end}}
+        {{with .Params.comment}}
+        <p class="center lh-copy gray mv1 tc {{$.classes_copy | default "f5 w-70-ns"}}">
+          {{- . -}}
+        </p>
+        {{end}}
+      </div>
+      {{else}}
+      <div class="{{$classes_box}} o-10">
+        <p class="b black tc">赞助商</p>
+      </div>
+      {{end}}
+      {{end}}
+    </div>
+  </div>
+</section>
