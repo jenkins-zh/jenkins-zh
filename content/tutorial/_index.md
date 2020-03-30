@@ -19,3 +19,7 @@ layout: list
 |author|作者，首位编写本教程的人，值为 GitHub ID（必填项）|
 |editors|协作者，作者以外的所有完善过本教程的人，值为 GitHub ID|
 |references|本教程涉及的参考资料链接，包括的字段：name、link|
+| katacoda | Jenkins 中文社区维护的 [Katacoda](katacoda) 交互式教程[项目](jenkins-zh-courses)的 ID |
+
+[katacoda]: https://www.katacoda.com/
+[jenkins-zh-courses]: https://github.com/jenkins-zh/jenkins-zh-courses
