@@ -1,6 +1,3 @@
-fetch-theme:
-	./scripts/fetch-theme.sh
-
 fetch-wechat-articles:
 	./scripts/fetch-wechat-articles.sh
 	make change-format
@@ -14,7 +11,6 @@ update:
 	else \
 		git clone https://github.com/jenkins-zh/jenkins-zh.github.io; \
 	fi
-	make fetch-theme
 	make fetch-wechat-articles
 
 live:

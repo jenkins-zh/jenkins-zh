@@ -1,0 +1,89 @@
+<footer class="bg-primary-color-dark ph4-ns pt4 relative w-100" role="contentinfo">
+  <div class="center flex-ns flex-wrap justify-between mw9 w-90">
+    <div class="pb3 pt4 w-100 w-50-ns">
+
+      <div class="b f3  light-gray mb3 nested-links tc">
+        由 <a href="{{ .Site.Params.github_contributors_link }}" target="_blank"
+          class="link">{{ .Site.Params.github_contributors }}</a> 维护<br />
+      </div>
+
+      <ul class="center f6 list ma0 mv3 pa0 tc" style="display:none">
+        {{- with .Site.Params.github_repo -}}
+        <li class="dib mr3"><a href="{{ . }}" class="dim link light-gray pv2">File an Issue</a></li>
+        {{- end -}}
+        {{- with .Site.Params.forum -}}
+        <li class="dib mr3"><a href="{{ . }}" class="dim link light-gray pv2">Get Help</a></li>
+        {{- end -}}
+        {{- with .Site.Params.gitter -}}
+        <li class="dib"><a href="{{ . }}" class="dim link light-gray pv2">Discuss Source Code</a></li>
+        {{- end -}}
+      </ul>
+
+      <ul class="center f6 list ma0 mv4 pa0 tc">
+        <li class="dib mr3">
+          <a href="https://twitter.com/jenkinsci" target="_blank" class="dim link light-gray pv2">Twitter</a>
+        </li>
+        <li class="dib mr3">
+          <a href="https://www.youtube.com/channel/UC63xz3pq26BBgwB3cnwCoqQ" target="_blank"
+            class="dim link light-gray pv2">YouTube</a>
+        </li>
+        <li class="dib mr3">
+          <a href="https://space.bilibili.com/433584098" target="_blank" class="dim link light-gray pv2">哔哩哔哩</a>
+        </li>
+        <li class="dib mr3">
+          <a href="https://jcli.jenkins-zh.cn/" target="_blank" class="dim link light-gray pv2">Jenkins
+            CLI</a>
+        </li>
+        <li class="dib mr3">
+          <a href="https://community.jenkins-zh.cn/" target="_blank" class="dim link light-gray pv2">社区论坛</a>
+        </li>
+      </ul>
+
+      {{ with getenv "REPOSITORY_URL" -}}
+      <p class="center f6 tc w-70"><a href="https://www.netlify.com"><img
+            src="https://www.netlify.com/img/global/badges/netlify-dark.svg" /></a></p>
+      {{- end }}
+    </div>
+
+    <div>
+      <div style="color: #ffffff; display: inline-block; text-align: center; margin-right: 5px; margin-left: 5px;">优酷视频
+        <div>
+          <a href="https://i.youku.com/jenkinszh" target="_blank">
+            <img src="/images/youku-qrcode.png" with="100" height="100">
+          </a>
+        </div>
+      </div>
+      <div style="color: #ffffff; display: inline-block; text-align: center; margin-right: 5px; margin-left: 5px;">微信公众号
+        <div>
+          <a href="https://mp.weixin.qq.com/s/vifdduC3kRGSIMpyL03yVA" target="_blank">
+            <img src="https://jenkins.io/images/jenkins-wechat.png" with="100" height="100">
+          </a>
+        </div>
+      </div>
+      <div style="color: #ffffff; display: inline-block; text-align: center; margin-right: 5px; margin-left: 5px;">微博
+        <div>
+          <a href="https://www.weibo.com/jenkinszh" target="_blank">
+            <img src="/images/weibo-qrcode.png" with="100" height="100">
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="f7 gray mb5 mb0-ns ph3 w-100"> 
+    <p class="dib mr4"><a href="http://www.beian.miit.gov.cn/" target="_blank" rel="nofollow" class="dim link light-gray pv2"><u>晋ICP备15000444号-2</u></a></p>
+  </div>
+
+
+  <div class="bg-primary-color-dark bottom-0 left-0 right-0 dn-l fixed pb3 ph3 w-100">
+    {{- partial "nav-mobile.html" . -}}
+  </div>
+
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'jenkinsci/chinese'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+</footer>

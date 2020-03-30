@@ -15,7 +15,7 @@
 对于如何参与社区活动，可以参考[站点中的介绍](https://jenkins-zh.github.io/about/how-to-involve/)。这里，要介绍的是如何运行站点。
 
 1. 下载 [Hugo](https://github.com/gohugoio/hugo/releases) 命令行；
-2. 更新主题 `make fetch-theme`
+2. 更新博客文章 `make fetch-wechat-articles`
 3. 启动服务 `hugo server -D`
 
 # 备份

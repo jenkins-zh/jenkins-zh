@@ -1,0 +1,48 @@
+  <div class="flex-ns flex-wrap center mw9">
+    <!-- LEFT -->
+
+    <div class="w-100 w-50-ns">
+      <div class="w-80 center tc nested-copy-line-height">
+        <h3 class="f2 black">Easy to install on any cloud.</h3>
+        <p class="f3">Jenkins X works on macOS, Linux, FreeBSD, and hopefully Windows soon!</p>
+        <div class="center w-50 w-25">
+          {{ partial "svg/kongfu.svg" . }}
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="w-100 w-50-ns tc">
+      <p class="f6 mid-gray m0 p0 pt3">Mac OS</p>
+      <div class="code f6 bg-black light-green lh-copy pv3 ph3 br2 w-100 w-50-ns center mb2 tl">
+        $ brew tap jenkins-x/jx <br />
+        $ brew install jx <br />
+      </div>
+      <p class="f6 mid-gray m0 p0 pt3">Other OSes</p>
+      <p class="f5 nested-links">
+        <a href="https://github.com/jenkins-x/jx/releases" class="link">Download the jx binary</a> and add it to your <b>$PATH</b>
+      </p>
+
+{{/*
+      <p class="f6 mid-gray">Windows</p>
+      <div class="code f6 bg-black light-green lh-copy pv3 ph3 br2 w-100 w-50-ns center tl">
+        $ choco install jx -confirm <br />
+      </div>
+      <p class="f6 mid-gray">Linux</p>
+      <div class="code f6 bg-black light-green lh-copy pv3 ph3 br2 w-100 w-50-ns center tl">
+        $  snap install jx <br />
+      </div>
+*/}}
+
+
+      <p class="f6 mid-gray m0 p0 pt3">Then install Jenkins X</p>
+
+      <p class="f5 nested-links"><a href="{{ "getting-started/" | absURL }}" class="link">See the Getting Started Guide for more  {{ partial "svg/link-ext.svg" (dict "fill" "#333" "size" "14") }}</a></p>
+    </div>
+
+    <!-- TODO: the install section should have a tab menu for selecting the preferred installation method, i.e. the binaries from GitHub or the commands for the installation via a package manager https://github.com/rdwatters/hugo-docs-concept/issues/3#issuecomment-287498412 -->
+
+      <!-- TODO: Animate the gopher  https://github.com/rdwatters/hugo-docs-concept/issues/3#issuecomment-287194777 -->
+
+
+  </div>
