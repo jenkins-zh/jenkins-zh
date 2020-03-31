@@ -14,6 +14,7 @@ draft: false
 | [知乎](https://www.zhihu.com/people/linuxsuren/) | 人工 | {{< ghref "LinuxSuRen" "LinuxSuRen" >}} |
 | [哔哩哔哩](https://space.bilibili.com/433584098) | 人工 | {{< ghref "LinuxSuRen" "LinuxSuRen" >}} |
 | [微博](https://weibo.com/jenkinszh) | 人工 | {{< ghref "donhui" "donhui" >}} |
+| [领英](https://www.linkedin.com/company/jenkins-zh/) | 人工 | {{< ghref "LinuxSuRen" "LinuxSuRen" >}} |
 | [思否 SegmentFault](https://segmentfault.com/u/jenkins_zh) | 人工 | {{< ghref "LinuxSuRen" "LinuxSuRen" >}} |
 | [CSDN](https://blog.csdn.net/u014249394/column/info/36607) | 人工 | {{< ghref "P01son6415" "P01son6415" >}} |
 | [简书](https://www.jianshu.com/c/b34c41b2f68f) | 人工 | {{< ghref "yJunS" "yJunS" >}} |
