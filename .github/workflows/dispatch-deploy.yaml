@@ -11,8 +11,6 @@ jobs:
     - name: update
       run: |
         cur=`pwd`
-        mkdir themes
-        cd $cur/themes && git clone https://github.com/jenkins-zh/hugo-jenkins-theme
         cd $cur/content && git clone https://github.com/jenkins-infra/wechat
         cd $cur/content/wechat/articles && rm sample.md && find . -name *.md -exec mv {} . \;
         rm -rf $cur/content/wechat/articles/2018
