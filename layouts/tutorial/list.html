@@ -1,47 +1,49 @@
 {{ define "main" }}
 <div class="w-100 ph4 pb5 pb6-ns pt1 pt3-ns">
     <div class="flex">
-      <div class="dn db-l w-20">
-        <aside>
-            <ul>
-                {{ $currentPage := . }}
-                {{ $baseURL := .Site.BaseURL}}
-                {{ range .Site.Menus.tutorial }}
+        <div class="dn db-l w-20">
+            <aside>
+                <ul>
+                    {{ $currentPage := . }}
+                    {{ $baseURL := .Site.BaseURL}}
+                    {{ range .Site.Menus.tutorial }}
                     {{ if .HasChildren }}
-                        <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
-                            <a href="{{$baseURL}}/tutorial/{{.Name}}">
-                                {{ .Pre }}
-                                <span>{{ default .Name .Post }}</span>
-                            </a>
+                    <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                        <a href="{{$baseURL}}/tutorial/{{.Name}}">
+                            {{ .Pre }}
+                            <span>{{ default .Name .Post }}</span>
+                        </a>
+                    </li>
+                    <ul class="sub-menu">
+                        {{ range .Children }}
+                        <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                            <a href="{{ .URL }}">{{ default .Name .Post }}</a>
                         </li>
-                        <ul class="sub-menu">
-                            {{ range .Children }}
-                                <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                                    <a href="{{ .URL }}">{{ default .Name .Post }}</a>
-                                </li>
-                            {{ end }}
-                        </ul>
+                        {{ end }}
+                    </ul>
                     {{ else }}
-                        <li>
-                            <a href="{{ .URL }}">
-                                {{ .Pre }}
-                                <span>{{ default .Name .Post }}</span>
-                            </a>
-                        </li>
+                    <li>
+                        <a href="{{ .URL }}">
+                            {{ .Pre }}
+                            <span>{{ default .Name .Post }}</span>
+                        </a>
+                    </li>
                     {{ end }}
-                {{ end }}
-            </ul>
-        </aside>
-      </div>
+                    {{ end }}
+                </ul>
+            </aside>
+        </div>
 
         <div class="prose">
-        {{.Content}}
+            {{.Content}}
 
-        {{ range .Pages }}
-        <div>
-            <a href="{{.RelPermalink}}">{{ .Params.title }}</a>
-        </div>
-        {{end}}
+            {{if ne $currentPage.URL "/tutorial/" }}
+            {{ range .Pages }}
+            <div>
+                <a href="{{.RelPermalink}}">{{ .Params.title }}</a>
+            </div>
+            {{end}}
+            {{end}}
         </div>
     </div>
 </div>
@@ -49,21 +51,17 @@
 {{ if .Site.Params.Comments.Utterances.Enable }}
 {{ if ne .Params.comment false }}
 <style>
-div[class=utterances] {
-    max-width: inherit;
-    width: auto;
-    margin-left: 32px;
-    margin-right: 32px;
-}
+    div[class=utterances] {
+        max-width: inherit;
+        width: auto;
+        margin-left: 32px;
+        margin-right: 32px;
+    }
 </style>
-<script src="https://utteranc.es/client.js"
-        repo="{{ .Site.Params.Comments.Utterances.Github.repository }}"
-        issue-term="{{ .Site.Params.Comments.Utterances.IssueTerm }}"
-        theme="github-light"
-        label="tutorial"
-        crossorigin="{{ .Site.Params.Comments.Utterances.Github.username }}"
-        async>
-</script>
+<script src="https://utteranc.es/client.js" repo="{{ .Site.Params.Comments.Utterances.Github.repository }}"
+    issue-term="{{ .Site.Params.Comments.Utterances.IssueTerm }}" theme="github-light" label="tutorial"
+    crossorigin="{{ .Site.Params.Comments.Utterances.Github.username }}" async>
+    </script>
 {{ end }}
 {{ end }}
 {{end}}
