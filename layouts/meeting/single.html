@@ -1,22 +1,41 @@
 {{ define "main" }}
 <main>
     <article class="w-100 ph4 pb5 pb6-ns pt1 pt5-ns">
-        Jenkins 中文社区例会 {{ dateFormat "2006-01-02" (string .Params.date) }}
+        <h1>Jenkins 中文社区例会</h1> {{ dateFormat "2006-01-02" (string .Params.date) }}
         <div class="flex-l">
-            <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
+            <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-80">
                 <div class="prose">
                     {{ .Content }}
                 </div>
             </aside>
 
-            <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky">
-                <aside class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
-                    {{with .Params.attendance}}
-                    签到列表：
-                    {{range .}}
-                    <div style="margin-top: 5px;"><a href="https://github.com/{{.}}" target="_blank">{{.}}</a></div>
+            <div class="order-2 w-100 w-20-l ph5-m ph0-l mb4 sticky pt3 mt2">
+                <aside
+                    class="fixed-lTK mw5-l right-0 f6 bl-l b--moon-gray pv4 pv0-ns ph4-l nested-list-reset nested-links nested-copy-line-height">
+                    <div style="margin-top: 20px; margin-bottom: 20px;">
+                        {{with .Params.attendance}}
+                        <p class="b">签到列表：</p>
+                        {{range .}}
+                        <div style="margin-top: 5px;"><a href="https://github.com/{{.}}" target="_blank">{{.}}</a></div>
+                        {{end}}
+                        {{end}}
+                    </div>
+
+                    {{ if .Params.video }}
+                    <hr>
+                    <a href="{{.Params.video}}" target="_blank" ref="nofollow">会议视频</a>
                     {{end}}
-                    {{end}}
+
+                    <hr>
+                    <div style="margin-top: 20px; margin-bottom: 20px;">
+                        <a href="{{.Site.Params.ghrepo}}edit/master/content/{{.File.Path}}"
+                            target="_blank">{{ i18n "improve-this-page" . }}</a>
+                    </div>
+
+                    <hr>
+                    <div style="margin-top: 20px; margin-bottom: 20px;">
+                        <a href="{{.Site.BaseURL}}/meeting">会议列表</a>
+                    </div>
                 </aside>
             </div>
         </div>
