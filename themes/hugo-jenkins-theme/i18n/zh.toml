@@ -5,7 +5,7 @@ other = "搜索文档"
 other = "查看更多"
 
 [page-catalog]
-other = "此页面上的内容"
+other = "内容目录"
 
 [see-also]
 other = "参考"
@@ -26,7 +26,7 @@ other = "讨论源码"
 other = "快速入门"
 
 [improve-this-page]
-other = "改善此页"
+other = "完善此页"
 
 [see-more]
 other = "查看更多"
