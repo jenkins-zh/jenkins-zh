@@ -1,7 +1,7 @@
 ---
 name: 推荐文章翻译
 about: 推荐 DevOps 相关的英文技术文章、博客
-title: "[翻译] - "
+title: "[推荐] - "
 labels: 翻译
 assignees: ''
 
