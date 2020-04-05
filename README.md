@@ -1,24 +1,24 @@
-# Jenkins 中文社区网站源码
+# Jenkins WeChat
 
-该站点采用 Markdown 格式编写，由 [Hugo](https://github.com/gohugoio/hugo) 生成静态文件。
+![GitHub contributors](https://img.shields.io/github/contributors/jenkins-zh/jenkins-zh)
 
-包含的内容，包括：
+WeChat is similar to [Twitter](https://twitter.com). Almost everyone has an account on WeChat in China.
 
-* 微信公众号文章
-* 社区活动（建设中）
-* 站点介绍
+The Jenkins WeChat subscription account delivers messages or events from the Jenkins Community.
 
-除了上述内容外，还基于 [utterance](https://github.com/utterance) 提供了文章评论功能。
+All articles should be open-source, every contributor could create a PR. Once we reviewed it, your articles could be released.
 
-# 参与
+We have a [chatbot](https://github.com/jenkins-zh/wechat-backend) that can reply to your messages automatically. 
+Unfortunately, its ability is very limited; it only understands a few keywords from [here](management/auto-reply/keywords-welcome.yml).
 
-对于如何参与社区活动，可以参考[站点中的介绍](https://jenkins-zh.github.io/about/how-to-involve/)。这里，要介绍的是如何运行站点。
+# TODO List
 
-1. 下载 [Hugo](https://github.com/gohugoio/hugo/releases) 命令行；
-2. 更新博客文章 `make fetch-wechat-articles`
-3. 启动服务 `hugo server -D`
+Feel free to pick up a task from [here](https://github.com/orgs/jenkins-zh/projects/2). If you're interested in contributing to this project, please read our [contributing guide](CONTRIBUTING.md) first.
 
-# 备份
+You can find a list of all contributors [here](https://github.com/jenkins-infra/wechat/tree/master/management/contributors).
 
-我们使用 [git-backup-actions](https://github.com/jenkins-zh/git-backup-actions/) 来备份当前仓库到 
-[gitee](https://gitee.com/jenkins-zh/jenkins-zh).
+# Join us on WeChat
+
+Please scan this QRCode below using the WeChat app:
+
+![](statics/images/wechat-qrcode.jpg)
