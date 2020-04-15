@@ -36,6 +36,19 @@ draft: false
 
 ## 定期激励
 每个季度被选中的贡献者，可以在[人民邮电出版社微店](https://shop16629033.youzan.com/v2/showcase/homepage?kdt_id=16436865)中自行挑选图书一本。  
+
+### NO.3
+时间范围：2019年9月～2020年4月  
+赞助方：[人民邮电出版社][ptpress]
+
+|成员|奖励|
+|----|----|
+|{{< ghref "wenjunzhangp" "wenjunzhangp" >}}|《微服务实战(Dubbox +Spring Boot+Docker)》|
+|{{< ghref "zhaoying818" "zhaoying818" >}}|《微服务设计》|
+|{{< ghref "0N0thing" "0N0thing" >}}|《DevOps实践指南》|
+|{{< ghref "wst021" "wst021" >}}|《DevOps入门与实践》|
+|{{< ghref "walker0921" "walker0921" >}}|《Python编程从入门到实践》|
+
 ### NO.2
 时间范围：2019年6月～8月  
 赞助方：[人民邮电出版社][ptpress]
