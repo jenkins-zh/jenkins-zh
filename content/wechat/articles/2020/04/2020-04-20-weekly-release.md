@@ -55,9 +55,10 @@ keywords:
 - Jenkins 2.230发布
 author: jenkinsci
 translator: zhaoying818
-poster: “./2020-04-20-jenkins-release/great-wall.jpeg”
+poster: "./2020-04-20-jenkins-release/great-wall.jpeg"
 ---
 
+![great-wall](great-wall.jpeg)
 
 ## 2.230 (2020-04-06)
 * 改进告警横幅的样式，使其更具视觉吸引力并更好地匹配现有的用户界面组件。 现在，警报在显示时完全覆盖了导航栏，而不是仅覆盖导航栏的一部分。 (issue 61478)
