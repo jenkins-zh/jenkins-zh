@@ -7,7 +7,7 @@ poster: cover.jpg
 translator: walker0921  
 original: https://medium.com/better-programming/how-we-scaled-jenkins-in-less-than-a-day-ccbcada8e4a4  
 tags:  
-- Jenkins  
+- Jenkins   
 - Kubernetes  
 - CI/CD  
  
