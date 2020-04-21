@@ -22,8 +22,8 @@ tags:
 这篇文章中，我将向你展示使用 kind 在单个 Docker 容器中启动一个集群的步骤。
 
 ## 什么是 kind？
-*kind 是一款使用 Docker 容器  “nodes” 运行 Kubernetes 集群的工具。*
-*https://kind.sigs.k8s.io/*
+>*kind 是一款使用 Docker 容器  “nodes” 运行 Kubernetes 集群的工具。*
+>*https://kind.sigs.k8s.io/*
 
 介绍看起来没有描述信息，但是很明显能知道是源于 “Kubernetes IN Docker”。该工具具备了跨平台友好的优势即便你使用的是 Windows 版本的 Docker。当然了，缺点就是它的可追溯性比较差。
 
@@ -41,7 +41,7 @@ kind create cluster
 kind get clusters
 ```
 
-## 设置 kuberctl
+## 设置 kubectl
 同样的，使用 [Homebrew](https://brew.sh/) 或者 [Chocolatey](https://chocolatey.org/) 安装最新版本的 `kubernetes-cli`。最新版本的 Docker 包含了 Kubernetes 的功能，但使用的是老版本的 `kubectl`。
 
 运行该命令检查它的版本号。
