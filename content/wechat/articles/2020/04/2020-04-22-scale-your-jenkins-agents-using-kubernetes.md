@@ -1,4 +1,4 @@
-个---
+---
 title: Kubernetes 构造可自由扩展的 Jenkins  
 date: 2020-04-22  
 description: 主要介绍 Jenkins 在 kubernetes 集群上的运行模式及配置  
@@ -10,7 +10,7 @@ tags:
 - Jenkins   
 - Kubernetes  
 - CI/CD  
- ---
+---
 
 ![cover](cover.jpg)
 
