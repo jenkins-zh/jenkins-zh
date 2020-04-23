@@ -1,8 +1,10 @@
 {{ define "main" }}
 <h4 align="center">合作伙伴</h4>
 
+<!-- 当前年度有合作的，列在前面 -->
 <div style="margin: 10px;text-align: center;">
     {{ range .Pages }}
+    {{if in .Params.period (string now.Year) }}
     <span style="padding-left: 10px; padding-right: 10px;">
         {{ if and (ne .Params.logo nil) (ne .Params.logo "") }}
         {{ if and (ne .Params.homepage nil) (ne .Params.homepage "") }}<a href="{{.Params.homepage}}"
@@ -11,6 +13,20 @@
             {{ if and (ne .Params.homepage nil) (ne .Params.homepage "") }}</a>{{ end}}
         {{ end }}
     </span>
+    {{ end }}
+    {{ end }}
+</div>
+
+<!-- 当前年度没有合作的排在后面，而且，不添加超链接 -->
+<div style="margin: 10px;text-align: center;">
+    {{ range .Pages }}
+    {{if not (in .Params.period (string now.Year)) }}
+    <span style="padding-left: 10px; padding-right: 10px;">
+        {{ if and (ne .Params.logo nil) (ne .Params.logo "") }}
+        <img src="/images/partners/{{.Params.logo}}" height="86px" alt="{{.Params.displayName}}" />
+        {{ end }}
+    </span>
+    {{ end }}
     {{ end }}
 </div>
 

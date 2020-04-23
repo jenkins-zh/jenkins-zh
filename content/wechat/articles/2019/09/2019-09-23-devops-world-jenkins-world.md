@@ -8,7 +8,7 @@ tags:
 keywords:
 - DEVOPS JENKINS
 author: Deborah Schalm
-translator: hnaug
+translator: h5ang
 poster: jenkins-world.jpeg
 ---
 
