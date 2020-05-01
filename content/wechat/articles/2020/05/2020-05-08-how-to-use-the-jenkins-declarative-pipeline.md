@@ -263,7 +263,7 @@ stage('run-parallel-branches') {
                 echo "Tests on Linux"
             },
             b: {
-            echo "Tests on Windows"
+                echo "Tests on Windows"
             }
         )
     }
