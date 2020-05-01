@@ -251,7 +251,9 @@ pipeline {
 
 ### parallel
 
-Jenkins 流水线阶段可以在内部嵌套其他阶段，这些阶段将并行执行。这是通过在脚本中添加“parallel”指令来完成的。 使用示例：
+Jenkins 流水线阶段可以在内部嵌套其他阶段，这些阶段将并行执行。
+
+这是通过在脚本中添加“parallel”指令来完成的。 使用示例：
 
 ```groovy
 stage('run-parallel-branches') {
