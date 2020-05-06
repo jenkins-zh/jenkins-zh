@@ -173,9 +173,9 @@ $ echo $TOKEN
 
 集群集成进来之后，我们可以直接从 web 页面安装 helm（Kubernetes 包管理工具）。
 
-![instal-helm](instal-helm.png)
+![install-helm](install-helm.png)
 
-![instal-helm-2](instal-helm-2.png)
+![install-helm-2](install-helm-2.png)
 
 现在我们可以通过命令行检查一下 `tiller` 守护进程（helm 的服务器端组件）是否运行。
 
