@@ -4,7 +4,7 @@ description: 在本教程中了解如何使用 Jenkins 的声明性流水线，�
 date: 2020-05-08
 author: Alejandro Berardinelli
 translator: hummerstudio 
-poster: Jenkins-Declarative-Pipeline.png
+poster: cover.jpg
 original: https://dzone.com/articles/how-to-use-the-jenkins-declarative-pipeline
 tags:  
 - Jenkins
@@ -12,7 +12,7 @@ tags:
 - Declarative Pipeline
 ---
 
-![封面](Jenkins-Declarative-Pipeline.png)
+![封面](declarative2-1.png)
 
 Jenkins 为您提供了两种开发流水线代码的方式：脚本式和声明式。 
 
