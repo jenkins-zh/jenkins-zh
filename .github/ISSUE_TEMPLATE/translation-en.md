@@ -6,6 +6,8 @@ labels: translation
 assignees: ''
 ---
 
+This article will be published to Jenkins official WeChat.
+
 ### Title
 
 
