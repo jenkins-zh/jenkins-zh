@@ -21,4 +21,4 @@ You can find a list of all contributors [here](https://github.com/jenkins-infra/
 
 Please scan this QRCode below using the WeChat app:
 
-![](statics/images/wechat-qrcode.jpg)
+![](static/images/wechat-qrcode.jpg)

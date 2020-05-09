@@ -32,17 +32,18 @@
     color: #0594cb;
   }
 </style>
-{{ range (.Pages.GroupByParam "year").Reverse }}
 <div style="background: #f5f5f5">
   <div class="content">
-    每个单周周三21:00，Jenkins 中文社区举办线上技术交流活动，参与的 zoom 会议 ID 为：691718976。<br />
+    每个单周周三21:00，Jenkins 中文社区举办线上技术交流活动，参与的 zoom 会议 ID 为：691718976。
     <a href="https://www.zoomus.cn/webclient/join" target="_blank">点击此处</a>通过 Web 客户端接入，
-    或者自行下载<a href="https://zoom.us/j/691718976" target="_blank">桌面客户端</a>。
+    或者通过<a href="https://zoom.us/j/691718976" target="_blank">桌面客户端</a>进入会议。
+
+    {{ range (.Pages.GroupByParam "year").Reverse }}
     <h3>{{.Key}}年度计划安排</h3>
     <table width="1000px">
       <thead>
         <tr>
-          <th>时间</th>
+          <th>日期</th>
           <th>主题</th>
           <th>城市</th>
           <th>位置</th>
@@ -83,14 +84,16 @@
         {{ end }}
       </tbody>
     </table>
+    {{end}}
+
   </div>
 </div>
-{{end}}
 
 <span>
-  想在自己 Mac 的 Calendar APP 上订阅 Jenkins 活动日历的小伙伴注意啦！首先得有自己的 Google 账号(梯子自备)，然后点击下方右下角 `+ Google Calendar`，将此日历添加到自己的 Google Calendar 中，然后在自己 Calendar APP 中添加自己的 Google 账号，将账号中同步的日历选中，就可以方便地看到 Jenkins 活动日历了
-<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FShanghai&amp;src=cDlrZmZoaXI2bG5ydXQ1YXA1Y2k2cTAzaWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=NHNzMTJmMG1xcjN0YnAxdDJmZTM2OXNsZjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=emgtY24uY2hpbmEjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%236633CC&amp;color=%238A2D38&amp;color=%231F753C&amp;hl=zh_CN"
-  style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+  想在自己 Mac 的 Calendar APP 上订阅 Jenkins 活动日历的小伙伴注意啦！首先得有自己的 Google 账号(梯子自备)，然后点击下方右下角 `+ Google Calendar`，将此日历添加到自己的
+  Google Calendar 中，然后在自己 Calendar APP 中添加自己的 Google 账号，将账号中同步的日历选中，就可以方便地看到 Jenkins 活动日历了
+  <iframe
+    src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FShanghai&amp;src=cDlrZmZoaXI2bG5ydXQ1YXA1Y2k2cTAzaWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=NHNzMTJmMG1xcjN0YnAxdDJmZTM2OXNsZjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=emgtY24uY2hpbmEjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%236633CC&amp;color=%238A2D38&amp;color=%231F753C&amp;hl=zh_CN"
+    style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
 </span>
 {{end}}
-

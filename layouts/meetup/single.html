@@ -2,80 +2,91 @@
 <main style="background: #f5f5f5">
   <style>
     .topic {
-        display: flex;
-        margin: 20px auto;
-        max-width: 1000px;
-        padding: 20px;
-        background-color: #fff;
+      display: flex;
+      margin: 20px auto;
+      max-width: 1000px;
+      padding: 20px;
+      background-color: #fff;
     }
+
     .topic .detail {
-        margin-left: 20px;
-        display: flex;
-        flex-direction: column;
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
     }
+
     .topic .detail .title {
-        color: #898989;
+      color: #898989;
     }
+
     .topic-detail {
-        margin: 20px auto;
-        max-width: 1000px;
-        padding: 20px;
-        background-color: #fff;
+      margin: 20px auto;
+      max-width: 1000px;
+      padding: 20px;
+      background-color: #fff;
     }
+
     .topic-title {
-        border-bottom: 1px solid #ddd;
-        padding: 10px;
-        display: flex;
-        border-left: 5px solid #1b809e;
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+      display: flex;
+      border-left: 5px solid #1b809e;
     }
+
     .guest {
-        display: flex;
+      display: flex;
     }
+
     .guest img {
-        width: 100px;
-        height: 100px;
+      width: 100px;
+      height: 100px;
     }
+
     .guest-detail {
-        margin: 0 20px
+      margin: 0 20px
     }
+
     .job-title {
-        color: #777;
-        font-size: 12px;
+      color: #777;
+      font-size: 12px;
     }
+
     .schedule-content::after {
-        position: absolute;
-        top: 10px;
-        left: 2px;
-        content: '';
-        display: block;
-        width: 2px;
-        height: 100%;
-        background-color: rgba(31,99,175,0.5);
-        z-index: 0;
+      position: absolute;
+      top: 10px;
+      left: 2px;
+      content: '';
+      display: block;
+      width: 2px;
+      height: 100%;
+      background-color: rgba(31, 99, 175, 0.5);
+      z-index: 0;
     }
+
     .schedule-content {
-        padding-bottom: 32px;
-        position: relative;
-        display: table;
-        clear: both;
-        width: 100%;
-        padding-left: 20px;
+      padding-bottom: 32px;
+      position: relative;
+      display: table;
+      clear: both;
+      width: 100%;
+      padding-left: 20px;
     }
+
     .schedule-timeline::after {
-        position: absolute;
-        left: 0;
-        top:8px;
-        content: '';
-        display: block;
-        width: 7px;
-        height: 7px;
-        border-radius: 1px;
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-        background-color: #1b809e;
-        z-index: 1;
+      position: absolute;
+      left: 0;
+      top: 8px;
+      content: '';
+      display: block;
+      width: 7px;
+      height: 7px;
+      border-radius: 1px;
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background-color: #1b809e;
+      z-index: 1;
     }
-    </style>
+  </style>
   <div class="topic">
     <div>
       <img width="320px" height="160px" src="{{ .Params.poster }}" alt>
@@ -88,23 +99,34 @@
         <span>{{ .Params.status }}</span>
       </div>
       <div>
-        <span class="title">时间:</span>
+        <span class="title">日期:</span>
         <span>{{ .Params.hostDate }}</span>
       </div>
+      {{ if .Params.time }}
+      <div>
+        <span class="title">时间:</span>
+        <span>{{ .Params.time }}</span>
+      </div>
+      {{end}}
       <div>
         <span class="title">地点:</span>
         <span>
-            {{ if ne .Params.map "" }}<a target="_blank" href="{{.Params.map}}">{{.Params.location}}</a>{{else}}{{.Params.location}}{{ end }}
+          {{ if ne .Params.map "" }}<a target="_blank"
+            href="{{.Params.map}}">{{.Params.location}}</a>{{else}}{{.Params.location}}{{ end }}
         </span>
       </div>
+      {{ if .Params.fee }}
       <div>
         <span class="title">费用:</span>
         <span>{{ .Params.fee }}</span>
       </div>
+      {{ end }}
+      {{ if .Params.signUpURL }}
       <div>
         <span class="title">报名:</span>
-        <span><a target="_blank" style="color: crimson" href="{{.Params.signUpURL}}">{{ .Params.signUp }}</a></span>
+        <span><a target="_blank" style="color: crimson" href="{{.}}">{{ .Params.signUp }}</a></span>
       </div>
+      {{ end }}
     </div>
   </div>
   <div class="topic-detail">
@@ -121,10 +143,10 @@
       <div class="guest">
         {{if eq . "todo"}}
         <div>本次活动还有空余的话题，欢迎您<a href="mailto:event@jenkins-zh.cn?subject=活动-{{$topic}}-讲师申请&body=请提供您的个人简介以及分享的题目"
-        class="f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link"
-        target="_blank" style="margin: 5px;">
-        立即申请作为讲师
-        </a></div>
+            class="f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link" target="_blank"
+            style="margin: 5px;">
+            立即申请作为讲师
+          </a></div>
         {{else}}
         {{ $speaker := getJSON "/content/speaker/" . ".json" }}
         <div style="min-width: 100px;">
@@ -165,23 +187,40 @@
     </div>
   </div>
 
+  {{with .Params.sponsors}}
   <div class="topic-detail">
     <h4 class="topic-title">赞助单位</h4>
     <div>
-      {{with .Params.sponsors}}
       {{ range . }}
       <img style="max-height: 70px;" src="/images/sponsors/{{.}}.png">
       {{ end }}
-      {{end}}
     </div>
   </div>
+  {{end}}
 
+  {{ if .Params.comment }}
   <div class="topic-detail">
     <h4 class="topic-title">注意事项</h4>
     <div>
       {{ safeHTML (replace .Params.comment "\n" "<br/>")}}
     </div>
   </div>
+  {{end}}
+
+  {{ if .Site.Params.Comments.Utterances.Enable }}
+  <style>
+    div[class=utterances] {
+      max-width: inherit;
+      width: auto;
+      margin-left: 32px;
+      margin-right: 32px;
+    }
+  </style>
+  <script src="https://utteranc.es/client.js" repo="{{ .Site.Params.Comments.Utterances.Github.repository }}"
+    issue-term="{{ .Site.Params.Comments.Utterances.IssueTerm }}" theme="github-light" label="tutorial"
+    crossorigin="{{ .Site.Params.Comments.Utterances.Github.username }}" async>
+    </script>
+  {{ end }}
 
 </main>
 
