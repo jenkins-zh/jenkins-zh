@@ -29,13 +29,13 @@ tags:
 
 ## 使用的软件
 
-- Sonartype Nexus OSS 3.15.0（或更高版本）
+- Sonatype Nexus OSS 3.15.0（或更高版本）
 
 - Docker 17.09（或更高版本）
 
 我设置了两个基于 Ubuntu LTS 版本的虚拟机，一个运行了 [Sonatype Nexus 3.14.0 的 Docker 容器](https://hub.docker.com/r/sonatype/nexus3/)（这个机器称作 **docker-host**），另一个只运行 Docker（称作 **docker-client**）。
 
-请注意一些网络配置或许跟你的配置不一样（例如 IPs）但是方法是相同的。同样，请注意那台运行 Nexus OSS 的机器（**docker-host**）需要有访问互联网的权限。
+请注意一些网络配置或许跟你的配置不一样（例如 IP）但是方法是相同的。同样，请注意那台运行 Nexus OSS 的机器（**docker-host**）需要有访问互联网的权限。
 
 **[更新，2018年10月] 请使用 Nexus 3.15 或者更高版本因为从 3.14 到 3.15 中间修复了多个 CVE 的漏洞问题。**
 
@@ -133,7 +133,7 @@ Repository Group 仅仅是一个 Repositories 的集合，但是我们需要 Doc
 
 如果需要的话，你可以安全的将你的 主机名或者 IP 替换为 10.0.2.2。请做全量替换。
 
-文件保存后，Docker 需要重启。如果成功: docker 命令信息会如下图所示:
+文件保存后，Docker 需要重启。如果成功: docker info 命令信息会如下图所示:
 
 ![dockerinfo](dockerinfo.png)
 
