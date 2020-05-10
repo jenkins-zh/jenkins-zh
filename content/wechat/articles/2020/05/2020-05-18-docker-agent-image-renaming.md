@@ -1,5 +1,5 @@
 ---
-title: Jenkins agent Docker 镜像重新命名了，赶快来了解一下吧！
+title: Jenkins agent Docker 镜像重新命名了，你知道吗？
 date: 2020-05-18
 description: 本文介绍了 Jenkins agent Docker 镜像新名称、重新命名的缘由、升级说明以及下一步计划
 author: Oleg Nenashev
