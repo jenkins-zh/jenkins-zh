@@ -42,7 +42,7 @@ JNLP 代表 [Java Network Launch Protocol](https://en.wikipedia.org/wiki/Java_We
 Docker agent 镜像支持 WebSockets，因此我们决定将映像名称更改为 [jenkins/inbound-agent](https://hub.docker.com/r/jenkins/inbound-agent)，这样可以防止进一步的混乱。
 *Inbound agent* 术语是指 agent 协议，其中 agent 通过不同的协议启动与 Jenkins master 的连接。
 
-非常感谢 [Alex Earl](https://www.jenkins.io/blog/authors/slide_o_mix/) 和 [krufab](https://github.com/krufab) 进行的存储库重组工作，这使重命名成为可能！还要感谢 [Tim Jacomb](https://www.jenkins.io/blog/authors/timja/)、[Marky Jackson](https://www.jenkins.io/blog/authors/markyjackson-taulia/)、[Mark Waite](https://www.jenkins.io/blog/authors/markewaite)、[Ivan Fernandez Calvo](https://github.com/kuisathaverat)和其他贡献者的评审和测试。
+非常感谢 [Alex Earl](https://www.jenkins.io/blog/authors/slide_o_mix/) 和 [krufab](https://github.com/krufab) 进行的存储库重组工作，这使重命名成为可能！还要感谢 [Tim Jacomb](https://www.jenkins.io/blog/authors/timja/)、[Marky Jackson](https://www.jenkins.io/blog/authors/markyjackson-taulia/)、[Mark Waite](https://www.jenkins.io/blog/authors/markewaite)、[Ivan Fernandez Calvo](https://github.com/kuisathaverat) 和其他贡献者的评审和测试。
 
 ## 升级和兼容性说明
 
@@ -73,6 +73,6 @@ Docker agent 镜像支持 WebSockets，因此我们决定将映像名称更改�
 如果您对这些项目中的任何一个感兴趣并想做出贡献，请联系 [Platform Special Interest Group](https://www.jenkins.io/sigs/platform)，该[小组](https://www.jenkins.io/sigs/platform)负责协调与 Docker 中的 Jenkins 相关的计划。
 
 关于 Docker 镜像之外的 agent 术语清除，我们将继续在 [Advocacy＆Outreach SIG](https://www.jenkins.io/sigs/advocacy-and-outreach) 中进行此项目。
-如果您在 Jenkins 组织中的任何地方（Web UI、文档等）看到过时的 "slave" 术语的使用，请随时提交 pull request 或在这个 Epic —— [JENKINS-42816：Slave 到 Agent 的重命名遗留问题](https://issues.jenkins-ci.org/browse/JENKINS-42816) 中报告问题。
+如果您在 Jenkins 组织中的任何地方（Web UI、文档等）看到过时的 "slave" 术语的使用，请随时提交 pull request 或在这个 Epic —— [JENKINS-42816：Slave 到 Agent 的重命名遗留问题](https://issues.jenkins-ci.org/browse/JENKINS-42816)中报告问题。
 在 `jenkinsci` GitHub 组织中恰好有 [3000个问题](https://github.com/search?q=org%3Ajenkinsci+slave&type=Code)，但我们会完成这个目标。
 对于任何贡献将不胜感激！
