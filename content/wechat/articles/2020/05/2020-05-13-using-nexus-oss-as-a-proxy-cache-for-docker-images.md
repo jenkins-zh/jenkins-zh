@@ -17,17 +17,17 @@ tags:
 
 通常，服务器会运行在一个控制非常严格的环境中并且不能从互联网中获取资源以确保获取的所有资源都是安全的。
 
-当你要使用一些公开的可获取的 Docker 容器时这会变得更麻烦，你会用到“古法”[偷偷摸摸](https://en.wikipedia.org/wiki/Sneakernet)的让你的主机能获取到 Docker 镜像。
+当你要使用一些公开的可获取的 Docker 容器时这会变得更麻烦，你会用到“古法”[偷偷摸摸](https://en.wikipedia.org/wiki/Sneakernet)的把 Docker 镜像放到你的主机上。
 
-以我为例，事情甚至更加困难。我需要一个通过第三方访问的（受限的）私有仓库。所以现在我该怎么办呢？
+对我而言，事情甚至更加困难。我需要一个通过第三方访问的（受限的）私有仓库。所以现在我该怎么办呢？
 
 幸运的是，目前市面上有好几个可以作为代理或者‘拉入式缓存’的 Docker Registries，这正是我们所需要的。用来作为代理或者缓存的主机需要互联网的权限，而且只有这一台机器需要。其他所有需要获取 Docker 镜像的主机通过这台机器访问互联网，该机器同样很方便的缓存了数据这样只需要检索一次就可以更快的分发到内部局域网的主机上。
 
-诸如 [Sonatype Nexus](https://www.sonatype.com/nexus-repository-sonatype)、[JFrog Artifactory](https://jfrog.com/artifactory/)、甚至 [Docker Registry](https://docs.docker.com/registry/) 都提供这些确切的功能，以及一些功能。这里我将会使用 Sonatype Nexus 进行所有的设置，主要的功能在 OSS 版本中可以使用（Artifactory 功能则是 Pro 版本的一部分功能）。
+诸如 [Sonatype Nexus](https://www.sonatype.com/nexus-repository-sonatype)、[JFrog Artifactory](https://jfrog.com/artifactory/)、甚至 [Docker Registry](https://docs.docker.com/registry/) 都提供这些确切的功能，以及一些功能。这里我将会使用 Sonatype Nexus 完成所有的设置，主要的功能在 OSS 版本中可以使用（Artifactory 功能则是 Pro 版本的一部分功能）。
 
 这篇文章将会向你展示怎样配置 Nexus OSS 来实现类似 Docker Hub ，私有仓库或者两者的结合那样的拉入式缓存功能。同样会向你展示怎样配置 Docker 客户端从而在检索镜像的时候能够使用到你的缓存。
 
-## 使用的软件
+## 需要的软件
 
 - Sonatype Nexus OSS 3.15.0（或更高版本）
 
