@@ -39,7 +39,7 @@ tags:
 JNLP 代表 [Java Network Launch Protocol](https://en.wikipedia.org/wiki/Java_Web_Start#Java_Network_Launching_Protocol_(JNLP))，它是 Java Web Start 的一部分。
 在 Java 1.8 上运行 agent 时，Jenkins 支持 agent 的 Java Web Start 模式，但是我们的网络协议基于 TCP 的，与 Java Network Launch Protocol 无关。
 此名称从一开始就非常混乱，随着 Jenkins 2.217（[JEP-222](https://github.com/jenkinsci/jep/blob/master/jep/222/README.adoc)）中引入 WebSocket 支持而变得更糟。
-Docker agent 镜像支持 WebSockets，因此我们决定将映像名称更改为 [jenkins/inbound-agent](https://hub.docker.com/r/jenkins/inbound-agent)，这样可以防止进一步的混乱。
+Docker agent 镜像支持 WebSockets，因此我们决定将镜像名称更改为 [jenkins/inbound-agent](https://hub.docker.com/r/jenkins/inbound-agent)，这样可以防止进一步的混乱。
 *Inbound agent* 术语是指 agent 协议，其中 agent 通过不同的协议启动与 Jenkins master 的连接。
 
 非常感谢 [Alex Earl](https://www.jenkins.io/blog/authors/slide_o_mix/) 和 [krufab](https://github.com/krufab) 进行的存储库重组工作，这使重命名成为可能！还要感谢 [Tim Jacomb](https://www.jenkins.io/blog/authors/timja/)、[Marky Jackson](https://www.jenkins.io/blog/authors/markyjackson-taulia/)、[Mark Waite](https://www.jenkins.io/blog/authors/markewaite)、[Ivan Fernandez Calvo](https://github.com/kuisathaverat) 和其他贡献者的评审和测试。
@@ -57,7 +57,7 @@ Docker agent 镜像支持 WebSockets，因此我们决定将映像名称更改�
 ## 下一步计划是什么？
 
 我们将继续在 Jenkins 组件中重命名引用旧镜像名称的 Docker 镜像。
-还有一组[便利的 Docker 映像](https://github.com/jenkinsci/jnlp-agents)，其中包括 Maven 或 Gradle 之类的构建工具，这些工具将在以后重命名。
+还有一组[便利的 Docker 镜像](https://github.com/jenkinsci/jnlp-agents)，其中包括 Maven 或 Gradle 之类的构建工具，这些工具将在以后重命名。
 该 `jenkins/ssh-agent` 镜像将来也可能会重命名；请参阅此开发人员[邮件列表线程中](https://groups.google.com/forum/#!msg/jenkinsci-dev/oxD-Hd_7l9k/WAbvqD-wEQAJ)正在进行的讨论。
 
 如果您对 Jenkins Docker 包中的新功能非常感兴趣，请继续关注未来的公告！
@@ -65,7 +65,7 @@ Docker agent 镜像支持 WebSockets，因此我们决定将映像名称更改�
 
 一些故事： 
 
-* Windows映像的一般可用性。
+* Windows 镜像的一般可用性。
 * 支持更多平台（AArch64、IBM s390x、PowerPC）。
 * 切换到 AdoptOpenJDK。
 * 引入多平台 Docker 镜像。
