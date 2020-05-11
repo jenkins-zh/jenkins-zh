@@ -1,7 +1,7 @@
 ---
 title: 手把手教会你 Jenkins 备份与恢复  
 description: 手把手教你如何完成 Jenkins 备份和恢复  
-date: 2020-05-15  
+date: 2020-05-12  
 author: oleksii_y  
 translator: walker0921  
 poster: jenkins.png  
@@ -116,11 +116,11 @@ Jenkins 任务主页，点击 Build now 按键。如果看到以下输出，说�
 
     git remote add origin git@github.com:username/new_repo
 
-##### Step4：从 GitHub pull 备份数据
+##### Step5：从 GitHub pull 备份数据
 
     git pull origin master
 
-##### Step5. 以 root 账户重启 Jenkins
+##### Step6. 以 root 账户重启 Jenkins
 
     service jenkins restart
 
