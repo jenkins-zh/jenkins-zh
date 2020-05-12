@@ -41,7 +41,6 @@ Jenkins 从最开始安装到权限设置，插件安装，任务维护等是一
 
 例如，25 12 * * * 会在每天白天 12:25 运行任务
 
-
 ##### Step4：Build 模块添加 “Execute Shell”
 
 在 Build 模块选择 Execute Shell，添加以下脚本内容
@@ -79,7 +78,6 @@ Jenkins 从最开始安装到权限设置，插件安装，任务维护等是一
   git push -q -u origin master  
 ```
 
-
 ##### Step5：保存以上设置
 
 ![save](save.png)
@@ -90,11 +88,11 @@ Jenkins 从最开始安装到权限设置，插件安装，任务维护等是一
 
 假如目前有一个用户名为 jenkins，进入此目录，执行以下命令
 
-```cd /var/lib/jenkins && git init```
+`cd /var/lib/jenkins && git init`
 
 ##### Step7：本地仓库关联 GitHub 
 
-```git remote add origin git@github.com:username/new_repo```
+`git remote add origin git@github.com:username/new_repo`
     
 ##### Step8：测试备份任务是否生效
 
@@ -106,26 +104,26 @@ Jenkins 任务主页，点击 Build now 按键。如果看到以下输出，说�
 
 ##### Step1：清空 Jenkins 主目录
 
-```cd /var/lib/jenkins && rm -rf * ```
+`cd /var/lib/jenkins && rm -rf * `
  
 ##### Step2：Jenkins 主目录初始化成 git 仓库
 
-```cd /var/lib/jenkins && git init```
+`cd /var/lib/jenkins && git init`
 
 ##### Step3：递归清除未纳入版本控制的文件
 
-```git clean -df```
+`git clean -df`
 
 ##### Step4：添加新的远程仓库地址
 
-```git remote add origin git@github.com:username/new_repo```
+`git remote add origin git@github.com:username/new_repo`
 
 ##### Step5：从 GitHub pull 备份数据
 
-```git pull origin master```
+`git pull origin master`
 
 ##### Step6. 以 root 账户重启 Jenkins
 
-```service jenkins restart```
+`service jenkins restart`
 
 至此，数据已完全恢复。
