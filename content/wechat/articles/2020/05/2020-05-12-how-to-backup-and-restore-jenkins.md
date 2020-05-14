@@ -122,7 +122,7 @@ Jenkins 任务主页，点击 Build now 按键。如果看到以下输出，说�
 
 `git pull origin master`
 
-##### Step6：以 root 账户重启 Jenkins
+##### Step6. 以 root 账户重启 Jenkins
 
 `service jenkins restart`
 
