@@ -15,22 +15,22 @@ tags:
 
 ![dockerJenkins](dockerJenkins.png)
 
-我们想要宣布对 Jenkins agent 官方 Docker 镜像重新命名。
-它不会对 Jenkins 用户产生任何直接影响，但是希望他们逐渐升级他们的实例。
+我们正式宣布对 Jenkins agent 官方 Docker 镜像重新命名。
+它不会对 Jenkins 用户产生任何直接影响，但是希望他们逐渐升级其实例。
 本文提供了新的镜像名称、升级过程以及旧镜像支持策略等相关信息。
 我们还将讨论在 Jenkins 中 Docker 包的下一步计划。
 
 ## 新镜像名称
 
-* [jenkins/agent](https://hub.docker.com/r/jenkins/agent) 是旧的 [jenkins/slave](https://hub.docker.com/r/jenkins/slave) 镜像的新名称，从 [4.3-2](https://github.com/jenkinsci/docker-agent/releases/tag/4.3-2) 开始
-* [jenkins/inbound-agent](https://hub.docker.com/r/jenkins/inbound-agent) 是旧的 [jenkins/jnlp-slave](https://hub.docker.com/r/jenkins/jnlp-slave) 镜像的新名称，从 [4.3-2](https://github.com/jenkinsci/docker-inbound-agent/releases/tag/4.3-2) 开始
-* [jenkins/ssh-agent](https://hub.docker.com/r/jenkins/ssh-agent) 是旧的 [jenkins/ssh-slave](https://hub.docker.com/r/jenkins/ssh-slave) 镜像的新名称，从 [2.0.0](https://github.com/jenkinsci/docker-ssh-agent/releases/tag/2.0.0) 开始
+* [jenkins/agent](https://hub.docker.com/r/jenkins/agent) 是旧的 [jenkins/slave](https://hub.docker.com/r/jenkins/slave) 镜像从 [4.3-2](https://github.com/jenkinsci/docker-agent/releases/tag/4.3-2) 开始的新名称
+* [jenkins/inbound-agent](https://hub.docker.com/r/jenkins/inbound-agent) 是旧的 [jenkins/jnlp-slave](https://hub.docker.com/r/jenkins/jnlp-slave) 镜像从 [4.3-2](https://github.com/jenkinsci/docker-inbound-agent/releases/tag/4.3-2) 开始的新名称
+* [jenkins/ssh-agent](https://hub.docker.com/r/jenkins/ssh-agent) 是旧的 [jenkins/ssh-slave](https://hub.docker.com/r/jenkins/ssh-slave) 镜像从 [2.0.0](https://github.com/jenkinsci/docker-ssh-agent/releases/tag/2.0.0) 开始的新名称
 
 请参阅下面的升级指南。
 
 ## 为什么要重新命名？
 
-"slave" 一词在开源社区中被广泛认为是不合适的。它已于2016年在 Jenkins 2.0中正式弃用，但在某些 Jenkins 组件中仍有剩余用法。
+"slave" 一词在开源社区中被广泛认为是不合适的。它已于2016年在 Jenkins 2.0中正式弃用，但在某些 Jenkins 组件中仍有遗留用法。
 这个 Epic —— [JENKINS-42816：Slave 到 Agent 的重命名遗留问题](https://issues.jenkins-ci.org/browse/JENKINS-42816) 用于跟踪此类问题的清理。
 官方 Docker agent 镜像是一个显而易见的案例，要修改在 DockerHub 上的旧版本镜像并非易事。很高兴这次更新终于解决了镜像命名问题。
 
