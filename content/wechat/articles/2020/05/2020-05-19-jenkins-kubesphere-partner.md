@@ -1,13 +1,13 @@
 ---
 title: "Jenkins 中文社区携手 KubeSphere，共建 DevOps 技术生态"
 description: "KubeSphere 与 Jenkins 中文社区强强合作，加速企业 DevOps 落地"
-date: 2020-04-29
+date: 2020-05-19
 tags:
 - jenkins
 - kubesphere
 - devops
 - open source
-author: Jenkins + KubeSphere 社区
+author: FeynmanZhou
 poster: "cover.jpg"
 ---
 
