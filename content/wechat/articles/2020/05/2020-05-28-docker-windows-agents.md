@@ -25,7 +25,7 @@ tags:
 
 * [jenkins/agent](https://hub.docker.com/r/jenkins/agent) 是一个基本的 agent，它捆绑 agent.jar 来进行 agent<= => master之间的通讯，最有用的是可以作为其他镜像的基础镜像。Windows 镜像从版本 [4.3-4](https://github.com/jenkinsci/docker-agent/releases/tag/4.3-4) 开始可用。
 
-* [jenkins/inbound-agent](https://hub.docker.com/r/jenkins/inbound-agent) 是一个基于上面 jenkins/agent 镜像的agent，它提供了用 PowerShell 编写的包装类脚本，以帮助指定 agent.jar 的参数。Windows 镜像从版本 [4.3-4](https://github.com/jenkinsci/docker-agent/releases/tag/4.3-4) 开始可用。
+* [jenkins/inbound-agent](https://hub.docker.com/r/jenkins/inbound-agent) 是一个基于上面 jenkins/agent 镜像的 agent，它提供了用 PowerShell 编写的包装类脚本，以帮助指定 agent.jar 的参数。Windows 镜像从版本 [4.3-4](https://github.com/jenkinsci/docker-agent/releases/tag/4.3-4) 开始可用。
 
 * [jenkins/ssh-agent](ttps://hub.docker.com/r/jenkins/ssh-agent) 是一个安装了 OpenSSH 的镜像， 应该与 [SSH Build Agents Plugin](https://plugins.jenkins.io/ssh-slaves) 一起使用。Windows 镜像从版本 [2.1.0](https://github.com/jenkinsci/docker-ssh-agent/releases/tag/2.1.0) 开始可用。
 
