@@ -33,7 +33,7 @@ tags:
  - 人类的大脑与体重的比例是最大的
  - 包含860亿个神经元
 
-重要提示：如果您想了解更多有关大脑不同部位的信息，可以使用 [Wellcome Trust] (http://www.brainfacts.org/3D-Brain) 的交互式3D 模型 AMAZE 。
+重要提示：如果您想了解更多有关大脑不同部位的信息，可以使用 [Wellcome Trust] (http://www.brainfacts.org/3D-Brain) 的交互式 3D 模型 AMAZE 。
 
 关于神经元的一些事实：
 
@@ -82,7 +82,7 @@ BBC RAF MRI UFO DNA VAN
 
 其中关键之一就是恐惧。杏仁核位于我们的大脑深处，通常被称为“蜥蜴脑”，因为它是早最进化的那一部，会引发战斗或逃跑反应，并支配身体产生肾上腺素和皮质醇（压力激素）。但是我们在工作中没有受到威胁。但这确实是应对社会威胁的同一系统，如果工作环境指责他人随处可见，犯错误和失败会受到惩罚，那大多数人往往会感到恐惧。
 
-面对变化会感到害怕。许多与我们合作的组织宣布并启动了大规模的“转型”计划，这些计将彻底改变其运营方式。但是正如 [Britt Andreatta] (https://www.linkedin.com/in/brittandreatta/)在她的《天生抵抗》[（Wired to Resist ）](https://www.brittandreatta.com/wired-to-resist/)一书中所说：
+面对变化会感到害怕。许多与我们合作的组织宣布并启动了大规模的“转型”计划，这些计将彻底改变其运营方式。但是正如 [Britt Andreatta] (https://www.linkedin.com/in/brittandreatta/)在她的《天生抵抗》[（ Wired to Resist ）](https://www.brittandreatta.com/wired-to-resist/)一书中所说：
 
 “我们大脑中的几个结构实际上旨在保护我们免受变化的潜在有害影响。人类天生抵抗变化，而我们正在处处反抗我们的生物本性。据记载，每年50％到70％的变革计划都会失败。”
 
