@@ -4,7 +4,7 @@ description: DevOps 原理和实践的最大挑战是文化，而改变文化的
 date: 2020-05-31
 author: Helen Beal
 translator: reneeteng
-poster: 
+poster: Your_DevOps_Brain.jpeg 
 original: https://medium.com/itrevolution/your-devops-brain-ways-of-thinking-ways-of-working-a2b046708d3a
 tags:
  - Neuroscience
@@ -13,6 +13,7 @@ tags:
  - Automation
  - Work
 ---
+![封面](Your_DevOps_Brain.jpeg)
 
 我经常不得不说的 DevOps 神话之一就是 DevOps 完全是关于自动化和工具的。尽管二者是达到 DevOps 目标的基本要素（ DevOps 的目标是为了更快更安全地交付更有价值成果而优化从创意到价值实现的过程），但在 DevOps 的发展初期，Damon Edwards 和 John Willis 提出了 CALMS 这一缩写词来帮助解释有关 DevOps 的问题，其中字母 C 表示的文化也是一个重要元素。该想法得到了 Gartner 一篇文章的支持。该文章提到研究表明有50％的受访者表示人的问题（与流程、技术和信息的问题相对）是目前采用 DevOps 原理和实践的最大障碍。我对自己客户的观察也支持这一想法，我的客户说文化是他们当下面临的最困难的挑战。
 
