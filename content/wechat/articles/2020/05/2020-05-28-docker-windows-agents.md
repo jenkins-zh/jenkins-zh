@@ -23,7 +23,7 @@ tags:
 我们还提供了明确的 Java 选择，例如 `jdk8-windowsservercore-1809` 或 `jdk11-nanoserver-1809`。
 版本标记也可用，例如 `jenkins/agent:4.3-4-jdk8-nanoserver-1809`。
 
-* [jenkins/agent](https://hub.docker.com/r/jenkins/agent) 是一个基本的 agent，它捆绑 agent.jar 来进行 agent<= => master之间的通讯，最有用的是可以作为其他镜像的基础镜像。Windows 镜像从版本 [4.3-4](https://github.com/jenkinsci/docker-agent/releases/tag/4.3-4) 开始可用。
+* [jenkins/agent](https://hub.docker.com/r/jenkins/agent) 是一个基础的 agent，它捆绑 agent.jar 来进行 agent<= => master之间的通讯，最有用的是可以作为其他镜像的基础镜像。Windows 镜像从版本 [4.3-4](https://github.com/jenkinsci/docker-agent/releases/tag/4.3-4) 开始可用。
 
 * [jenkins/inbound-agent](https://hub.docker.com/r/jenkins/inbound-agent) 是一个基于上面 jenkins/agent 镜像的 agent，它提供了用 PowerShell 编写的包装类脚本，以帮助指定 agent.jar 的参数。Windows 镜像从版本 [4.3-4](https://github.com/jenkinsci/docker-agent/releases/tag/4.3-4) 开始可用。
 
