@@ -21,7 +21,7 @@ poster: "./2020-05-25-jenkins-release/great-wall.jpeg"
 
 ![great-wall](great-wall.jpeg)
 
-## 2.237 (2020-05-18) 中有什么新内容 
+## 2.237 (2020-05-18) 
 * 防止以 Java 11 运行时缺少 javax.annotation 类的导致的遥测告警(由 2.231 引入的缺陷回归)。 (issue 61920)
 * 在类字段解组问题的情况下，防止 Old Data Monitor 插件加载失败。 (issue 62231)
 * 确保在 UserLanguages 遥测初始化程序总是在扩展后运行。 (issue 60118)
@@ -30,13 +30,13 @@ poster: "./2020-05-25-jenkins-release/great-wall.jpeg"
 * 开发者: 将 JSTL API 库从 1.2.1 更新到 1.2.7。 (pull 4656, 变更日志更新到 1.2.5, 1.2.3 到 1.2.7 的差异, 1.2.1 到 1.2.3 的差异)
 * 开发者: 在 Java API 中弃用 jenkins.model.Configuration。 (pull 4715)
 
-## 2.236 (2020-05-11) 中有什么新内容 
+## 2.236 (2020-05-11) 
 * 使插件管理可以再次支持 Internet Explorer 11 (由 2.231 引入的缺陷回归)。 (issue 62163)
 * 安全增强: 即使没有加密的 Secret 字段支持，也始终以加密形式来回传递密码表单控制值。 如果出现问题，可以通过在启动时将系统属性 hudson.util.Secret.AUTO_ENCRYPT_PASSWORD_CONTROL 设置为 false 来禁用此功能。 (issue 61808)
 * 安全增强: 当用户缺少“项目/配置”权限时，即使没有加密的 Secret 字段支持，也始终在项目相关的配置表单中使用占位符值作为密码表单控制值。 如果出现问题，可以通过将系统属性 hudson.util.Secret.BLANK_NONSECRET_PASSWORD_FIELDS_WITHOUT_ITEM_CONFIGURE 设置为 false 来禁用此功能 (issue 61808)
 * 开发者: 使 SystemProperties API 可用于插件，以便它们的属性可以由标准引擎管理。 (pull 4707, Javadoc 系统属性, 受系统属性控制的 Jenkins 功能)
 
-## 2.235 (2020-05-04) 中有什么新内容 
+## 2.235 (2020-05-04) 
 * 当根目录 URL 配置指向先前配置的根目录 URL 时，防止表单验证出现 “404 Not Found” 错误（由 2.205 引入的缺陷回归）。 (issue 62133)
 * 在通知告警可再次单击之前一直显示面包屑导航页面。 (issue 62065)
 * 允许系统读取以查看更多管理员监视器。 (issue 61208)
@@ -49,7 +49,7 @@ poster: "./2020-05-25-jenkins-release/great-wall.jpeg"
 * 内部: 从 ReverseProxySetupMonitor 视图中删除内联资源。 当 Jenkins 根 URL 不包含 contextPath 时，添加特定的告警。 (issue 60866)
 * 内部: 从 LogRecorder 视图中删除内联资源。 将 bigtables 的列标题向左对齐。 (issue 60866)
 
-## 2.234 (2020-04-27) 中有什么新内容 
+## 2.234 (2020-04-27) 
 * 修复插件管理 "Available" 页签中的排序顺序(由 2.233 引入的缺陷回归)。 (pull 4675)
 * 重新设置帮助图标的样式。 (issue 62001)
 * 允许具有系统读取权限的用户查看系统日志。 (issue 61207)
