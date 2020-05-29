@@ -49,7 +49,7 @@ tags:
 
 无一例外，我们客户都将努力从瀑布式过渡到敏捷作为业务和技术挑战核心。他们认识到自己正受到数字化的干扰。如果想要生存，能够蓬勃发展那更好，那么他们就需要在吞吐量和稳定性方面都能做得更好。但是，如果组织中的所有人（无论是200人还是20,000人）都接受过以项目为导向的工作方式的培训，资金也是以项目为导向，系统随着自身的发展而变成紧密耦合的整体，组织结构被孤立，组织中有负责变革咨询和发布管理团队，组织的工作被外包，技术发展滞后，那么组织中的人将很难改变自己的行为。实际上他们必须忘记（ unlearn ）多年甚至几十年已经学习到并坚信的东西。
 
-[Barry O’Reill](https://www.linkedin.com/in/barryoreilly/) 在他最近的著作[《 Unlearn 》](https://barryoreilly.com/unlearning-business-innovation/)中将 unlearn 定义为：
+[Barry O’Reill](https://www.linkedin.com/in/barryoreilly/) 在他最近的著作[《Unlearn》](https://barryoreilly.com/unlearning-business-innovation/)中将 unlearn 定义为：
 
 “一个放开、远离和重新定义那些曾经有效但是现在限制我们成功的那些有用的心态和后天行为的过程。这不是在忘记或丢弃已有的知识或经验；这是一种有意识的行为，放弃过时的信息，积极收集和吸收新信息以为有效的决策和行动提供信息。”
 
