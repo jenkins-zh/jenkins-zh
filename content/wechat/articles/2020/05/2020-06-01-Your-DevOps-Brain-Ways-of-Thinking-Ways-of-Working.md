@@ -1,7 +1,7 @@
 ---
 title: 你的 DevOps 大脑：思考方式和工作方式
 description: DevOps 原理和实践的最大挑战是文化，而改变文化的本质是改变人的行为。改变行为的关键在于了解驱动行为的大脑。
-date: 2020-05-31
+date: 2020-06-01
 author: Helen Beal
 translator: reneeteng
 poster: Your_DevOps_Brain.jpeg 
