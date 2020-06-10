@@ -1,6 +1,6 @@
 ---
 title: "GitHub App 身份验证支持已发布"
-description: ""
+description: "GitHub App 身份验证支持已发布，本文教你简单使用以及一些注意事项"
 date: 2020-06-17
 original: "https://www.jenkins.io/blog/2020/04/16/github-app-authentication/#github-app-authentication-support-released"
 tags:
