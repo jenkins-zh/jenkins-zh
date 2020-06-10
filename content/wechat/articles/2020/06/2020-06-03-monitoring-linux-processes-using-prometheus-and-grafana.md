@@ -31,7 +31,7 @@ tags:
 
 ![grafana-dashboard](grafana-dashboard.png)
 
-这篇入门文章旨在**为 Linux 系统管理员**创建一个**完整的监控仪表盘**
+这篇入门文章旨在如何**为 Linux 系统管理员**创建一个**完整的监控仪表盘**
 
 该仪表盘会展示完全可定制并且可扩展到分布式架构的多个实例的不同面板。
 
@@ -99,7 +99,7 @@ Htop 还提供当前系统使用情况的**仪表盘**
 
 这些特点需要我们在这篇文章中始终需要牢记的。
 
-我们今天将要使用的具体细节是这样的:
+我们今天将要实践的具体细节是这样的:
 
 ![architecture-details](architecture-details.png)
 
@@ -129,7 +129,7 @@ Htop 还提供当前系统使用情况的**仪表盘**
 
 ## a -- 安装 Pushgateway
 
-为了安装 ** Pushgateway**，运行一个简单的 wget 命令来获取最新版本的二进制文件。
+为了安装 ** Pushgateway**，运行一个简单的 wget 命令来获取二进制文件。
 
 ```
 wget https://github.com/prometheus/pushgateway/releases/download/v0.8.0/pushgateway-0.8.0.linux-amd64.tar.gz
