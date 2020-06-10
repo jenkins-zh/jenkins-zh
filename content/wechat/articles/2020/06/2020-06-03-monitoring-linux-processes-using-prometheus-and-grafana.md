@@ -377,7 +377,7 @@ curl -X POST -H "Content-Type: text/plain" --data "$var
 
 类似于之前所做的工作，我们将会定义几个阈当消耗太多资源的时候得到通知。
 
-![cheat-sheet-topk-horizontal](cheat-sheet-topk-horizontal.png)
+![cheat-sheet-topk-horizontal](cheat-sheet-topk-horiziontal.png)
 
 ## 3 -- 构建垂直仪表盘
 
@@ -438,7 +438,7 @@ curl -X POST -H "Content-Type: text/plain" --data "$var
 
 简单的切换到过滤器然后可以看到仪表盘根据过滤器进行了更新。
 
-![udate-dashboard.png](udate-dashboard)
+![udate-dashboard](udate-dashboard.png)
 
 **现在你可以直观的看到 Prometheus 在你的实例上是怎样的了。**
 
