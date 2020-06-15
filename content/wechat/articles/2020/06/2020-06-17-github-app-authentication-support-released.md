@@ -17,7 +17,7 @@ poster: "cover.jpg"
 
 身份验证为 GitHub 应用带来了很多好处：
 
-* `更高的费率限制` - GitHub 应用程序的速率限制随您的组织规模而定，而基于用户的令牌的限制为 5000，无论您拥有多少存储库。
+* `更高的请求频率限制` - GitHub 应用程序的速率限制随您的组织规模而定，而基于用户的令牌的限制为 5000，无论您拥有多少存储库。
 * `与用户无关的身份验证` - 每个 GitHub 应用都有自己的用户独立身份验证。不再需要“机器人”用户或确定谁应该是 2FA 或 OAuth 令牌的所有者。
 * `改进的安全性和更严格的权限` - 与服务用户及其个人访问令牌相比，GitHub Apps 提供了更精细的权限。这使 Jenkins GitHub 应用程序需要更少的权限集即可正常运行。
 * `访问 GitHub Checks API` - GitHub Apps 可以访问 GitHub Checks API 以从 Jenkins 作业创建检查运行和检查套件，并提供有关提交和代码注释的详细反馈。
@@ -28,7 +28,7 @@ poster: "cover.jpg"
 
 ## 配置 GitHub Organization 文件夹
 
-遵循 [GitHub App Authentication setup guide](https://github.com/jenkinsci/github-branch-source-plugin/blob/master/docs/github-app.adoc)。这些说明也从 GitHub 上的插件的 README 中链接。
+遵循 [GitHub App Authentication setup guide](https://github.com/jenkinsci/github-branch-source-plugin/blob/master/docs/github-app.adoc)。这些说明也可在 GitHub 上的插件 README 文件中看到。
 
 设置完成后，Jenkins 将验证您的凭据，并且您应该会看到新的速率限制。这是一个大型组织的示例：
 
