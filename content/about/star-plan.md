@@ -37,8 +37,8 @@ draft: false
 ## 不定期激励
 |成员|奖励|日期|提供方|
 |----|----|----|----|
-|{{< ghref "anxk" "anxk" >}}| 端午礼盒  | 2020-06 | vivo |
-|{{< ghref "walker0921" "walker0921" >}}| 端午礼盒  | 2020-06 | vivo |
+|{{< ghref "anxk" "anxk" >}}| 端午礼盒  | 2020-06 | [vivo](https://www.vivo.com) |
+|{{< ghref "walker0921" "walker0921" >}}| 端午礼盒  | 2020-06 | [vivo](https://www.vivo.com) |
 
 ## 定期激励
 每个季度被选中的贡献者，可以在[人民邮电出版社微店](https://shop16629033.youzan.com/v2/showcase/homepage?kdt_id=16436865)中自行挑选图书一本。  
