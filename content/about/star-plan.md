@@ -34,6 +34,12 @@ draft: false
 | 2020-1-5 | 北京 | {{< ghref "linan607" "linan607" >}} | 50元 |
 | 2020-1-5 | 北京 | {{< ghref "yJunS" "yJunS" >}} | 50元 [论坛帖子](https://community.jenkins-zh.cn/t/topic/178) |
 
+## 不定期激励
+|成员|奖励|日期|提供方|
+|----|----|----|----|
+|{{< ghref "anxk" "anxk" >}}| 端午礼盒  | 2020-06 | vivo |
+|{{< ghref "walker0921" "walker0921" >}}| 端午礼盒  | 2020-06 | vivo |
+
 ## 定期激励
 每个季度被选中的贡献者，可以在[人民邮电出版社微店](https://shop16629033.youzan.com/v2/showcase/homepage?kdt_id=16436865)中自行挑选图书一本。  
 
