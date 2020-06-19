@@ -12,7 +12,7 @@ poster: "jenkins-logo-word-cloud.png"
 ![jenkins-logo-word-cloud](jenkins-logo-word-cloud.png)
 
 作为最流行的 CI/CD 工具，Jenkins 的优势之一是其生态强大，而这与其插件体系分不开的。
-目前 Jenkins 插件 1500+ （截止20200617，插件数量为1749）。
+目前 Jenkins 插件 1500+ （截止2020年06月17日，插件数量为1749）。
 
 近日发现词云比较好玩，于是想着以 Jenkins 插件名称为数据源，形成的词云会是什么样的呢，什么关键字会比较突出呢？
 想到就去做，带着问题，带着好奇心，开始了实践之旅～
