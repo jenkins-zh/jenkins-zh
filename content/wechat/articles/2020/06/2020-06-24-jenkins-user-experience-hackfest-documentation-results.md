@@ -16,7 +16,7 @@ poster: "cover.jpg"
 
 Jenkins 技术文档是我们项目的重要组成部分，因为它是正确使用 Jenkins 的关键。好的文档可以指导用户，并鼓励选择好的实现方式。这是用户体验的关键部分。
 
-在最近的 Jenkins UI/UX hackfest 中，文档是改善 Jenkins 用户体验的特定途径。我们从经验丰富的 Jenkins 贡献者和新移民那里获得了许多进步。来自世界各地的贡献者提交了有关安装，管理和操作 Jenkins 文档的 PR。
+在最近的 Jenkins UI/UX hackfest 中，文档是改善 Jenkins 用户体验的特定途径。我们从经验丰富的 Jenkins 贡献者和新人那里获得了许多进步。来自世界各地的贡献者提交了有关安装，管理和操作 Jenkins 文档的 PR。
 
 ![contributions-by-country](contributions-by-country.png)
 
@@ -31,17 +31,17 @@ Jenkins Wiki 迁移项目确定了 Jenkins Wiki 上访问量最大的 50 个页�
 * [Jenkins 管理](https://www.jenkins.io/doc/book/managing/)
 * [系统管理](https://www.jenkins.io/doc/book/system-administration/)
 
-Hackfest 解决了 Wiki 迁移问题中的 19 个问题。有关其他 25 个 Wiki 迁移问题的工作正在进行中。我们已经取得了长足的进步，并期待将来取得更好的成绩。新的贡献者非常有效地使用了“好第一期”标签。我们以未分配的 25 个“良好的第一期”中的大多数未分配开始了 Hackfest，并以 14 个已关闭的项目和另外 10 个正在进行的项目完成了 Hackfest。 当我们使用 Jenkins Wiki 迁移来欢迎新的文档撰稿人时，我们将提供更多的“良好的第一期”。
+Hackfest 解决了 Wiki 迁移问题中的 19 个问题。有关其他 25 个 Wiki 迁移问题的工作正在进行中。我们已经取得了长足的进步，并期待将来取得更好的成绩。新的贡献者非常有效地使用了“good first issues”标签。我们以未分配的 25 个“good first issues”中的大多数未分配开始了 Hackfest，并以 14 个已关闭的项目和另外 10 个正在进行的项目完成了 Hackfest。 当我们使用 Jenkins Wiki 迁移来欢迎新的文档撰稿人时，我们将提供更多的“良好的第一期”。
 
 ![sample-pages](sample-pages.png)
 
 ## 迁移插件文档
 
-插件文档也在过渡中。自 2019 年 11 月以来，插件一直将其文档移至托管插件源代码的 GitHub 存储库中。这种[“将文档作为代码”](https://www.jenkins.io/blog/2019/10/21/plugin-docs-on-github/)的方法使插件维护人员可以在实现新功能的相同 PR 中包括文档改进。它确保文档更改由审查和批准新功能的相同维护者审查。
+插件文档也在过渡中。自 2019 年 11 月以来，插件一直将其文档移至托管插件源代码的 GitHub 存储库中。这种[“文档即代码”](https://www.jenkins.io/blog/2019/10/21/plugin-docs-on-github/)的方法使插件维护人员可以在实现新功能的相同 PR 中包括文档改进。它确保文档更改由审查和批准新功能的相同维护者审查。
 
-Hackfest 参与者提交了 PR，以将插件文档迁移到 GitHub。Hackfest 正在进行 10 个插件提取请求。来自 Hackfest 的 5 个插件 PR 已被合并，正在等待插件的发布。
+Hackfest 参与者提交了 PR，以将插件文档迁移到 GitHub。Hackfest 正在进行 10 个插件 PR。来自 Hackfest 的 5 个插件 PR 已被合并，正在等待插件的发布。
 
-## Chuck Norris 使用文档作为代码
+## Chuck Norris 文档即代码
 
 出于娱乐和冒险的精神，Oleg Nenashev [在 2020 年 5 月 26 日的 Hackfest 现场演示](https://www.youtube.com/watch?v=BaEJ8v7INNQ)中将 “Chuck Norris 插件” 迁移为 GitHub 文档中的代码。可以从以下链接获取录音，插件迁移指南和导出工具的链接：[将插件迁移为代码文档](https://github.com/jenkinsci/ui-ux-hackfest-2020/tree/master/presentations/04-migrating-plugin-docs)”。
 
@@ -73,6 +73,6 @@ Jira 插件的传入 UI 示例：
 
 ## 下一步是什么？
 
-Jenkins 文档中仍有很多工作要做，我们需要您的帮助。[参与](https://www.jenkins.io/participate/) Jenkins 项目的方式有很多，包括[文档](https://www.jenkins.io/participate/document)。请参阅[提供指导](https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc)以获取详细说明。加入文档聊天室，获得个性化的帮助和鼓励。
+Jenkins 文档中仍有很多工作要做，我们需要您的帮助。[参与](https://www.jenkins.io/participate/) Jenkins 项目的方式有很多，包括[文档](https://www.jenkins.io/participate/document)。请参阅[贡献指南](https://github.com/jenkins-infra/jenkins.io/blob/master/CONTRIBUTING.adoc)以获取详细说明。加入文档聊天室，获得个性化的帮助和鼓励。
 
 Jenkins 项目也已于今年加入 [Google Docs](https://developers.google.com/season-of-docs)。这项开源指导计划使开源社区和技术作家社区聚集在一起，从而使双方受益。我们正在寻找有兴趣为 2020 年 9 月至 12 月对该项目做出贡献的技术撰稿人。这是学习作为文档编码的工具并了解有关为开源项目做出贡献的更多信息的绝佳机会。您可以在[此处](https://www.jenkins.io/sigs/docs/gsod/)找到 Jenkins 项目构想和更多信息。
