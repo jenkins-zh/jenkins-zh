@@ -19,7 +19,7 @@ Jenkins 项目在很大程度上依赖于其基础架构。我们使用诸如 [w
 * 超过 60 万人访问了 [www.jenkins.io](https://www.jenkins.io/)
 * 超过 25 万个 Jenkins 服务器定期检查 [Jenkins 软件包服务器](https://pkg.jenkins.io/)和 [Jenkins 更新服务器](https://updates.jenkins.io/)
 * [ci.jenkins.io](https://ci.jenkins.io/) 上有超过 43000 个持续集成工作
-* 超过 950 个插件在 [ci.jenkins.io](https://ci.jenkins.io/) 上运行了他们的持续集成管道
+* 超过 950 个插件在 [ci.jenkins.io](https://ci.jenkins.io/) 上运行了他们的持续集成流水线
 
 jenkins.io 的国家（地区）访客
 
