@@ -11,7 +11,7 @@ update:
 	else \
 		git clone https://github.com/jenkins-zh/jenkins-zh.github.io; \
 	fi
-	make fetch-wechat-articles
+	## make fetch-wechat-articles
 
 live:
 	make update
