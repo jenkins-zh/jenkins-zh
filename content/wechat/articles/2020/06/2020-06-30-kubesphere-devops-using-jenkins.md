@@ -242,6 +242,8 @@ kubectl get pod -n kubesphere-devops-system
 > - `图形化构建流水线：` 通过图形化编辑的界面构建流水线，无需写 Jenkinsfile，交互友好，参考文档 **https://kubesphere.com.cn/docs/zh-CN/quick-start/jenkinsfile-out-of-scm**
 > - `基于 Jenkinsfile 构建流水线：` 基于项目仓库中已有的 Jenkinsfile 快速构建流水线，参考文档 **https://kubesphere.com.cn/docs/zh-CN/quick-start/devops-online**
 
+![](https://pek3b.qingstor.com/kubesphere-docs/png/20200628235151.png)
+
 ## 活动预告
 
 KubeSphere 将在七月份重磅发布 v3.0！欢迎大家关注和报名参加 6 月 30 日 KubeSphere 线上发布会的直播，提前知晓 v3.0 的重大更新。
