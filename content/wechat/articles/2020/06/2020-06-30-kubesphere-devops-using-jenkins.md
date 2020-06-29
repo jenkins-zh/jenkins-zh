@@ -7,7 +7,7 @@ tags:
 - kubesphere
 - devops
 - open source
-author: Feynman Zhou
+author: FeynmanZhou
 poster: "https://pek3b.qingstor.com/kubesphere-docs/png/20200628225840.png"
 ---
 
@@ -23,7 +23,7 @@ KubeSphere DevOps 作为 KubeSphere 容器平台的一个可插拔功能组件�
 
 ![](https://pek3b.qingstor.com/kubesphere-docs/png/20200628225840.png)
 
-KubeSphere DevOps 充分利用和释放 Kubernetes 动态扩展的能力。例如，KubeSphere 在内置的 DevOps 系统使用了 Jenkins Kubernetes 的动态 Agent，即默认全部使用动态的 Kubernetes Slave，这样的方案相较于传统虚拟机上的 Jenkins 要更加灵活敏捷。同时，在 KubeSphere DevOps 中内置了常用的 Agent 类型，例如 Maven、Node.js、Go 等，并且还支持自定义与扩展的 Agent 类型。
+KubeSphere DevOps 充分利用和释放 Kubernetes 动态扩展的能力。例如，KubeSphere 在内置的 DevOps 系统使用了 Jenkins Kubernetes 的动态 Agent，这样的方案相较于传统虚拟机上的 Jenkins 要更加灵活敏捷。同时，在 KubeSphere DevOps 中内置了常用的 Agent 类型，例如 Maven、Node.js、Go 等，并且还支持自定义与扩展的 Agent 类型。
 
 ![](https://pek3b.qingstor.com/kubesphere-docs/png/20200628172418.png)
 
@@ -246,6 +246,6 @@ kubectl get pod -n kubesphere-devops-system
 
 ## 活动预告
 
-KubeSphere 将在七月份重磅发布 v3.0！欢迎大家关注和报名参加 6 月 30 日 KubeSphere 线上发布会的直播，提前知晓 v3.0 的重大更新。
+KubeSphere 将在七月份重磅发布 v3.0！欢迎大家关注和报名参加 **6 月 30 日 （本周二下午 14:00）** 的 KubeSphere 线上发布会的直播，提前知晓 v3.0 的重大更新。
 
 ![](https://pek3b.qingstor.com/kubesphere-docs/png/20200628075312.png)
