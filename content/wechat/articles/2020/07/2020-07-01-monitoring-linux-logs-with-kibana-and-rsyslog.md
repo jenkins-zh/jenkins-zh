@@ -28,7 +28,7 @@ tags:
 
 如果你想从这几个地方了解的话，或许你来对地方了。
 
-在这篇文章当中，我们将会构建一个**完整的日志监控流水线，使用 [ELK 堆栈](https://www.elastic.co/products/elastic-stack)**（ElesticSearch、Logstash、和 Kibana）和 Rsyslog 作为一个强力的系统日志服务器。
+在这篇文章当中，我们将会构建一个**完整的日志监控流水线，使用 [ELK 堆栈](https://www.elastic.co/products/elastic-stack)**（ElasticSearch、Logstash、和 Kibana）和 Rsyslog 作为一个强力的系统日志服务器。
 
 在开始动手之前，让我们先快速的考虑下技术因素，让我们讨论下为什么我们使用 Kibana 监控 Linux 日志。
 
