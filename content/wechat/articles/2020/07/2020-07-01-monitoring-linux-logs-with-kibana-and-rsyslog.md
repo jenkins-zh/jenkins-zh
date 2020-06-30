@@ -1,4 +1,4 @@
-﻿---
+---
 title: 使用 Kibana 和 Rsyslog 监控 Linux 日志  
 date: 2020-07-01  
 description: 通过具体配置 Rsyslog 与 ELK 堆栈（ElasticSearch，Logstash，Kibana）介绍了如何使用这些工具监控 Linux 系统的系统日志  
