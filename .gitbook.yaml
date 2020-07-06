@@ -2,4 +2,4 @@ root: ./content/tutorial
 
 structure:  
     readme: _index.md  
-    summary: SUMMARY.md
+    summary: summary.md
