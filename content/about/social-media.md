@@ -10,7 +10,7 @@ draft: false
 | 媒体 | 方式 | 负责人 |
 |----|----|----|
 | 微信公众号 | 人工 | {{< ghref "LinuxSuRen" "LinuxSuRen" >}} |
-| [开源中国](https://my.oschina.net/jenkinszh) | 人工 | {{< ghref "donhui" "donhui" >}} |
+| [开源中国](https://my.oschina.net/jenkinszh) | 自动同步 | {{< ghref "LinuxSuRen" "LinuxSuRen" >}} |
 | [知乎](https://www.zhihu.com/people/linuxsuren/) | 人工 | {{< ghref "LinuxSuRen" "LinuxSuRen" >}} |
 | [哔哩哔哩](https://space.bilibili.com/433584098) | 人工 | {{< ghref "LinuxSuRen" "LinuxSuRen" >}} |
 | [微博](https://weibo.com/jenkinszh) | 人工 | {{< ghref "donhui" "donhui" >}} |
