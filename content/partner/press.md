@@ -6,4 +6,5 @@ displayName: 人民邮电出版社
 logo: post-telecom-press.png
 period:
 - 2019
+- 2020
 ---
