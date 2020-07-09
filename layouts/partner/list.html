@@ -7,8 +7,8 @@
     {{if in .Params.period (string now.Year) }}
     <span style="padding-left: 10px; padding-right: 10px;">
         {{ if and (ne .Params.logo nil) (ne .Params.logo "") }}
-        {{ if and (ne .Params.homepage nil) (ne .Params.homepage "") }}<a href="{{.Params.homepage}}"
-            target="_blank">{{ end}}
+        {{ if and (ne .Params.homepage nil) (ne .Params.homepage "") }}<a href="{{.Params.homepage}}" target="_blank"
+            ref="nofollow">{{ end}}
             <img src="/images/partners/{{.Params.logo}}" height="86px" alt="{{.Params.displayName}}" />
             {{ if and (ne .Params.homepage nil) (ne .Params.homepage "") }}</a>{{ end}}
         {{ end }}
