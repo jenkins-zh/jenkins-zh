@@ -1,7 +1,7 @@
 ---
-title: "社区推送博客 - GitHub Checks API 项目"
-description: "GitHub Checks API 插件项目 - 编码阶段 1"
-date: 2020-07-09
+title: GSoC: GitHub Checks API 项目第一阶段总结
+description: GitHub Checks API 插件项目 - 编码阶段 1
+date: 2020-08-07
 original: "https://www.jenkins.io/blog/2020/07/09/github-checks-api-plugin-coding-phase-1/"
 tags:
 - github
