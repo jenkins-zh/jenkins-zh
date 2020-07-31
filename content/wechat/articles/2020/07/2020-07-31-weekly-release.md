@@ -21,7 +21,7 @@ keywords:
 - Jenkins 2.249发布
 author: jenkinsci
 translator: zhaoying818
-poster: "./2020-05-25-jenkins-release/great-wall.jpeg"
+poster: "./2020-07-31-jenkins-release/great-wall.jpeg"
 ---
 
 ![great-wall](great-wall.jpeg)
@@ -32,7 +32,7 @@ poster: "./2020-05-25-jenkins-release/great-wall.jpeg"
 * 修复了某些元素的标题（例如授权矩阵）的样式错误的问题。 (pull 4861)
 
 ## 2.248 (2020-07-21)  
-由于发布基础设施的问题导致的意外，Windows MSI 软件包尚未发布。 解决方法是，手动下载并替换 JENKINS_HOME 中的 jenkins.war。
+> 由于发布基础设施的问题导致的意外，Windows MSI 软件包尚未发布。 解决方法是，手动下载并替换 JENKINS_HOME 中的 jenkins.war。
 
 * 停止支持 .NET Framework 2.0 将 Jenkins 服务和代理作为 Windows 服务启动。 现在需要 .NET Framework 4.0 或更高版本。 (公告, 升级指南, issue 60005, issue 61862, Windows 支持策略)
 * 将 Windows Service Wrapper（WinSW）从基于 .NET Framework 2.0 的 2.3.0 可执行文件更新为基于 .NET Framework 4.0 的 2.9.0。 包括多项改进和问题修复。 最值得注意的是，如果需要，服务安装程序现在将要求权限提升。 (变更摘要, WinSW 完整的变更日志, Windows Agent Installer 2.0 变更日志)
@@ -62,16 +62,14 @@ poster: "./2020-05-25-jenkins-release/great-wall.jpeg"
 * 内部: 记录 Jenkins 核心问题分类指南。 (文档)
 
 ## 2.247 (2020-07-21)  
-此发行版本未在发行基础设施上正确签名。 jenkins.war 的发行已被暂停，不建议使用。 安装程序和本地软件包未发布。
+> 此发行版本未在发行基础设施上正确签名。 jenkins.war 的发行已被暂停，不建议使用。 安装程序和本地软件包未发布。
 在这次发布中没有显著的变更。
 
 ## 2.246 (2020-07-21)  
-此发行版本未在发行基础设施上正确签名。 jenkins.war 的发行已被暂停，不建议使用。 安装程序和本地软件包未发布。
+> 此发行版本未在发行基础设施上正确签名。 jenkins.war 的发行已被暂停，不建议使用。 安装程序和本地软件包未发布。
 在这次发布中没有显著的变更。
 
 ## 2.245 (2020-07-15)  
-72 sunny0 cloudy1 storm
-Community reported issues: 1×JENKINS-62723
 > 由于发布基础设施的问题导致的意外，Windows MSI 软件包尚未发布。 解决方法是，手动下载并替换 JENKINS_HOME 中的 jenkins.war。
 * 重要的安全修复 (安全公告)
 
