@@ -1,13 +1,13 @@
 ---
 title: "Jenkins 长期支持版更新"
 description: "本次更新的版本包括：2.222.2~2.235.2"
-date: 2020-08-03
+date: 2020-08-02
 tags:
 - jenkins
 - release
 author: jenkinsci
 translator: zhaoying818
-poster: “./2020-08-03-jenkins-release/great-wall.jpeg”
+poster: “./2020-08-02-jenkins-release/great-wall.jpeg”
 ---
 
 ![great-wall](great-wall.jpeg)
