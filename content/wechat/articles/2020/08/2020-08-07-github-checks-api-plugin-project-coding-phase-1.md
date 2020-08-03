@@ -10,8 +10,7 @@ tags:
 - developer
 - gsoc
 - gsoc2020
-author: Kezhi Xiong
-translator: XiongKezhi
+author: XiongKezhi
 poster: "jenkins-gsoc-logo_small.png"
 ---
 
