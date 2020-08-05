@@ -15,7 +15,7 @@ tags:
 
 ![cover](cover.jpg)
 
-持续集成和持续交付是一些人为之努力的目标。它让一切事物变得更简单。当然，市面上有许多 CI/CD 工具，但是随着 Kubernetes 的日渐盛行，所有这些工具都需要做相应的调整。比如说，[Jenkins](https://jenkins.io/)，这款非常成熟的 CI/CD 工具在全球范围内被广泛使用，但是这款工具缺乏创新并且感觉有点笨重。同样的话也适用于 [Spinnaker](https://www.spinnaker.io/)。一款出色的企业解决方案拥有让工作深入开展下去的资源，但是让 CI/CD 工具以一种快速，整洁的方式升级不是一个理想的选择。还有其他的一些工具可以为更简单的工作流提供更多的支持。其中一个就是我们本文中将要介绍的 **Argo**。
+持续集成和持续交付是一些人为之努力的目标。它让一切事物变得更简单。当然，市面上有许多 CI/CD 工具，但是随着 Kubernetes 的日渐盛行，所有这些工具都需要做相应的调整。比如说，[Jenkins](https://jenkins.io/)，这款非常成熟的 CI/CD 工具在全球范围内被广泛使用，但是这款工具缺乏创新并且感觉有点笨重。同样的话也适用于 [Spinnaker](https://www.spinnaker.io/)。一款出色的企业解决方案拥有让工作深入开展下去的资源，但是让 CI/CD 工具以一种快速、整洁的方式升级不是一个理想的选择。还有其他的一些工具可以为更简单的工作流提供更多的支持。其中一个就是我们本文中将要介绍的 **Argo**。
 
 ![argo-logo](argo-logo.png)
 
@@ -232,7 +232,7 @@ args: ["cd /src/ansible \
 
 ## 持续交付
 
-CD 部分会部署应用程序到 Kubernetes。通过执行一个运行 [Ansible](https://github.com/ansible/ansible) 的模板来实现。如你所见，这个模板有一些输入，例如 git 仓库，该仓库是从 *_cicd_* 模板传下来的。还有镜像 tag 这样 Ansible 就会知道需要把哪个 Docker 容器部署到 Kubernetes。我自己构建了一个定制的容器里面包括 Ansible，Kubectl，以及 [credstash](https://github.com/fugue/credstash)，模板的参数使用 credstash 在 yamls 做了定义。
+CD 部分会部署应用程序到 Kubernetes。通过执行一个运行 [Ansible](https://github.com/ansible/ansible) 的模板来实现。如你所见，这个模板有一些输入，例如 git 仓库，该仓库是从 *_cicd_* 模板传下来的。还有镜像 tag 这样 Ansible 就会知道需要把哪个 Docker 容器部署到 Kubernetes。我自己构建了一个定制的容器里面包括 Ansible、Kubectl 以及 [credstash](https://github.com/fugue/credstash)，模板的参数使用 credstash 在 yamls 做了定义。
 
 ```
 - name: deploy-kubernetes  
@@ -260,7 +260,7 @@ args: ["cd /src/ansible \
 && ansible-playbook deploy-backend-to-k8s.yml -i environments/backend/backend-k8s -e docker_image_tag={{inputs.parameters.image-tag}}"]
 ```
 
-同样重要的是修改 Argo 的 ClusterRole 这样就可以部署到 Kubernetes  集群的所有命名空间里面。ClusterRole 定义如下，这样就可以部署所有的 CRD 例如 Deployments，Services 等等。
+同样重要的是修改 Argo 的 ClusterRole 这样就可以部署到 Kubernetes  集群的所有命名空间里面。ClusterRole 定义如下，这样就可以部署所有的 CRD 例如 Deployments、Services 等等。
 
 ```
 apiVersion: rbac.authorization.k8s.io/v1  
@@ -294,4 +294,4 @@ verbs: ["*"]
 
 ## 总结
 
-Argo 非常容易理解，它集成在 Kubernetes 使用 Kubernetes 集群实现 CI/CD。它比我们说的 Spinnaker，Istio 等等这些工具更简洁，更轻量。安装简单可以完成所需的工作。Argo 的主程序定义了自己的 CRD，称为 ‘Workflow’。Argo CI 已经不再开发了，但是我创建了一个自己的[实现程序](https://github.com/BouweCeunen/argo-continuous-integration)。Argo CD 是一个管理部署的 GitOps 方法。与我自己实现的 Argo CI 以及 Argo 工作流一起，在 Kubernetes 集群设置运行一个 CI/CD 流水线成为可能。
+Argo 非常容易理解，它集成在 Kubernetes 使用 Kubernetes 集群实现 CI/CD。它比我们说的 Spinnaker、Istio 等等这些工具更简洁，更轻量。安装简单可以完成所需的工作。Argo 的主程序定义了自己的 CRD，称为 ‘Workflow’。Argo CI 已经不再开发了，但是我创建了一个自己的[实现程序](https://github.com/BouweCeunen/argo-continuous-integration)。Argo CD 是一个管理部署的 GitOps 方法。与我自己实现的 Argo CI 以及 Argo 工作流一起，在 Kubernetes 集群设置运行一个 CI/CD 流水线成为可能。
