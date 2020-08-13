@@ -1,6 +1,6 @@
 ---
-title: GSoC: GitHub Checks API 项目第一阶段总结
-description: GitHub Checks API 插件项目 - 编码阶段 1
+title: "GSoC: GitHub Checks API 项目第一阶段总结"
+description: "GitHub Checks API 插件项目 - 编码阶段 1"
 date: 2020-08-07
 original: "https://www.jenkins.io/blog/2020/07/09/github-checks-api-plugin-coding-phase-1/"
 tags:
