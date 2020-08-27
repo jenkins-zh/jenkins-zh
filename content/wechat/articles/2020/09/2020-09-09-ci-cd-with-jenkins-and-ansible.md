@@ -14,9 +14,9 @@ tags:
 ![cover](cover.png)
 
 
-现在是2018年。Kubernetes在容器编排大战中取得了胜利。我们中的一些人怀着羡慕的心情阅读着硅谷创业公司的那些文章（是的，或许你所在的城市已经有了这些创业公司了！），然而读完之后还是回到自己手上运行得还可以的遗留的老系统上工作。
+现在是 2018 年。Kubernetes 在容器编排大战中取得了胜利。我们中的一些人怀着羡慕的心情阅读着硅谷创业公司的那些文章（是的，或许你所在的城市已经有了这些创业公司了！），然而读完之后还是回到自己手上运行得还可以的遗留的老系统上工作。
 
-基于主干开发，容器部署至云上，虽然都在DevOps未来的规划中，但是短期内这些还基本无法落地。
+基于主干开发，容器部署至云上，这些虽然都在 DevOps 未来的规划中，但是短期内这些还基本无法落地。
 
 向 DevOps 方向迈出的一步是要消除孤岛（dev，QA，ops），因此我们必须以一种每个角色都能轻松协作的方式来构建我们的代码。
 
@@ -26,7 +26,7 @@ tags:
 
 我准备了一个 [Jenkins](https://www.jenkins.io/) 实例，部署了 ssh， 以及一个可运行的 [Spring Boot](https://spring.io/projects/spring-boot) jar，还有一台 [RedHat7](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux) 的虚拟机，和 [Nexus](https://www.sonatype.com/product-nexus-repository) 的制品仓库。所以我想我很高兴不用再部署 EARs 了。
 
-! [jenkins-with-ansible-a-simple-but-powerful-combination](2020-09-09-jenkins-with-ansible-a-simple-but-powerful-combination.png)
+![jenkins-with-ansible-a-simple-but-powerful-combination](2020-09-09-jenkins-with-ansible-a-simple-but-powerful-combination.png)
 
 现在我将使用以上的工具构建一个[部署流水线](https://martinfowler.com/bliki/DeploymentPipeline.html)，并对所有内容做版本控制，以便团队中的每个人都可以访问所有内容，并了解他们的代码从提交到部署的每个环节（本例中只是到测试环境）。
 
@@ -40,7 +40,7 @@ parent
 Jenkinsfile
 ```
 
-简单起见，backend - 一个简单的 Spring Boot 应用 - 包含了前端 [ReactJS](https://reactjs.org/) 应用，deployment 中是持续交付相关工具，根目录下的 [Jenkinsfile](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/) 是这个流水线的声明式描述。
+简单起见，backend——一个简单的 Spring Boot 应用——包含了前端 [ReactJS](https://reactjs.org/) 应用，deployment 中是持续交付相关工具，根目录下的 [Jenkinsfile](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/) 是这个流水线的声明式描述。
 
 ![spring-boot-with-react-a-common-choice-for-web-applications](2020-09-09-spring-boot-with-react-a-common-choice-for-web-applications.png)
 
@@ -73,7 +73,7 @@ Jenkinsfile
 </dependencies>
 ```
 
-我还使用了 [Spotbugs](https://github.com/spotbugs/spotbugs)` , `[Checkstyle](https://checkstyle.sourceforge.io/) 和  [Jacoco](https://www.eclemma.org/jacoco/) 来做静态代码检查和代码覆盖率检查，所以我们也将这些插件添加进来。需要注意的是安全插件 [Spotbugs](https://find-sec-bugs.github.io/) 是一个小的[安全防护左移](https://www.paloaltonetworks.com/cyberpedia/what-is-devsecops)。
+我还使用了 [Spotbugs](https://github.com/spotbugs/spotbugs)，[Checkstyle](https://checkstyle.sourceforge.io/) 和 [Jacoco](https://www.eclemma.org/jacoco/) 来做静态代码检查和代码覆盖率检查，所以我们也将这些插件添加进来。需要注意的是安全插件 [Spotbugs](https://find-sec-bugs.github.io/) 是一个小的[安全防护左移](https://www.paloaltonetworks.com/cyberpedia/what-is-devsecops)。
 
 ```
 <build>
@@ -171,7 +171,7 @@ Jenkinsfile
 
 由于需要一个可以作为 Maven 依赖项的库，我们将构建资源复制到 jar 的 public 目录，作为 maven-resources-plugin。
 
-但是首先我们需要构建和测试这个模块。我们会使用 frontend-maven-plugin 完成这两步。如果不喜欢 maven 方式，也可以使用脚本，或者直接使用 Jenkinsfile完成构建和测试。
+但是首先我们需要构建和测试这个模块。我们会使用 frontend-maven-plugin 完成这两步。如果不喜欢 maven 方式，也可以使用脚本，或者直接使用 Jenkinsfile 完成构建和测试。
 
 ```
 <build>
@@ -313,7 +313,7 @@ pipeline {
 
 Nexus 是我们唯一存储构建制品的仓库，也是我们所有环境拉取制品的地方。
 
-制品仓库需要定义在后端的 pom.xml文件中。
+制品仓库需要定义在后端的 pom.xml 文件中。
 
 ```
 <distributionManagement>
@@ -333,16 +333,15 @@ Nexus 是我们唯一存储构建制品的仓库，也是我们所有环境拉�
 ```
 
 
-
 ## 部署
 
 前面提到过我们有一台 RedHat7 虚拟机且可以通过 ssh 连接。我们使用的 [Ansible](https://www.ansible.com/) 工具需要 ssh 连接，所以需要安装到 Jenkins 节点上。
 
 ![for-simple-IT-automation](2020-09-09-for-simple-IT-automation.png)
 
-另一个需要决定的是如何运行我们的应用程序。我们可以通过编写 shell 脚本来启停 java jar，但更优雅的一种方式是使用进程/服务管理器。
+另一个需要决定的是如何运行我们的应用程序。我们可以通过编写 shell 脚本来启停 java jar，但更为优雅的一种方式是使用进程/服务管理器。
 
-我们可以选择使用 [Supervisor](http://supervisord.org/index.html) 或者其它的一些工具，但是这些工具在 RedHat Linux上不能开箱即用，所以我们选择使用 [systemd](https://en.wikipedia.org/wiki/Systemd)。
+我们可以选择使用 [Supervisor](http://supervisord.org/index.html) 或者其它的一些工具，但是这些工具在 RedHat Linux 上不能开箱即用，所以我们选择使用 [systemd](https://en.wikipedia.org/wiki/Systemd)。
 
 每次执行的步骤如下：
 
@@ -378,7 +377,7 @@ Nexus 是我们唯一存储构建制品的仓库，也是我们所有环境拉�
     force: yes
 ```
 
-配置管理部分如下所示
+配置管理部分如下所示：
 
 ```
 - name: Ensure app is configured
@@ -445,7 +444,7 @@ WantedBy=multi-user.target
 11.22.33.46
 ```
 
-以及一个 playbook (site.yml) 来定义所有的步骤：
+以及一个 playbook（site.yml）来定义所有的步骤：
 
 ```
 ---
@@ -480,7 +479,7 @@ stage('Deploy to test'){
 
 ## 配置 Jenkins
 
-在 Jenkins 上创建一个新的 Multibranch 类型流水线。在配置页面唯一需要配置的就是source：
+在 Jenkins 上创建一个新的 Multibranch 类型流水线。在配置页面唯一需要配置的就是 source：
 
 ![jenkins-configuration](2020-09-09-jenkins-configuration.png)
 
