@@ -7,7 +7,6 @@ translator: wwjgit
 original: https://itnext.io/ci-cd-with-jenkins-and-ansible-f41ef2b33977
 tags:
 - Ansible
-- Continuous Integration
 - Continuout Delivery
 ---
 
