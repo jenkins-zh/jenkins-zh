@@ -41,7 +41,19 @@ draft: false
 |{{< ghref "walker0921" "walker0921" >}}| 端午礼盒  | 2020-06 | [vivo](https://www.vivo.com) |
 
 ## 定期激励
-每个季度被选中的贡献者，可以在[人民邮电出版社微店](https://shop16629033.youzan.com/v2/showcase/homepage?kdt_id=16436865)中自行挑选图书一本。  
+每个季度被选中的贡献者，可以在[人民邮电出版社微店](https://shop16629033.youzan.com/v2/showcase/homepage?kdt_id=16436865)中自行挑选图书一本。
+
+### NO.4
+时间范围：2020年4月～2020年8月
+赞助方：[人民邮电出版社][ptpress]
+
+|成员|奖励|
+|----|----|
+|{{< ghref "niuganghappy" "niuganghappy" >}}|《图解TCP/IP (第5版)》|
+|{{< ghref "wenjunzhangp" "wenjunzhangp" >}}|《趣味算法》|
+|{{< ghref "wst021" "wst021" >}}|《DevOps 开发运维训练营》|
+|{{< ghref "hummerstudio" "hummerstudio" >}}|《Spring Boot+Spring Cloud 微服务开发实战》|
+|{{< ghref "linuxsuren" "linuxsuren" >}}|《学会写作 自我进价的高效方法》|
 
 ### NO.3
 时间范围：2019年9月～2020年4月  
