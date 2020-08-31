@@ -33,7 +33,7 @@ Jenkins X 是革命性的具有改变现代应用程序与客户交互的潜力�
 
 ## 使用 Jenkins X 的现代应用程序部署方式
 
-Jenkins X *“一个云原生版本的 Jenkins，可以叫做 Jenkins 的酷表亲”*，是一款开源项目为在 Kubernetes 上的云原生应用程序提供了 自动化的 CI/CD。Jenkins X 提供了自动化流水线，内置 GitOps，预览环境可以帮助团队合作以及加快以任何规模交付他们软件的速度。它会让所有事物更直接，通过使用开源工具比如 Helm、Skaffold、Monocular、ChartMuseum、Nexus、KSync 以及 Docker Registry 快速构建云原生应用程序可以让你使用 Jenkins 2.0 的强大功能进行操作。
+Jenkins X *“一个云原生版本的 Jenkins，可以叫做 Jenkins 的酷表亲”*，是一款开源项目为在 Kubernetes 上的云原生应用程序提供了自动化的 CI/CD。Jenkins X 提供了自动化流水线，内置 GitOps，预览环境可以帮助团队合作以及加快以任何规模交付他们软件的速度。它会让所有事物更直接，通过使用开源工具比如 Helm、Skaffold、Monocular、ChartMuseum、Nexus、KSync 以及 Docker Registry 快速构建云原生应用程序可以让你使用 Jenkins 2.0 的强大功能进行操作。
 
 ![logo](logo.png)
 
