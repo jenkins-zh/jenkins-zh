@@ -1,10 +1,11 @@
 ﻿---
-title: “DevOps 的打开方式: 构建和部署”  
+title: "DevOps 的打开方式: 构建和部署"  
 date: 2020-09-02  
-description: “介绍了一下 Jenkins X 的组成部分通过具体的实践告诉读者正确打开在 Kubernetes 上实现 CI/CD 的方式”  
+description: "介绍了一下 Jenkins X 的组成部分通过具体的实践告诉读者正确打开在 Kubernetes 上实现 CI/CD 的方式"  
 author: Ernese Norelus  
 translator: 0N0thing  
 original: https://medium.com/ibm-garage/devops-adoption-approach-build-and-deploy-edc2a52c075  
+poster: cover.jpg  
 tags:
 - Jenkins  
 - Jenkins X  
