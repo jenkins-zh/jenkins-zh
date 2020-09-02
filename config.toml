@@ -68,6 +68,9 @@ googleAnalytics = "UA-4216293-5"
 [[menu.tutorial]]
   name = "best-practice"
   post = "最佳实践"
+[[menu.tutorial]]
+  name = "get-started"
+  post = "入门"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON" ]
