@@ -1,13 +1,14 @@
 ---
-title: 使用 Jenkins 和 Ansible 实现 CI/CD
+title: "使用 Jenkins 和 Ansible 实现 CI/CD"
 date: 2020-09-09
-description: 以一个 Spring Boot + JS 的项目为例，讲解了如何通过 Jenkins 以及 Ansible 实现 CI/CD
+description: "以一个 Spring Boot + JS 的项目为例，讲解了如何通过 Jenkins 以及 Ansible 实现 CI/CD"
 author: Balázs Németh
 translator: wwjgit
 original: https://itnext.io/ci-cd-with-jenkins-and-ansible-f41ef2b33977
 tags:
 - Ansible
 - Continuout Delivery
+poster: "cover.png"
 ---
 
 ![cover](cover.png)
@@ -19,7 +20,7 @@ tags:
 
 向 DevOps 方向迈出的一步是要消除孤岛（dev，QA，ops），因此我们必须以一种每个角色都能轻松协作的方式来构建我们的代码。
 
-我阅读了很多非常不错的文章，介绍如何使用一些单页面  Javascript 和 Spring Boot 后端构建应用，其中还涉及了配置管理，基础框架，持续集成和持续交付。现在我将结合以上所有内容，为你开展自己的工作提供一些支持和帮助。
+我阅读了很多非常不错的文章，介绍如何使用一些单页面 Javascript 和 Spring Boot 后端构建应用，其中还涉及了配置管理、基础框架、持续集成和持续交付。现在我将结合以上所有内容，为你开展自己的工作提供一些支持和帮助。
 
 ## 准备
 
