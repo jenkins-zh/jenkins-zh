@@ -95,8 +95,8 @@ pipeline {
 上述Jenkinsfile文件可用于所有类型的项目构建，实际使用的时候一般还会用到以下三个Jenkins插件：
 
 * [Agent Server Parameter Plugin 用于选择构建的Agent服务器](https://github.com/jenkinsci/agent-server-parameter-plugin)
-* [Custom Checkbox Parameter Plugin 用于选择子项目进行构建多用于微服务项目](https://github.com/jenkinsci/custom-checkbox-parameter-plugin)
-* [Git Parameter 用于现在分支构建](https://github.com/jenkinsci/git-parameter-plugin)
+* [Custom Checkbox Parameter Plugin 用于选择子项目进行构建,多用于微服务项目](https://github.com/jenkinsci/custom-checkbox-parameter-plugin)
+* [Git Parameter 用于选择分支构建](https://github.com/jenkinsci/git-parameter-plugin)
 
 ### JSON配置文件内容
 
@@ -183,7 +183,7 @@ pipeline {
 }
 ```
 
-说明：
+配置说明：
 
 ```json
 "检查Java环境": {
@@ -282,4 +282,5 @@ sonar.java.binaries=./target/classes
 ## 欢迎大家去关注、交流更多的关于Jenkins构建的问题和经验
 
 项目地址：[Jenkins Json Build](https://github.com/gyyx/jenkins-json-build)
+
 个人邮箱：sunweisheng@live.cn
