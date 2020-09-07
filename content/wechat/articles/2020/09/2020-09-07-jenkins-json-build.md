@@ -266,7 +266,7 @@ sonar.java.binaries=./target/classes
 
 经过上述配置文件的执行，我们可以很简单的完成所有的构建步骤：
 
-![project doc image](docs/images/jenkins-json-build-04.png)
+![project doc image](jenkins-json-build-04.png)
 
 这里篇幅有限，更多内容请到项目仓库查看比如：
 
