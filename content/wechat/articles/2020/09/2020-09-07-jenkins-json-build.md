@@ -1,7 +1,7 @@
 ---
 title: "对Jenkinsfile语法说不，开源项目Jenkins Json Build挺你"
 description: "使用JSON配置文件驱动Jenkins构建"
-date: 2020-09-11
+date: 2020-09-07
 keywords:
 - Jenkins
 - Jenkins Shared Libraries
