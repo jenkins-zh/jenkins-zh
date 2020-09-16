@@ -1,6 +1,6 @@
 ---
 title: "Jenkins 国内插件源恢复正常啦"
-date: 2020-09-22
+date: 2020-09-18
 description: "修复 Jenkins 国内插件源，恢复正常使用"
 author: yJunS
 tags:
