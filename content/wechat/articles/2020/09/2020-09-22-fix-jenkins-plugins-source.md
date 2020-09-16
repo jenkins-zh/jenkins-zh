@@ -15,7 +15,7 @@ poster: "jenkins-voltron.png"
 
 ## 对比插件源
 
-经过对比，发现原来原始插件源和国内插件源返回的 json 内容几乎一致,导致国内插件源下载 Url 都指向了国外插件下载地址,国内有些网络的情况下会有直接下载失败的情况
+经过对比，发现原来原始插件源和国内插件源返回的 json 内容几乎一致，导致国内插件源下载 Url 都指向了国外插件下载地址，国内有些网络的情况下会有直接下载失败的情况
 
 ![old-vs-updateCenter](old-vs-updateCenter.png)
 
@@ -29,8 +29,12 @@ poster: "jenkins-voltron.png"
 
 ## 完美解决
 
-重新将程序打包上传之后，插件源重新生成之后，插件更新基本正常解决
+重新将程序打包上传之后，插件源重新生成之后，插件更新基本正常解决。
 
 ![new-vs-updateCenter](new-vs-updateCenter.png)
 
 ![download](download.png)
+
+## 如何使用
+
+如想知道如是使用国内插件源，请参考[此页](https://jenkins-zh.cn/wechat/articles/2019/11/2019-11-11-update-center-mirror-announcement/)。源地址替换为[插件源地址](https://updates.jenkins-zh.cn/update-center.json)
