@@ -11,6 +11,13 @@ Tomcat 和 [Jenkins](http://jenkins.io/) 都是用 Java 语言开发的，因此
 
 ## 安装
 首先，我们需要下载 Tomcat 和 Jenkins：
+首先，我们需要有 Java 的运行环境，JRE 或者 JDK 都可以。下面提供几种安装的方式：
+
+* macOS 下安装 `brew cask install adoptopenjdk8`
+
+注意，本文的实验环境是 Java8
+
+然后，我们需要下载 Tomcat 和 Jenkins：
 ```
 wget https://mirror.bit.edu.cn/apache/tomcat/tomcat-7/v7.0.105/bin/apache-tomcat-7.0.105.tar.gz
 tar xzvf apache-tomcat-7.0.105.tar.gz
@@ -42,6 +49,12 @@ Tomcat 分别支持以交互式、守护进程的方式来启动，如果你对�
 `./bin/catalina.sh start`
 
 `./bin/catalina.sh stop`
+进入 Tomcat 的根目录下，执行命令 `./bin/catalina.sh run`
+
+### 守护进程
+进入 Tomcat 的根目录下，执行命令 `./bin/catalina.sh start` 就可以启动 Tomcat
+
+停止 Tomcat 的命令为 `./bin/catalina.sh stop`
 
 ## 目录结构
 
