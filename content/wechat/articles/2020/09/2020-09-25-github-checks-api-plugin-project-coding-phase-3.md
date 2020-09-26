@@ -28,7 +28,7 @@ poster: "jenkins-gsoc-logo_small.png"
 
 对流水线的支持让用户无需依赖任何 Checks API 的实现就可以直接在他们编写的流水线当中轻松发布 checks。
 
-![Pipeline Checks](pipeline-checks.png)
+![Pipeline Checks](pipeline-check.png)
 
 上图中的 check 可以通过如下脚本实现：
 
