@@ -1,7 +1,7 @@
 ---
 title: "Jenkins 每周版更新"
 description: "本次更新的版本包括：2.250~2.256"
-date: 2020-09-28
+date: 2020-10-09
 tags:
 - jenkins
 - weekly
