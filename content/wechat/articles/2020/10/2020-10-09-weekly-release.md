@@ -17,7 +17,7 @@ keywords:
 - Jenkins 2.256发布
 author: jenkinsci
 translator: zhaoying818
-poster: "./2020-09-28-weekly-release/great-wall.jpeg"
+poster: "./2020-10-09-weekly-release/great-wall.jpeg"
 ---
 
 ![great-wall](great-wall.jpeg)
