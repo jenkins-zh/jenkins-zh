@@ -1,5 +1,5 @@
 ---
-title: "2020年十月 Hacktoberfest 纪念版T恤还是种树"
+title: "2020年10月 Hacktoberfest 纪念版T恤还是种树"
 date: 2020-09-27
 description: "Jenkins 中文社区邀请你参加 Hacktoberfest"
 author: LinuxSuRen
