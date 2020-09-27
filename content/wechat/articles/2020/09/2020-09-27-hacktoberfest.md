@@ -6,10 +6,10 @@ author: LinuxSuRen
 tags:
 - jenkins
 - hacktoberfest
-poster: "hacktoberfest.svg"
+poster: "hacktoberfest-2020.svg"
 ---
 
-![Hacktoberfest](hacktoberfest.svg)
+![Hacktoberfest](hacktoberfest-2020.svg)
 
 Hacktoberfest 是由知名云服务商 DigitalOcean 发起的一个推广、支持开源的年度在线活动，任何一个开源爱好者都可以参与到其中。只要在10月份内
 向 GitHub 上的任意开源项目提交若干 Pull Request，就算完成活动任务，并将得到由 DigitalOcean、GitHub 等活动赞助商提供的纪念品。纪念品，
