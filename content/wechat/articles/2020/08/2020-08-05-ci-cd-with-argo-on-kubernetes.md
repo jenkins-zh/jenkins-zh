@@ -1,16 +1,16 @@
 ﻿---
-title: 在 Kubernetes 上使用 Argo 实现 CI/CD  
-date: 2020-08-05  
-descritpion: "讲解了Argo 的组成部分，展示了具体的配置文件说明了 Argo 是如何在 Kubernetes 实现 CI/CD 的"
-author: Bouwe Ceunen  
-translator: 0N0thing  
-original: https://medium.com/axons/ci-cd-with-argo-on-kubernetes-28c1a99616a9  
+title: 在 Kubernetes 上使用 Argo 实现 CI/CD
+date: 2020-08-05
+description: 讲解了Argo 的组成部分，展示了具体的配置文件说明了 Argo 是如何在 Kubernetes 实现 CI/CD 的
+author: Bouwe Ceunen
+translator: 0N0thing
+original: https://medium.com/axons/ci-cd-with-argo-on-kubernetes-28c1a99616a9
 tags:
-- Docker  
-- Kubernetes  
-- Argo  
-- Continuous Integration  
-- Continuout Delivery  
+- Docker
+- Kubernetes
+- Argo
+- Continuous Integration
+- Continuout Delivery
 ---
 
 ![cover](cover.jpg)
