@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: hugo-deploy-gh-pages
-        uses: jenkins-zh/hugo-gh-actions@v0.0.1
+        uses: jenkins-zh/hugo-gh-actions@v0.0.2
         env:
           GIT_DEPLOY_KEY: ${{ secrets.GIT_DEPLOY_KEY }}
           HUGO_VERSION: "0.53"
