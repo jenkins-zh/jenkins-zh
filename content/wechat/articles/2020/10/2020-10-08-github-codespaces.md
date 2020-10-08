@@ -6,7 +6,7 @@ author: LinuxSuRen
 poster: "web-ide.png"
 ---
 
-![](2020-10-08-github-codespaces/web-ide.png)
+![](web-ide.png)
 
 这是国庆假期最后一天的早晨，浏览完几份未读的邮件之后，顺手打开 GitHub 看看有没有啥新动态。欣喜地发现 GitHub 又给我们放出来了
 一个功能 Codespaces，特地和大家来分享。
@@ -21,15 +21,15 @@ GitHub 作为全球最大的代码托管平台，肯定是会提供类似的功�
 
 首先，编辑器的入口是非常重要的一点。GitHub 选择 Code 作为入口，也是非常恰当的；虽然，我一开始感觉有点找不到北。 Code -> Open with Codespaces
 
-![](2020-10-08-github-codespaces/github-vs-1.png)
+![](github-vs-1.png)
 
 第一次使用的话，会提示你新建一个 codespace
 
-![](2020-10-08-github-codespaces/github-vs-2.png)
+![](github-vs-2.png)
 
 如果是再次进入 codespace 的话，就可以选择一个已经创建好的
 
-![](2020-10-08-github-codespaces/github-vs-3.png)
+![](github-vs-3.png)
 
 真正让我感到眼前一亮的功能在于它集成了对 PullRequest 和终端控制台的支持，这两点对于一个开源项目的贡献者来说是非常需要的功能。
 
@@ -37,25 +37,25 @@ GitHub 作为全球最大的代码托管平台，肯定是会提供类似的功�
 
 有点美中不足的是，issues 功能貌似是有点缺陷，无法看到正确的列表。
 
-![](2020-10-08-github-codespaces/github-vs-4.png)
+![](github-vs-4.png)
 
 更强大的地方在于，我们在 Codespace 的终端可以直接执行一些命令。例如：在上图中，我可以通过 GitHub 官方的 CLI 来查看 PR 或者 issues 等。我们无需为 gh 配置凭据信息，Codespace 已经提供了开箱即用的体验。
 
 对于 Hugo 这种静态网站的项目，也是可以直接执行 hugo 命令的：
 
-![](2020-10-08-github-codespaces/github-vs-5.png)
+![](github-vs-5.png)
 
 对于 Golang 的项目，同样支持编译、单元测试等命令的执行。
 
-![](2020-10-08-github-codespaces/github-vs-7.png)
+![](github-vs-7.png)
 
 想必要支持编译环境的话，需要消耗较多的计算资源，因此，GitHub 提供 Beta 级别的 Codespace 只允许我们创建两个工作空间。
 
-![](2020-10-08-github-codespaces/github-vs-6.png)
+![](github-vs-6.png)
 
 再让我们来看看 Codespace 给大家提供的环境配置：4G内存、2核CPU、60G磁盘。对于中小型的开源项目而言，完全可以满足要求了。
 
-![](2020-10-08-github-codespaces/github-vs-8.png)
+![](github-vs-8.png)
 
 除了 gh、hugo、git、go 等命令外，还集成了如下的命令行工具：
 
