@@ -1,6 +1,7 @@
 # Jenkins WeChat
 
 ![GitHub contributors](https://img.shields.io/github/contributors/jenkins-zh/jenkins-zh)
+[![HitCount](http://hits.dwyl.com/jenkins-zh/jenkins-zh.svg)](http://hits.dwyl.com/jenkins-zh/jenkins-zh)
 
 WeChat is similar to [Twitter](https://twitter.com). Almost everyone has an account on WeChat in China.
 
