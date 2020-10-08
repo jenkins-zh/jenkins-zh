@@ -1,3 +1,6 @@
+![GitHub contributors](https://img.shields.io/github/contributors/jenkins-zh/jenkins-zh)
+[![HitCount](http://hits.dwyl.com/jenkins-zh/jenkins-zh.svg)](http://hits.dwyl.com/jenkins-zh/jenkins-zh)
+
 # Jenkins 中文社区网站源码
 
 该站点采用 Markdown 格式编写，由 [Hugo](https://github.com/gohugoio/hugo) 生成静态文件。
@@ -5,7 +8,8 @@
 包含的内容，包括：
 
 * 微信公众号文章
-* 社区活动（建设中）
+* 社区活动
+* 合作伙伴
 * 站点介绍
 
 除了上述内容外，还基于 [utterance](https://github.com/utterance) 提供了文章评论功能。
@@ -22,3 +26,9 @@
 
 我们使用 [git-backup-actions](https://github.com/jenkins-zh/git-backup-actions/) 来备份当前仓库到 
 [gitee](https://gitee.com/jenkins-zh/jenkins-zh).
+
+# 微信公众号
+
+请扫描下面的二维码，关注 Jenkins 中文社区的微信公众号：
+
+![](static/images/wechat-qrcode.jpg)
