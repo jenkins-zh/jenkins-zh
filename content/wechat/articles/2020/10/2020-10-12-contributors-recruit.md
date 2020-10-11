@@ -45,7 +45,7 @@ Jenkins 中文社区，作为 Jenkins 的中文用户集中交流的社区，不
 
 ## 社区合作
 合作、共赢是我们推出公益性 Jenkins 视频教程的基础，贵社区的加入可以让更多的人因此获益。我们会将贵社区的 Logo 放在视频的片尾部分，图片文件请提交 Pull Request 到[视频剪辑项目仓库](https://github.com/jenkins-zh/jenkins-open-tutorial)中。
-而您需要做的是，在贵社区的微信公众号平台上连续转载每一期的视频。
+而您需要做的是，在贵社区的微信公众号平台上连续转载每一期的视频。当然，如果您的社区也可以有讲师来分享，或者视频剪辑、图片设计等。
 
 ## 许可证
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
