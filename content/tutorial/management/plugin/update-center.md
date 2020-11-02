@@ -20,3 +20,4 @@ Jenkins 安装完成后，默认的插件更新中心地址为 `https://updates.
 |[腾讯](https://mirrors.cloud.tencent.com/jenkins/) | `https://mirrors.cloud.tencent.com/jenkins/updates/update-center.json` |
 |[ustc](https://mirrors.ustc.edu.cn/jenkins/) | `https://mirrors.ustc.edu.cn/jenkins/updates/update-center.json` |
 |[bit](https://mirror.bit.edu.cn/jenkins/) | `https://mirror.bit.edu.cn/jenkins/updates/update-center.json` |
+|[lework](https://github.com/lework/jenkins-update-center) | `https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/tencent/update-center.json` `https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/tsinghua/update-center.json` `https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/ustc/update-center.json` `https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/bit/update-center.json` |
