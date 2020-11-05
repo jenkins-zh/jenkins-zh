@@ -1,7 +1,7 @@
 ﻿ ---
 title: "使用 AWS、k3s、Rancher、Vault 和 ArgoCD 在 Kubernetes 上集成 GitOps"  
 date: 2020-11-04  
-description: 讲解了基于 GitOps 实现在 Kubernetes 上部署应用程序所需工具链的安装、配置，并通过 hello-world 应用程序讲解具体过程  
+description: "讲解了基于 GitOps 实现在 Kubernetes 上部署应用程序所需工具链的安装、配置，并通过 hello-world 应用程序讲解具体过程"  
 author: Adam Toy  
 translator: 0N0thing  
 original: https://medium.com/@adam-toy/implementing-gitops-on-kubernetes-using-k3s-rancher-vault-and-argocd-f8e770297d3a  
