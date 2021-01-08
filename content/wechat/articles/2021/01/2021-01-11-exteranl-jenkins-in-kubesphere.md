@@ -1,20 +1,21 @@
 ---
 title: "KubeSphere 使用外置 Jenkins"
 description: "KubeSphere 使用外置 Jenkins"
-date: 2021-01-08
+date: 2021-01-11
 author: linuxsuren
-poster: "jenkins-cli.png"
+poster: "kubesphere.png"
 ---
 
-![jenkins](jenkins.png)
+![kubesphere](kubesphere.png)
 
 相信很多 KubeSphere 的用户之前在以 Jenkins 作为 CI/CD 工具，但是，KubeSphere 默认会安装一个新的 Jenkins，无法直接使用已有的 Jenkins 作为 CI/CD 引擎。这对于希望能上生产，但是又不方便迁移已有流水线的用户来说，还是有很多不方便的地方。本文的目标，就是给大家提供一个让 KubeSphere 可以使用外置 Jenkins 的方案。
 
 ## 限制
 该方案并不是一个完美的终极方案，因此，在你开始使用外置 Jenkins 之前，请先评估下面的限制：
 
-* 已有的流水线将会无法使用
+* KubeSphere 上已有的流水线将会无法使用
 * 如果你已有的 Jenkins 中安装了不兼容的插件，可能会导致部分功能无法使用
+* 不会把旧的 Jenkins 上的流水线迁移到 KubeSphere 上
 
 鉴于方案可能会有如上所属的风险，请*不要*直接在你的生产环境上操作！另外，请确保你有一个备份环境，并且在备份环境上进行如下的方案实施。
 
@@ -32,7 +33,7 @@ yum update -y && yum install wget curl vim bash-completion -y
 
 为了不影响已有的业务，我们最好还是找个空白的环境，安装一个新的 KubeSphere 会比较稳妥。下面，我们首先把安装工具 `kk` 下载好。值得一提的是，KubeSphere 社区为了能够让用户更方便地体验到最新交付的 feature 或者修复的缺陷，提供了每日构建版，也就是所谓的：`nightly build`。想要体验找个 `nightly build` 最好的办法是使用最新开发中的的 `kk`。
 
-需要注意的是，下面的链接是我个人编译出来的二进制文件，并不是社区发布的正式版本，提供学习使用。
+需要注意的是，下面的链接是我个人编译出来的二进制文件，并不是社区发布的正式版本，仅供学习使用。
 
 ```
 wget https://github.com/LinuxSuRen/kubekey/releases/download/v1.0.4/kubekey-v1.0.4-linux-amd64.tar.gz
@@ -96,19 +97,12 @@ https://kubesphere.io             2021-01-05 10:40:32
 ```
 
 # 外置 Jenkins
-* Install all necessary Jenkins plugins in the external one
-* Config the external Jenkins as need
-* Make the exteranl Jenkins as default in KubeSphere
 
-## 限制
-在你开始使用外置 Jenkins 之前，请先评估下面的限制：
-
-* 已有的流水线将会无法使用
-* 如果你已有的 Jenkins 中安装了不兼容的插件，可能会导致部分功能无法使用
+前面我们已经做了很多的准备工作，现在终于开始动手集成外置 Jenkins 了。
 
 ## 步骤
 
-假设，你的外置 Jenkins 是通过这个命令安装的：
+假设，你的外置 Jenkins 是通过这个命令安装的（如果你正好有一个可以做测试的外置 Jenkins 的话，可以跳过下面的步骤）：
 
 `jcli center start -m docker --c-user root --image jenkinszh/jenkins-k8s --version 2.249.1 --sys hudson.security.csrf.DefaultCrumbIssuer.EXCLUDE_SESSION_ID=true`
 
@@ -121,10 +115,16 @@ git clone https://github.com/kubesphere/ks-jenkins
 jcli plugin install --formula ks-jenkins/formula.yaml
 ```
 
-安装插件可能需要花点事情，具体依赖于你的网络带宽。jcli 可以通过读取 YAML 配置文件 `ks-jenkins/formula.yaml` 安装所有的插件。
+安装插件可能需要花点时间，具体依赖于你的网络带宽。jcli 可以通过读取 YAML 配置文件 `ks-jenkins/formula.yaml` 安装所有的插件。
 
 接下来，需要手动配置 Jenkins。你需要关注两件事情：配置 `KubeSphere Jenkins Auth` 并启用，提供 KubeSphere API Gateway，也就是 `ks-apiserver` 所暴露的端口。另一个重要的部分是 Kubernetes 配置，请确保它至少包含这些 podTemplates `base`, `nodejs`, `maven` and `go` 。你可以从 KubeSphere 默认安装的 Jenkins 中的 podTemplates 了解到如何配置。
 
-当你完成了上面的配置，而且所有插件都已经安装成功后，重启 Jenkins。
+当你完成了上面的配置，而且所有插件都已经安装成功后，重启 Jenkins。重启的方法有很多，但还是提供一个比较优雅的吧：`jcli restart -b`
 
 最后，修改 configmap `kubesphere-system/kubesphere-config` 中 Jenkins 的连接信息。从 `data.kubesphere.yaml` 中找到 `devops.host` ，把它修改为你期望使用的 Jenkins 的地址。为了让修改生效，我们还需要重启 `ks-apiserver` ，命令为： `kubectl rollout restart -n kubesphere-system deploy ks-apiserver`。
+
+完成上面的步骤后，创建一个新的流水线，你就会发现已经关联到了新的 Jenkins 上了。
+
+# 写在最后
+
+安装一个全新的，通常是一件相对比较容易的事情。但是，想要平滑地把已有的组件做迁移的话，则可能会遇到各种问题。非常欢迎看到本文的读者和我一起解决上面提到的几个限制因素。
