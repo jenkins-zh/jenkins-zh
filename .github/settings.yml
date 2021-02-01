@@ -38,6 +38,9 @@ labels:
   - name: kind/outreach
     color: 85ea85
     description: 社区合作
+  - name: kind/tutorial
+    color: 85ea85
+    description: 社区教程
 branches:
   - name: master
     protection:
