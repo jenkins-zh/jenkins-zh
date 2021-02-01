@@ -17,5 +17,5 @@ assignees: ''
 ### 参考资料
 无。
 
-kind/tutorial
+/kind tutorial
 
