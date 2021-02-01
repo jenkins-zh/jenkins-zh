@@ -35,6 +35,9 @@ labels:
   - name: kind/chore
     color: 85ea85
     description: 仓库维护
+  - name: kind/outreach
+    color: 85ea85
+    description: 社区合作
 branches:
   - name: master
     protection:
