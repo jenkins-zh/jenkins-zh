@@ -1,7 +1,7 @@
 ﻿---
-title: “Jenkins 贡献者线上会议 - 二月 23 日至 25 日”  
+title: “Jenkins 贡献者线上峰会 - 二月 23 日至 25 日”  
 date: 2021-02-21  
-description: 介绍此次线上会议的时间、会议议程  
+description: 介绍此次线上峰会的时间、会议议程  
 author: Mark Waite  
 translator: 0N0thing  
 original: https://www.jenkins.io/blog/2021/02/16/contributor-summit-online/  
@@ -13,9 +13,9 @@ tags:
 
 ![cover](cover.jpg)
 
-Jenkins 贡献者会议让 Jenkins 项目目前以及将来的贡献者们能够齐聚一堂。今年我们主持本次线上会议是为了鼓励全世界的贡献者们相互了解、讨论、规划未来。
+Jenkins 贡献者峰会让 Jenkins 项目目前以及将来的贡献者们能够齐聚一堂。今年我们主持本次线上峰会是为了鼓励全世界的贡献者们相互了解、讨论、规划未来。
 
-此次贡献者会议将于 **2021 年 2 月 23 日至 2 月 25 日举行**。此次会议旨在组织社区成员们一起学习、交流、规划 Jenkins 的未来。在 Jenkins 社区里，我们珍视所有形式的贡献并真诚欢迎新成员加入进来。
+此次贡献者峰会将于 **2021 年 2 月 23 日至 2 月 25 日举行**。此次会议旨在组织社区成员们一起学习、交流、规划 Jenkins 社区未来的发展方向。在 Jenkins 社区里，我们珍视所有形式的贡献并真诚欢迎新成员加入进来。
 
 [点击注册加入](https://docs.google.com/forms/d/e/1FAIpQLSdTABEUvRlXdMptACYNFu5tP1aNrhpzUZ60uQEzGH-qTRDvbg/viewform)
 
@@ -25,13 +25,13 @@ Jenkins 贡献者会议让 Jenkins 项目目前以及将来的贡献者们能够
 
 ## 开幕式
 
-开幕式将于 2021 年 2 月 23 日 15 时（北京时间 23 时）开始。在欢迎环节与回顾环节结束后，我们将会听取 Jenkins 项目的负责人介绍过去一年的成果以及未来一年的展望。
+开幕式将于 2021 年 2 月 23 日 15 时（北京时间 23 时）开始。在欢迎环节与回顾环节结束后，我们将会听取 Jenkins 各个领域的负责人介绍过去一年的成果以及未来一年的展望。
 
 - 安全 - Daniel Beck
 
 - 基础设施 - Olivier Vernin
 
-- 发布 - Tim Jacomb
+- 版本发布 - Tim Jacomb
 
 - 用户体验 - Félix Queiruga
 
