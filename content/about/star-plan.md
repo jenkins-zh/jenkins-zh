@@ -43,6 +43,18 @@ draft: false
 ## 定期激励
 每个季度被选中的贡献者，可以在[人民邮电出版社微店](https://shop16629033.youzan.com/v2/showcase/homepage?kdt_id=16436865)中自行挑选图书一本。
 
+### NO.5
+时间范围：2020年8月～2020年11月
+赞助方：[人民邮电出版社][ptpress]
+
+|成员|奖励|
+|----|----|
+|{{< ghref "ZhzhIn" "ZhzhIn" >}}|《深入浅出Docker 技术入门与实践指南》|
+|{{< ghref "zhaoying818" "zhaoying818" >}}|《Python编程快速上手 让繁琐工作自动化》|
+|{{< ghref "lizhiposui" "lizhiposui" >}}|《精通Kubernetes 开发运维教程书籍》|
+|{{< ghref "tjsooner" "tjsooner" >}}|《深入浅出Docker 技术入门与实践指南》|
+|{{< ghref "JoneyHsiao" "JoneyHsiao" >}}|《持续交付2.0 业务引领的DevOps精要》|
+
 ### NO.4
 时间范围：2020年4月～2020年8月
 赞助方：[人民邮电出版社][ptpress]

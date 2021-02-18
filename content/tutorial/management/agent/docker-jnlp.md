@@ -25,5 +25,9 @@ Jenkins 支持多种类型的代理节点，本篇教程介绍的是基于 JNLP 
 docker run -u root -d --rm jenkins/slave:4.0.1-1-alpine java -jar /usr/share/jenkins/agent.jar -jnlpUrl http://192.168.31.239:8080/computer/jnlp/slave-agent.jnlp -secret ad36ea3aff1fea65a803f32e7020bd6c6b5866db9f587fb2079d308661691911 -workDir "/tmp"
 ```
 
+或者，也可以使用下面更加简单的命令：
+
+`jcli computer launch simple -m docker --agent-type docker`
+
 如果希望了解更多这种代理节点的话，可以参考[官方源码](https://github.com/jenkinsci/docker-slave)。
 
