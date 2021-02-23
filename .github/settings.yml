@@ -26,6 +26,21 @@ labels:
   - name: event
     color: 85ea85
     description: Jenkins 中文社区活动
+  - name: kind/article
+    color: 85ea85
+    description: 原创文章
+  - name: kind/translation
+    color: 85ea85
+    description: 翻译文章
+  - name: kind/chore
+    color: 85ea85
+    description: 仓库维护
+  - name: kind/outreach
+    color: 85ea85
+    description: 社区合作
+  - name: kind/tutorial
+    color: 85ea85
+    description: 社区教程
 branches:
   - name: master
     protection:
