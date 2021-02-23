@@ -28,9 +28,9 @@ weight: 100
 
 |用途|金额|日期|申请人|
 |---|---|---|---|
+| 购买梯子帐号（一年） | 180 | 2021.02.22 | {{< ghref "linuxsuren" "linuxsuren" >}}, {{< ghref "yJunS" "yJunS" >}}, {{< ghref "wst021" "wst021" >}} |
 | open4u域名购买 | 29 | 2020.7.12 |{{< ghref "linuxsuren" "linuxsuren" >}}|
 | 阿里云服务器升级 | 786.57 | 2020.6.9 |{{< ghref "linuxsuren" "linuxsuren" >}}|
 | 购买梯子帐号（一年） | 276 | 2020.02.23 | {{< ghref "linuxsuren" "linuxsuren" >}}, {{< ghref "yJunS" "yJunS" >}}, {{< ghref "donhui" "donhui" >}}, {{< ghref "linan607" "linan607" >}} |
 |购买阿里云服务器|5,640|2019.11.8|{{< ghref "linuxsuren" "linuxsuren" >}}|
 |阿里云服务器带宽充值|100|2019.10.24|{{< ghref "linuxsuren" "linuxsuren" >}}|
-| 购买梯子帐号（一年） | 180 | 2021.02.22 | {{< ghref "linuxsuren" "linuxsuren" >}}, {{< ghref "yJunS" "yJunS" >}}, {{< ghref "wst021" "wst021" >}} |
