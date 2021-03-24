@@ -1,7 +1,7 @@
 ﻿---
 title: "2020 Google 编程之夏活动总结"  
 date: 2021-03-24    
-description: 回顾了 GSoC 2020 活动情况，总结过去，展望未来  
+description: "回顾了 GSoC 2020 活动情况，总结过去，展望未来"  
 author: Oleg Nenashev  
 translator: 0N0thing  
 original: https://www.jenkins.io/blog/2020/12/22/gsoc-report/  
