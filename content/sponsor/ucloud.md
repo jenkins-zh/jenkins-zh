@@ -5,6 +5,6 @@ displayName: UCloud
 github: ucloud
 homepage: https://www.ucloud.cn/site/global.html?ytag=Jenkinshw
 logo: ucloud.png
-years:
+period:
 - 2020
 ---
