@@ -1,10 +1,11 @@
 {{$classes_box := "ba b--light-gray bg-light-gray br3 flex flex-column flex-wrap items-center justify-center ph3 pv4 mb4 w-100 w-30-l "}}
 {{ $sponsors := where .Site.Pages "Params.type" "sponsor" }}
 <section class="bg-primary-color-dark b--dark-gray bb bt ph5 pv4 w-100">
-  <div class="center mw9"> 
+  <div class="center mw9">
     <f3 class="b f3 light-gray">赞助商</f3>
     <div class="flex-ns flex-wrap center justify-between  pt3">
       {{ range $sponsors }}
+      {{if in .Params.period (string now.Year) }}
       {{ $banner := . }}
       {{if .Params.logo }}
       <div class="{{$classes_box}} o-100">
@@ -21,8 +22,9 @@
       <div class="{{$classes_box}} o-10">
         <p class="b black tc">赞助商</p>
       </div>
-      {{end}}
-      {{end}}
+      {{end}}<!--logo check end-->
+      {{end}}<!--years check end-->
+      {{end}}<!--range end-->
     </div>
   </div>
 </section>
