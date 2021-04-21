@@ -3,7 +3,11 @@ title: 开源软件供应链点亮计划 - 暑期2021
 description: 通过 CLI 对 Jenkins 实现安全升级
 ---
 
+## 项目标题
 通过 CLI 对 Jenkins 实现安全升级
+
+## 项目难度
+中
 
 ## 技能要求
 
@@ -48,3 +52,8 @@ Jenkins 有 1500+ 由社区提供的[插件](http://plugins.jenkins.io/)，利�
 
 * 开源软件供应链点亮计划，社区管理员，[史彦军](https://github.com/yJunS)
 * 导师，[Rick](https://github.com/LinuxSuRen/)
+
+## 相关代码仓库
+* https://github.com/jenkins-zh/jenkins-cli
+* https://github.com/jenkinsci/pipeline-restful-api-plugin
+
