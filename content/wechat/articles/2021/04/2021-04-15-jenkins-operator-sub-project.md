@@ -33,11 +33,11 @@ poster: gopher-butler-256.png
 
 邀请您[参与贡献](https://github.com/jenkinsci/kubernetes-operator/blob/master/CONTRIBUTING.md)该项目，实际体验自动管理 Jenkins 的乐趣！别犹豫，请参与到社区活动中来。与我们一起努力实现您认为有用的功能。也欢迎您提出缺陷、建议或补丁。我们正在积极解决社区提出的问题与建议，并设立了专门的 [Slack 互动频道](https://github.com/jenkinsci/kubernetes-operator#community)。
 
-本项目原由 [VirtusLab](http://virtuslab.com/) 公司设立，并在持续维护中。成为 Jenkins 官方子项目后，我们也[正在讨论（google groups）](https://groups.google.com/g/jenkinsci-dev/c/OA5nb_SAgh0/m/OoBS2o8nAwAJ:)创建一个开放式的治理机制来促进沟通和协作。
+本项目原由 [VirtusLab](http://virtuslab.com/) 公司设立，并在持续维护中。成为 Jenkins 官方子项目后，我们也[正在讨论（Google Groups）](https://groups.google.com/g/jenkinsci-dev/c/OA5nb_SAgh0/m/OoBS2o8nAwAJ:)创建一个开放式的治理机制来促进沟通和协作。
 
 ## 向我们反馈并引导项目前进
 
-为庆祝我们项目正在开启的新可能性，诚邀您参加一个小调查，助力我们找到正确方向。如您正在使用 Jenkins Operator 或在任何其他环境中运行 Jenkins，请花一点时间填写我们的快速调查表。我们将选择至少三个最有用的答案，送出我们专门设计的T恤，上面印有我们可爱的 Gopher 管家。点击[这个链接打开调查问卷（google docs）](https://docs.google.com/forms/d/1doIkgnm3_WbjtlwWSU4sOoiI7QoneHlYIjXEJOVMrfQ/edit?usp=sharing)，真诚的回复也是对我们项目最好的支持。
+为庆祝我们项目正在开启的新可能性，诚邀您参加一个小调查，助力我们找到正确方向。如您正在使用 Jenkins Operator 或在任何其他环境中运行 Jenkins，请花一点时间填写我们的快速调查表。我们将选择至少三个最有用的答案，送出我们专门设计的T恤，上面印有我们可爱的 Gopher 管家。点击[这个链接打开调查问卷（Google Docs）](https://docs.google.com/forms/d/1doIkgnm3_WbjtlwWSU4sOoiI7QoneHlYIjXEJOVMrfQ/edit?usp=sharing)，真诚的回复也是对我们项目最好的支持。
 ![gopher tshirt](tshirt-logo.jpg)
 
 另外，如果您还没有用过 Jenkins Kubernetes Operator，[欢迎您下载使用](https://www.jenkins.io/projects/jenkins-operator/#getting-started)。试一试，发现在 Kubernetes 上 运行 Jenkins 的新方式。
