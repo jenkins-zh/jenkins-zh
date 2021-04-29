@@ -5,6 +5,6 @@ displayName: 句子科技
 github: juzi
 homepage: https://wechat.botorange.com/
 logo: juzi.png
-years:
+period:
 - 2020
 ---
