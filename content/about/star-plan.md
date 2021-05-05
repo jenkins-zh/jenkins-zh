@@ -43,6 +43,20 @@ draft: false
 ## 定期激励
 每个季度被选中的贡献者，可以在[人民邮电出版社微店](https://shop16629033.youzan.com/v2/showcase/homepage?kdt_id=16436865)中自行挑选图书一本。
 
+
+### NO.6
+时间范围：2020年12月～2021年4月
+赞助方：[人民邮电出版社][ptpress]
+
+|成员|奖励|
+|----|----|
+|{{< ghref "zhaoying818" "zhaoying818" >}}|《远古世界恐龙和它的朋友们》|
+|{{< ghref "0N0thing" "0N0thing" >}}|《深入剖析Kubernetes》|
+|{{< ghref "yJunS" "yJunS" >}}|《算法(第4版)》|
+|{{< ghref "wst021" "wst021" >}}|《敏捷测试实战指南》|
+|{{< ghref "Rick" "Rick" >}}|《算法详解四部曲：算法详解 卷1 算法基础》|
+
+
 ### NO.5
 时间范围：2020年8月～2020年11月
 赞助方：[人民邮电出版社][ptpress]
