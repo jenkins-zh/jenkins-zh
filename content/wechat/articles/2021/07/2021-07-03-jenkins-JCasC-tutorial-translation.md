@@ -1,3 +1,23 @@
+```
+---
+title: 用JCasC配置插件
+description: 一个用JCasC配置插件的教程，主要是用yaml文件来配置插件，教程简单，大致分为六个步骤。
+author: Dheeraj Singh Jodha
+translator: 蒋新蕊
+original: https://www.jenkins.io/blog/2021/05/20/configure-plugins-with-jcasc/
+poster: jenkins-zh/content/wechat/articles/2021/07/2021-07-03-jenkins-JCasC-tutorial-translation/JCasC-logo.jpg
+toc: false
+date: 2021-07-04
+tags:
+- tag1 jenkins
+- tag2 JCasC
+shared_by:
+- 无
+---
+```
+
+![封面图片](https://repository-images.githubusercontent.com/107676801/2c522780-b1fb-11e9-8f83-f7009988212e)
+
 # 用JCasC配置插件
 
 [Dheeraj Singh Jodha](https://www.jenkins.io/blog/authors/dheerajodha/)发表于 2021-05-20     [Tweet](https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.jenkins.io%2F)
@@ -70,6 +90,7 @@
     在 Jenkins 的图形界面上配置插件
 </h2>
 
+
 * 为了完成这个例子，需要安装 `View Job Filters` 插件。
 * 现在可以通过工作台上左侧的 `New View` 按钮创建一个 view。
 * 给一个名字（例如：“testView”），把类型设置为 `List View`，然后按 `OK` 按钮。
@@ -109,6 +130,7 @@
 <h2 id="本地更新 JCasC 文件">
     本地更新 JCasC 文件
 </h2>
+
 
 * 在下载下来的 `jenkins.yaml` 文件里进行一些修改，并看看图形界面上自动产生的变化。
 
