@@ -1,16 +1,14 @@
 ```
 ---
-title: 用JCasC配置插件
-description: 一个用JCasC配置插件的教程，主要是用yaml文件来配置插件，教程简单，大致分为六个步骤。
-author: Dheeraj Singh Jodha
-translator: 蒋新蕊
-original: https://www.jenkins.io/blog/2021/05/20/configure-plugins-with-jcasc/
-poster: jenkins-zh/content/wechat/articles/2021/07/2021-07-03-jenkins-JCasC-tutorial-translation/JCasC-logo.jpg
+title: "用JCasC配置插件"
+description: "一个用JCasC配置插件的教程，主要是用yaml文件来配置插件，教程简单，大致分为六个步骤。"
+author: "Dheeraj Singh Jodha"
+translator: "蒋新蕊"
+original: "https://www.jenkins.io/blog/2021/05/20/configure-plugins-with-jcasc/"
+poster: "jenkins-zh/content/wechat/articles/2021/07/2021-07-03-jenkins-JCasC-tutorial-translation/JCasC-logo.jpg"
 toc: false
-date: 2021-07-04
+date: 2021-07-21
 tags:
-- tag1 jenkins
-- tag2 JCasC
 shared_by:
 - 无
 ---
@@ -178,6 +176,5 @@ shared_by:
 
 [Dheeraj Singh Jodha](https://www.jenkins.io/blog/authors/dheerajodha)
 
-Dheeraj是孟买大学的维韦卡南德技术研究所的一名计算机工程的学生。他从2021年的3月开始了他在 Jenkins 社区的贡献之旅。他的微小贡献大部分是关于[ Jenkins 项目的自定义发布服务](https://github.com/jenkinsci/custom-distribution-service)。他也喜欢参与 JCasC 项目和写一些文档来帮助其他开发人员。
-
+Dheeraj is a Computer Science Engineering student (senior) at Vivekanand Institute of Technology, University of Mumbai. He started his journey of contributing to Jenkins in March 2021. His tiny contributions revolve around the [Custom Distribution Service for Jenkins Project](https://github.com/jenkinsci/custom-distribution-service). He also likes to contribute to the JCasC project and documentation to help the developers.
 [GitHub](https://github.com/dheerajodha)    [LinkedIn](https://www.linkedin.com/in/dheeraj-singh-jodha)
