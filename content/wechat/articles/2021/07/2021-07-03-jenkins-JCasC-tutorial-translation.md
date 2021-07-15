@@ -43,7 +43,7 @@ shared_by:
 * 要确保 `jenkins.yaml` 是在 `$JENKINS_HOME/jenkins.yaml` 这个路径里。
 * 更改 `systemMessage` 的值为如下：
 
-![更新 jenkins.yaml 文件](https://www.jenkins.io/images/post-images/2021-05-15-configure-plugins-with-jcasc/updating-the-jenkins-file.png)
+![更新 jenkins.yaml 文件](2021-07-03-jenkins-JCasC-tutorial-translation/updating-the-jenkins-file.png)
 
 图1. 更新 jenkins.yaml 文件
 
@@ -51,7 +51,7 @@ shared_by:
 
 * 现在，在工作台的顶端，你可以看到更新过后的 System Message
 
-![看工作台上的变化](https://www.jenkins.io/images/post-images/2021-05-15-configure-plugins-with-jcasc/viewing-changes-in-jenkins-file.png)
+![看工作台上的变化](2021-07-03-jenkins-JCasC-tutorial-translation/viewing-changes-in-jenkins-file.png)
 
 图2. 看工作台上的变化
 
@@ -63,13 +63,13 @@ shared_by:
 * 现在可以通过工作台上左侧的 `New View` 按钮创建一个 view。
 * 给一个名字（例如：“testView”），把类型设置为 `List View`，然后按 `OK` 按钮。
 
-![创建 View](https://www.jenkins.io/images/post-images/2021-05-15-configure-plugins-with-jcasc/naming-the-view.png)
+![创建 View](2021-07-03-jenkins-JCasC-tutorial-translation/naming-the-view.png)
 
 图3. 创建 View
 
 * 点击 `Add Job Filter` 添加过滤器（filter），让我们选择 `Build Duration Filter`，然后填写值（例如：“60” 分钟）
 
-![在 view 中添加过滤器](https://www.jenkins.io/images/post-images/2021-05-15-configure-plugins-with-jcasc/add-filters-to-view.png)
+![在 view 中添加过滤器](2021-07-03-jenkins-JCasC-tutorial-translation/add-filters-to-view.png)
 
 图4. 在 view 中添加过滤器
 
@@ -77,7 +77,7 @@ shared_by:
 * 在你的主要的 `jenkins.yaml` 配置文件中能看到所有的配置信息。点击 `Manage Jenkins > Configuration as Code > View Configuration`可以查看 `jenkins.yaml` 文件。
 * 在YAML文件中找到 `views` 部分，可以看到关于 view 的详细信息，
 
-![在这里可以看到关于 view（我们刚创建的）的详细信息](https://www.jenkins.io/images/post-images/2021-05-15-configure-plugins-with-jcasc/yaml-file-on-jenkins-ui.png)
+![在这里可以看到关于 view（我们刚创建的）的详细信息](2021-07-03-jenkins-JCasC-tutorial-translation/yaml-file-on-jenkins-ui.png)
 
 图5. 在这里可以看到关于 view（我们刚创建的）的详细信息
 
@@ -86,7 +86,7 @@ shared_by:
 * 现在你已经成功通过图形界面配置好插件了，让我们来到工作台上的 `Manage Jenkins`，点击 `System Configuration` 下的 `Configuration as Code` ，就可以下载配置文件。
 * 现在点击 `Download Configuration` 将配置下载到本地。
 
-![下载配置](https://www.jenkins.io/images/post-images/2021-05-15-configure-plugins-with-jcasc/download-config-button.png)
+![下载配置](2021-07-03-jenkins-JCasC-tutorial-translation/download-config-button.png)
 
 图6. 下载配置
 
@@ -95,7 +95,7 @@ shared_by:
 * 在下载下来的 `jenkins.yaml` 文件里进行一些修改，并看看图形界面上自动产生的变化。
 * 作为一个例子，让我们将配置文件里的 `name` 的对应值改成“YoutubeDemoView”并且将 `buildDurationMinutes` 值设为 55。
 
-![在本地修改关于 View 的信息](https://www.jenkins.io/images/post-images/2021-05-15-configure-plugins-with-jcasc/yaml-file-on-local-text-editor.png)
+![在本地修改关于 View 的信息](2021-07-03-jenkins-JCasC-tutorial-translation/yaml-file-on-local-text-editor.png)
 
 图7. 在本地修改关于 View 的信息
 
@@ -105,7 +105,7 @@ shared_by:
 
 * 现在为了能让 `jenkins.yaml` 文件里的改变应用到 Jenkins 服务器上，点击 `Reload existing configuration` 按钮。
 
-![将新的配置应用到 Jenkins 实例中](https://www.jenkins.io/images/post-images/2021-05-15-configure-plugins-with-jcasc/apply-new-config.png)
+![将新的配置应用到 Jenkins 实例中](2021-07-03-jenkins-JCasC-tutorial-translation/apply-new-config.png)
 
 图8. 将新的配置应用到 Jenkins 实例中
 
@@ -116,7 +116,7 @@ shared_by:
 * 并且 `Build Duration Filter` 的值从“60”变成了“55”。
 * 这两个变化就是我们刚刚在本地修改 `jenkins.yaml` 文件中的内容
 
-![验证变化](https://www.jenkins.io/images/post-images/2021-05-15-configure-plugins-with-jcasc/view-final-changes.png)
+![验证变化](2021-07-03-jenkins-JCasC-tutorial-translation/view-final-changes.png)
 
 图9. 验证变化
 
