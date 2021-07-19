@@ -17,7 +17,7 @@ Jenkins 中文社区作为开放的技术社区，深受广大 Jenkins 用户和
 我们将对公开征集到的议题进行认真的筛选，根据筛选的收集结果来安排在线或者线下活动，为 Jenkins 中文用户提供更多交流的空间。
 
 ## 议题提交通道
-您可以通过发送邮件到 admin@jenkins-zh.cn，或者直接提交 issue 到 GitHub https://github.com/jenkins-zh/jenkins-zh/issues/new
+您可以通过发送邮件到 admins@jenkins-zh.cn，或者直接提交 issue 到 GitHub https://github.com/jenkins-zh/jenkins-zh/issues/new
 
 ## 议题范围
 * 任何 Jenkins 相关的使用、踩坑经验
