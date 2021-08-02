@@ -6,7 +6,7 @@ translator: "蒋新蕊"
 original: "https://www.jenkins.io/blog/2021/05/20/configure-plugins-with-jcasc/"
 poster: "jenkins-zh/content/wechat/articles/2021/07/2021-07-03-jenkins-JCasC-tutorial-translation/JCasC-logo.jpg"
 toc: true
-date: 2021-07-21
+date: 2021-07-03
 tags:
 shared_by:
 - 无
