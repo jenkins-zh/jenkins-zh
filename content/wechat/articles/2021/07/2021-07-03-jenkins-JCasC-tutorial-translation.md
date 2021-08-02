@@ -2,7 +2,7 @@
 title: "用JCasC配置插件"
 description: "一个用JCasC配置插件的教程，主要是用yaml文件来配置插件，教程简单，大致分为六个步骤。"
 author: "Dheeraj Singh Jodha"
-translator: "蒋新蕊"
+translator: "jxr98"
 original: "https://www.jenkins.io/blog/2021/05/20/configure-plugins-with-jcasc/"
 poster: "jenkins-zh/content/wechat/articles/2021/07/2021-07-03-jenkins-JCasC-tutorial-translation/JCasC-logo.jpg"
 toc: true
