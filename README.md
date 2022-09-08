@@ -14,7 +14,7 @@ Unfortunately, its ability is very limited; it only understands a few keywords f
 
 # TODO List
 
-Feel free to pick up a task from [here](https://github.com/orgs/jenkins-zh/projects/2). If you're interested in contributing to this project, please read our [contributing guide](CONTRIBUTING.md) first.
+Feel free to pick up a task from [here](https://github.com/orgs/jenkins-zh/projects/2). If you're interested in contributing to this project, please read our [contributing guide](CONTRIBUTION.md) first.
 
 You can find a list of all contributors [here](https://github.com/jenkins-infra/wechat/tree/master/management/contributors).
 
