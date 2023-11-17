@@ -17,6 +17,7 @@ Jenkins 安装完成后，默认的插件更新中心地址为 `https://updates.
 | [Jenkins 中文社区](https://github.com/jenkins-zh/mirror-proxy) | `https://updates.jenkins-zh.cn/update-center.json` |
 |[清华大学](https://mirrors.tuna.tsinghua.edu.cn/jenkins/)|`https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json`|
 |[华为开源镜像站](https://mirrors.huaweicloud.com/jenkins/)|`https://mirrors.huaweicloud.com/jenkins/updates/update-center.json`|
+|[阿里云](https://mirrors.aliyun.com/jenkins)|`https://mirrors.aliyun.com/jenkins/updates/update-center.json`|
 |[腾讯](https://mirrors.cloud.tencent.com/jenkins/) | `https://mirrors.cloud.tencent.com/jenkins/updates/update-center.json` |
 |[ustc](https://mirrors.ustc.edu.cn/jenkins/) | `https://mirrors.ustc.edu.cn/jenkins/updates/update-center.json` |
 |[bit](https://mirror.bit.edu.cn/jenkins/) | `https://mirror.bit.edu.cn/jenkins/updates/update-center.json` |
